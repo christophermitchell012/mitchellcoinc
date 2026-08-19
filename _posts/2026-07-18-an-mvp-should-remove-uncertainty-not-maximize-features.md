@@ -3,7 +3,7 @@ layout: post
 title: "An MVP Should Remove Uncertainty, Not Maximize Features"
 date: 2026-07-18 08:45:00 -0500
 category: Product
- description: "The best MVP is usually the smallest thing that answers the most important unanswered question."
+description: "The best MVP is usually the smallest thing that answers the most important unanswered question."
 read_time: "4 min read"
 ---
 
