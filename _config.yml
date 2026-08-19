@@ -9,7 +9,7 @@ future: false
 giscus:
   repo: christophermitchell012/mitchellcoinc
   repo_id: R_kgDOTCbWRw
-  category: General
-  category_id: ""
+  category: Announcements
+  category_id: DIC_kwDOTCbWR84DDvqG
 
 exclude: [CNAME, README.md]
