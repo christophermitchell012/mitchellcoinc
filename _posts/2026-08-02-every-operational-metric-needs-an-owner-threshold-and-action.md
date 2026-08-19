@@ -3,135 +3,62 @@ layout: post
 title: "Every Operational Metric Needs an Owner, a Threshold, and an Action"
 date: 2026-08-02 11:35:00 -0500
 category: Product + Analytics
-description: "Metrics become operational when somebody owns them, knows when they are abnormal, and knows what happens next."
+description: "Telemetry becomes operational only when the team agrees who responds, what abnormal means, and what happens next."
 read_time: "4 min read"
 ---
 
-A metric can be perfectly calculated and still be operationally useless.
+I've worked on autonomous robots, energy systems, analytical instruments and software platforms. They all have one thing in common: once the instrumentation gets good, it's very easy to create more metrics than anyone can realistically pay attention to.
 
-The missing pieces are often not mathematical.
+The dashboard isn't the scarce resource. Attention is.
 
-They are organizational.
+So for the small set of metrics that are supposed to drive operations, I want three things to be pretty clear: who owns the response, what abnormal means, and what the first move should be.
 
-For an important metric, I like to ask three questions:
+That sounds obvious. In practice, teams often discover those answers in the middle of the incident, which is exactly when you don't want to be figuring them out.
 
-1. **Who owns it?**
-2. **When does it require attention?**
-3. **What happens when that threshold is crossed?**
+## "Engineering owns it" usually isn't enough
 
-If those answers are vague, the metric is probably still just reporting.
+Suppose a fleet starts showing a higher rate of localization failures.
 
-## Ownership changes behavior
+Who actually takes the first look?
 
-Suppose a team tracks API error rate.
+Autonomy? Fleet operations? The engineer responsible for sensor fusion? Whoever pushed the latest build?
 
-The dashboard shows:
+The right answer depends on the organization, and it can change as the product matures. What matters is that the people dealing with the problem don't have to reconstruct the org chart while the system is misbehaving.
 
-> Error rate: 1.8%
+Ownership isn't blame. It's just the role responsible for making sure the signal turns into a response.
 
-That may be technically accurate.
+## Thresholds need context, not just a number
 
-But who is responsible for noticing when it gets worse?
+I'm suspicious of thresholds that are simply "above X is bad."
 
-If the answer is "engineering," that is often not specific enough.
+A CPU spike for three seconds is different from the same value for twenty minutes. One failed delivery is different from twenty failures clustered in the same neighborhood. A sensor dropout on a parked system may be irrelevant and critical while the system is moving.
 
-A stronger definition might be:
+So I tend to think about the condition as some combination of:
 
-> The platform on-call engineer owns API error rate during business hours and the incident commander owns it during an active incident.
+> value + duration + operating context + impact
 
-Now responsibility is explicit.
+That's much closer to how people reason about real systems.
 
-Ownership does not mean one person caused the problem.
+It also cuts down on noisy alerts. Once operators stop trusting alerts, you're in a bad place because the monitoring system starts becoming background decoration.
 
-It means one person or role is responsible for making sure the problem gets handled.
+## Make the first investigation cheap
 
-## Thresholds turn numbers into signals
+A runbook doesn't need to be enormous. Often I only care that the first useful step is obvious.
 
-Next comes the threshold.
+That might be:
 
-Without one, every change invites interpretation.
+- compare affected units with the latest deployment
+- check whether the problem is geographic
+- inspect the largest contributing error category
+- verify whether an upstream dependency changed
+- pull the raw telemetry for one of the first affected events
 
-Is 1.8% bad?
+The point is to remove the dead time before useful investigation begins.
 
-What about 2.1%?
+I don't operationalize every metric this way. Weekly trends don't need paging rules. Product adoption metrics don't need an on-call engineer. Plenty of numbers are there simply to help a team understand what changed over time.
 
-What about 4% for three minutes?
+But if a metric is supposed to cause a near-term response, I want the operating contract to be obvious.
 
-A useful threshold might be:
+Who notices it? Under what condition? What happens first?
 
-> Trigger investigation if the five-minute error rate exceeds 3% for ten consecutive minutes.
-
-That is far more actionable.
-
-Thresholds can be based on:
-
-- service-level objectives
-- historical ranges
-- customer impact
-- statistical deviations
-- financial exposure
-- safety limits
-
-The exact mechanism depends on the system.
-
-The important part is that normal and abnormal are defined before the pressure arrives.
-
-## Actions complete the loop
-
-Even ownership and thresholds are not enough if nobody knows what to do next.
-
-For the API example, the action might be:
-
-1. Check whether one endpoint accounts for most errors.
-2. Compare the change with the latest deployment.
-3. Inspect upstream dependency health.
-4. Roll back if the increase aligns with a recent release.
-5. Escalate if customer impact exceeds a second threshold.
-
-Now the metric is connected to an operating procedure.
-
-This does not mean every metric needs a giant runbook.
-
-Sometimes the action is simply:
-
-> Review the top five contributing accounts before the daily operations meeting.
-
-That is enough if it consistently drives the right behavior.
-
-## Avoid alerting on everything
-
-Once teams understand this pattern, they sometimes go too far.
-
-They attach thresholds and alerts to dozens of metrics.
-
-Then alerts become background noise.
-
-The goal is not to operationalize every number.
-
-The goal is to identify the small set of metrics where a change should cause a meaningful response.
-
-A useful test is:
-
-> If this metric crosses its threshold at 2:00 p.m., would we actually do something before tomorrow?
-
-If not, it probably does not need real-time alerting.
-
-It may belong in a weekly review instead.
-
-## Metrics should encode decisions
-
-A mature metric definition therefore looks less like:
-
-> Customer cancellations
-
-and more like:
-
-> If weekly cancellations exceed 4% for two consecutive weeks, the retention owner reviews cancellation reasons by customer segment and proposes the top corrective action at the next product review.
-
-The number is only one component.
-
-The owner, threshold, and response are what connect the number to the organization.
-
-That is when a dashboard starts becoming an operating system rather than a display.
-
-**A metric matters when the organization knows who watches it, when to care, and what to do next.**
+If those answers are still fuzzy, I treat the metric as reporting until the team proves otherwise.
