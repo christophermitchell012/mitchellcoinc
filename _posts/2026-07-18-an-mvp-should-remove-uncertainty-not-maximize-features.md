@@ -3,140 +3,57 @@ layout: post
 title: "An MVP Should Remove Uncertainty, Not Maximize Features"
 date: 2026-07-18 08:45:00 -0500
 category: Product
-description: "The best MVP is usually the smallest thing that answers the most important unanswered question."
+description: "I use MVPs to answer the riskiest unanswered question, not to build a miniature version of the eventual product."
 read_time: "4 min read"
 ---
 
-Teams often describe an MVP as a smaller version of the final product.
+One of the easiest ways to make an MVP too large is to call it "version one of the product."
 
-That framing creates trouble.
+That wording almost immediately turns the conversation into feature negotiation. Authentication is probably needed. Reporting would be nice. Admin controls seem responsible. Somebody wants CSV export. Before long, the minimum product has a roadmap of its own.
 
-It encourages people to ask:
+I use a simpler definition: **an MVP is the smallest amount of product needed to answer an important question.**
 
-> Which features can we squeeze into version one?
+That question changes from project to project.
 
-A better question is:
+## The first version may look nothing like the final one
 
-**What do we still not know that could make this product fail?**
+At Refraction AI, I worked on systems where the underlying technical question mattered a lot more than polish. One example was localization. We were combining GPS, IMU and wheel-encoder information and using filtering to improve the position estimate.
 
-The purpose of an MVP is not to look complete.
+At that stage, I wasn't worried about whether the final operator interface had the right settings panel. I wanted to know whether the approach improved location precision enough to matter to the robot and the operation.
 
-It is to remove uncertainty.
+Once that answer became clearer, investing in tooling around it made sense.
 
-## Start with the riskiest assumption
+I've used the same logic with internal software. A labeling tool doesn't need every feature of a mature commercial labeling platform if the real question is whether it can produce useful training data faster and consistently enough to improve the ML loop.
 
-Imagine a company wants to build scheduling software for field technicians.
+Those are the MVPs I like. They're narrow on purpose.
 
-The proposed product includes:
+## Write down what you don't know
 
-- route optimization
-- customer notifications
-- technician profiles
-- inventory tracking
-- analytics
-- automated scheduling
+Before I start arguing about scope, I try to write down what would change my mind.
 
-That sounds like a reasonable roadmap.
+It might be:
 
-But suppose the biggest unanswered question is much simpler:
+- We don't know whether users trust this recommendation enough to act on it.
+- We don't know whether this model is accurate enough under real operating conditions.
+- We don't know whether the integration actually saves time after all the manual handoffs are included.
+- We don't know whether customers will pay enough to justify the operational cost.
 
-> Will dispatchers trust software-generated schedules enough to use them?
+Now the backlog has a job.
 
-If that assumption is wrong, the rest of the feature list barely matters.
+If a feature doesn't help answer the question, it has to make a stronger case for being in the MVP.
 
-A strong MVP might therefore be nothing more than:
+That doesn't mean the prototype should be sloppy. Reliability, safety and security can be part of the experiment itself. It just means the polish should be proportional to what you're trying to learn.
 
-1. Import tomorrow's jobs.
-2. Generate a proposed schedule.
-3. Show the dispatcher why each assignment was made.
-4. Let the dispatcher accept or change it.
-5. Measure what gets changed and why.
+## Sometimes I'd rather fake the automation first
 
-That system does not look like a complete field-service platform.
+I'm comfortable with spreadsheets, scripts, manual review and behind-the-scenes work when they let a team test the risky assumption faster.
 
-It does answer the important question.
+If five customers won't use a manually assisted workflow, automating the whole thing is unlikely to rescue the idea.
 
-## Features are expensive when they do not teach you anything
+The opposite is useful too. If the manual process is obviously valuable but painful to operate, you've learned something important about where software can create leverage.
 
-Every feature creates more than implementation cost.
+I've seen teams spend weeks debating what belongs in an MVP when the faster move was to run the ugly version with a handful of users and watch what happened.
 
-It creates:
+That's the part of MVP work that tends to disappear inside feature checklists. The objective isn't really to launch something small.
 
-- design decisions
-- test cases
-- support burden
-- analytics requirements
-- documentation
-- edge cases
-- maintenance
-
-Those costs can be worthwhile when the feature validates an important assumption or delivers clear value.
-
-But adding a polished preferences page to an MVP rarely teaches you whether the core product works.
-
-A useful filter is:
-
-> What new decision will we be able to make after shipping this feature?
-
-If the answer is unclear, the feature may belong later.
-
-## Define the learning goal before the backlog
-
-Before writing user stories, write down the uncertainty.
-
-For example:
-
-> We believe operations managers will use an automated exception queue if it saves at least 30 minutes per shift without increasing missed incidents.
-
-Now the MVP has a job.
-
-It needs to measure:
-
-- actual time saved
-- missed incidents
-- adoption
-- overrides
-- reasons for overrides
-
-Notice what this does to scope.
-
-The team may realize it does not need a sophisticated reporting module yet.
-
-It does need good instrumentation around operator behavior.
-
-That is a better trade.
-
-## A rough prototype can be more valuable than a polished MVP
-
-Sometimes the riskiest assumption can be tested without building software at all.
-
-You can manually perform the service behind the scenes.
-
-You can use a spreadsheet.
-
-You can create a clickable prototype.
-
-You can run the workflow with five customers before automating it.
-
-If a manual version proves nobody cares about the outcome, you have learned something extremely valuable at low cost.
-
-The point is not to avoid engineering.
-
-The point is to spend engineering effort after the important questions become clearer.
-
-## MVP success is a decision, not a launch
-
-A useful MVP should end with one of a few outcomes:
-
-- continue because the assumption looks valid
-- change direction because the behavior differs from expectations
-- stop because the opportunity is weaker than expected
-- run another experiment because the evidence is inconclusive
-
-That means an MVP is successful even when it tells you not to build the original idea.
-
-A failed experiment can save months of work.
-
-A beautiful MVP that teaches you nothing can waste them.
-
-**The smallest valuable product is the one that removes the largest important uncertainty.**
+It's to become less wrong without spending so much that you've lost the ability to change direction.
