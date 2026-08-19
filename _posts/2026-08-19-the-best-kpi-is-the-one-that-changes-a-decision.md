@@ -3,94 +3,56 @@ layout: post
 title: "The Best KPI Is the One That Changes a Decision"
 date: 2026-08-19 12:58:00 -0500
 category: Product + Analytics
-description: "A metric is only useful when someone knows what decision to make when it moves."
+description: "If a metric moves and nobody knows what to do next, it is probably reporting rather than an operational KPI."
 read_time: "4 min read"
 ---
 
-Most companies don't have a shortage of metrics.
+I've spent a lot of time around dashboards, both as a product manager and as the person trying to figure out why an operational system is misbehaving.
 
-They have a shortage of metrics that tell someone what to do.
+The charts usually aren't the hard part. It's deciding which numbers actually deserve attention.
 
-A dashboard can have twenty beautifully calculated KPIs and still be nearly useless if the person looking at it can't answer a simple question:
+A fleet can have completion rate, latency, localization health, battery telemetry, route performance, support volume and another dozen signals. That's useful when you're trying to understand the system as a whole. It's less useful at 2:15 in the afternoon when performance suddenly drops and somebody needs to decide what to investigate first.
 
-**What would I do differently if this number moved?**
+That's the distinction I care about: **does the metric change a decision?**
 
-That is the test I like to apply to almost every product or operational metric.
+## Start with the person who has to act
 
-## Start with the decision, not the data
+In robotics and fleet operations, two very different failures can push the same top-line KPI in the wrong direction. A localization problem may reduce completed missions. So can a routing problem. So can a hardware issue.
 
-Teams often build metrics in the opposite order.
+If the dashboard only tells me completion fell from yesterday, I still have to do the diagnostic work manually.
 
-They ask:
+What I really want is something closer to:
 
-1. What data do we have?
-2. What can we calculate?
-3. What should we put on the dashboard?
+- Which failures increased?
+- How many units are affected?
+- Is the problem concentrated in one location, software version or operating condition?
+- Has this happened before?
+- Who owns the next investigation?
 
-A better sequence is:
+At Refraction AI, some of the most useful observability work wasn't about adding more charts. It was about making abnormal behavior easier to separate from normal fleet noise.
 
-1. What decision are we trying to improve?
-2. What information would change that decision?
-3. What metric best captures that information?
-4. What action should happen when it crosses a threshold?
+That's as much a product problem as an analytics problem.
 
-That sounds like a small distinction. It isn't.
+## I like metrics with an implied verb
 
-Consider a delivery operation that reports:
+One quick test I use is to put a verb after the metric.
 
-> On-time delivery rate: 92%
+If route failures rise, **inspect** the affected routes.
 
-That sounds useful. But what happens when it falls to 89%?
+If localization confidence degrades, **compare** sensor and positioning data.
 
-If nobody knows, the KPI is mostly descriptive.
+If customer-facing status errors increase, **trace** the event path that generates those updates.
 
-Now suppose the team breaks the same problem into:
+The action will be different for every system, but the metric should at least narrow the next move. A number that only produces the sentence "that looks bad" isn't finished yet.
 
-- 4% delayed because of insufficient capacity
-- 2% delayed because of routing
-- 1% delayed because of equipment failures
-- 1% delayed because customers were unavailable
+I also don't think every number needs an alert, an owner and a runbook. Some metrics are there for trends. Some belong in a weekly product review. Some are useful only after another signal fires.
 
-Now the metric starts becoming operational.
+The mistake is treating all of them as equally important because they happen to fit on the same screen.
 
-A spike in the first category might trigger additional capacity.
+I'd rather have five metrics that consistently trigger good decisions than fifty metrics that create the appearance of visibility.
 
-A spike in routing failures might trigger a routing investigation.
+So when I'm defining a KPI, I usually ask one extra question:
 
-A spike in equipment failures might change preventive-maintenance priorities.
+**If this changes materially tomorrow, who will care, and what will they do differently?**
 
-The data hasn't merely described reality. It has changed a decision.
-
-## A simple KPI test
-
-For every important metric on a dashboard, ask:
-
-> If this metric moves by 20% tomorrow, who notices and what do they do?
-
-If the answer is:
-
-> "We'd probably look into it."
-
-the metric probably isn't finished.
-
-A stronger answer looks like:
-
-> "If this exceeds 6%, the operations lead looks at the three contributing failure categories and assigns the largest one for investigation that day."
-
-Now you have more than a KPI.
-
-You have the beginning of an operating system.
-
-## Fewer metrics can produce better decisions
-
-This is also why I am skeptical of dashboards with dozens of equally prominent numbers.
-
-Every additional metric consumes attention.
-
-The goal isn't maximum visibility into the business. The goal is enough visibility to make the important decisions faster and better.
-
-Five metrics connected to five clear decisions can be far more valuable than fifty metrics connected to none.
-
-The best KPI isn't necessarily the cleverest calculation.
-
-**It's the one that changes what somebody does.**
+If there's a clear answer, keep it prominent. If there isn't, it may still be useful data. I just wouldn't confuse it with an operational KPI.
