@@ -5,4 +5,11 @@ baseurl: ""
 timezone: America/Chicago
 permalink: /blog/:year/:month/:day/:title/
 future: false
+
+giscus:
+  repo: christophermitchell012/mitchellcoinc
+  repo_id: R_kgDOTCbWRw
+  category: General
+  category_id: ""
+
 exclude: [CNAME, README.md]
