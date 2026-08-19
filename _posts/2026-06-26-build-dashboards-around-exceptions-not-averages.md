@@ -3,127 +3,56 @@ layout: post
 title: "Build Dashboards Around Exceptions, Not Averages"
 date: 2026-06-26 09:20:00 -0500
 category: Product + Analytics
-description: "Averages summarize the system. Exceptions tell operators where attention is needed now."
+description: "Operational dashboards are most useful when they make the few abnormal things easier to find than the many normal ones."
 read_time: "4 min read"
 ---
 
-Most dashboards are built to summarize what happened.
+I like operational dashboards that get boring when everything is working.
 
-Operators usually need something different.
+That sounds a little backwards because most dashboard demos try to look busy: maps, gauges, trend lines, counters and enough color to make the system feel alive.
 
-They need to know **where the system is behaving badly enough that somebody should act.**
+But if I'm running an operation, I don't need the dashboard to entertain me. I need it to tell me which few things deserve attention.
 
-That distinction sounds small, but it changes the entire design of a dashboard.
+I saw this pretty clearly working on fleet products. When most vehicles are behaving normally, a screen full of healthy units is reassuring, but it doesn't help much with the next decision. The useful part is finding the robot that stopped progressing, the route that suddenly looks wrong, the telemetry that disappeared, or the same failure showing up often enough that it may be turning into a pattern.
 
-## Averages are useful, but they hide the work
+That's why I tend to think of a good operations dashboard as an **exception queue with context**.
 
-Suppose a delivery operation reports:
+## Averages are still useful
 
-> Average delivery time: 31 minutes
+Average delivery time, completion rate, uptime and support volume can all tell you whether the system is generally getting better or worse. I'd keep those.
 
-That number may be useful for leadership. It tells you something about overall performance.
+I just wouldn't make an operator hunt through summary charts to discover a problem that's already visible in the underlying data.
 
-But imagine there were 1,000 deliveries yesterday:
+If ten units are behaving abnormally, show me those ten units.
 
-- 850 arrived in less than 30 minutes
-- 100 took 30 to 45 minutes
-- 40 took 45 to 60 minutes
-- 10 took more than an hour
+Then tell me what's weird about them.
 
-The average can still look healthy while a small group of customers has a very bad experience.
+Maybe several share the same software build. Maybe the failures started after entering the same geographic area. Maybe a sensor stopped reporting. Maybe four events are still classified as "unknown," which can be more interesting than it sounds because it may point to a gap in the telemetry itself.
 
-An operator generally does not need to stare at the 850 normal deliveries.
+Those details are much closer to the actual job.
 
-The interesting question is:
+## "Worst first" isn't always the right sort order
 
-**What happened in those 50 unusually slow deliveries?**
+One thing I've learned from operational products is that the biggest number isn't automatically the most important problem.
 
-## Turn the dashboard into a queue
+I may care more about a moderate issue affecting twenty units than a severe one affecting a single unit. A safety-related event can outrank a larger efficiency problem. Something that's been unresolved for forty minutes may matter more than a spike that started thirty seconds ago.
 
-A useful operational dashboard often behaves more like a prioritized work queue than a report.
+So the queue needs some product judgment.
 
-Instead of showing:
+Severity matters, but so can duration, customer impact, number of affected assets, recurrence and confidence in the diagnosis. You don't need an elaborate scoring model on day one. You just need to acknowledge that operators are prioritizing constantly, whether the software helps them or not.
 
-> Average delivery time: 31 minutes
+A weak alert basically says:
 
-show something like:
+> Something is wrong.
 
-> 50 deliveries exceeded 45 minutes
+A useful exception card gets closer to:
 
-Then break those exceptions down:
+> This asset has been outside its normal operating pattern for 18 minutes, three similar assets are showing the same behavior, and all four changed after the same deployment.
 
-- 19 capacity constraints
-- 13 routing failures
-- 8 equipment problems
-- 6 customer-access problems
-- 4 unknown
+Now I know where I'd start.
 
-Now the dashboard is pointing directly at work.
+I usually want current state, recent history, likely contributing factors and a quick path to the underlying records. Not every case needs all of that. Every extra click should earn its keep.
 
-The 19 capacity-related failures might trigger a staffing or fleet decision.
+The dashboard doesn't need to explain the entire system. It needs to make the abnormal thing hard to miss and cheap to investigate.
 
-The 13 routing failures might trigger a route-quality review.
-
-The four unknown cases might be especially valuable because they expose a gap in your telemetry or categorization.
-
-## Define normal before looking for abnormal
-
-Exception-driven dashboards require an explicit definition of normal.
-
-That could be:
-
-- a threshold
-- a service-level target
-- a statistical range
-- a comparison with a historical baseline
-- a difference from a peer group
-
-For example, if a machine normally operates between 68°C and 74°C, a dashboard that continuously plots temperatures inside that range may not be especially useful.
-
-Instead, surface:
-
-> 7 machines exceeded 74°C for more than 10 minutes today
-
-Then rank them by severity and duration.
-
-The underlying data is the same. The presentation is different because the dashboard is optimized for decisions rather than observation.
-
-## Exceptions need context
-
-An exception by itself is not enough.
-
-For each exception, try to give the user enough context to answer three questions:
-
-1. **How bad is it?**
-2. **Why might it be happening?**
-3. **What should I do next?**
-
-A good exception card might therefore include:
-
-- current value
-- expected range
-- duration
-- trend
-- likely contributing factors
-- owner
-- recommended next action
-
-You do not need all of those fields for every problem. But the closer the dashboard gets to answering those questions, the more operational value it creates.
-
-## The dashboard should get quieter when things are working
-
-There is a useful design test here:
-
-> If everything is operating normally, should this dashboard become boring?
-
-For many operational systems, the answer should be yes.
-
-A quiet dashboard means the system is inside expected bounds.
-
-Attention should become more concentrated as abnormal behavior appears.
-
-That is very different from a dashboard whose goal is to fill every square inch with charts.
-
-The best operational dashboard is often not the one that shows the most information.
-
-**It is the one that makes the next abnormal thing difficult to miss.**
+And if everything is healthy, I'm perfectly happy for that screen to look quiet.
