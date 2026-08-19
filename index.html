@@ -279,15 +279,6 @@
     @media (max-width:980px){.hero-grid,.section-head,.diagnostic,.proof-grid,.bio-grid,.cta{grid-template-columns:1fr}.proof-work,.service-grid{grid-template-columns:repeat(2,1fr)}.cards,.faq,.hero-subpanel{grid-template-columns:1fr}.nav-links{display:none}.hero-bullets{grid-template-columns:1fr}.hero{padding-top:6rem}.orbit{opacity:.25}}
     @media (max-width:620px){.wrap,.nav-inner{padding-left:1rem;padding-right:1rem}.metrics,.signal-flow,.proof-work,.service-grid,.cards{grid-template-columns:1fr}.section{padding:4.8rem 0}h1{font-size:clamp(3rem,17vw,4.8rem)}.cta{padding:1.2rem}.actions .btn{width:100%}}
   </style>
-  <!-- Compatibility notes:
-       - Core content is visible without JavaScript.
-       - No external fonts, no third-party scripts, no lazy-loaded body assets.
-       - Avoids relying on Safari-fragile reveal animations for content visibility.
-       - If embedded in Wix as HTML, this runs inside an iframe. Native Wix sections are better for SEO.
-       - favicon.ico, /assets/icon.svg, /assets/apple-touch-icon.png (180x180), and /assets/site.webmanifest
-         must exist on the server at those paths. Add the actual files or update the hrefs to match
-         wherever the icon assets are hosted.
-  -->
 </head>
 <body>
 <noscript><style>.reveal{opacity:1!important}.service.hide{display:block!important}</style></noscript>
@@ -301,6 +292,7 @@
         <a href="#proof">Proof</a>
         <a href="#services">Services</a>
         <a href="#ai-systems">AI systems</a>
+        <a href="/blog/">Blog</a>
         <a href="#faq">FAQ</a>
         <a class="nav-cta" href="mailto:mitchellcoinc012@gmail.com?subject=MitchellCo%20consulting%20conversation">Start a conversation</a>
       </div>
@@ -350,318 +342,35 @@
   </header>
 
   <main id="main">
-    <section id="model" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>From ambiguity to clarity to execution.</h2>
-          <p>Most growing companies do not need another bloated transformation project. They need an experienced operator who can identify the real constraint, shape the work, build the useful artifact, and make the system measurable.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal"><span class="num">0</span><h3>Find the signal.</h3><p>Clarify customer problems, product direction, operational bottlenecks, data gaps, stakeholder alignment, and decision metrics.</p></article>
-          <article class="card reveal"><span class="num">1</span><h3>Build the first working version.</h3><p>Scope and deliver a practical POC, MVP, dashboard, automation workflow, AI prototype, Python tool, LabVIEW app, or SQL-backed reporting system.</p></article>
-          <article class="card reveal"><span class="num">100</span><h3>Make it repeatable.</h3><p>Improve reliability, usability, measurement, team execution, reporting logic, documentation, and operating cadence so the system can scale.</p></article>
-        </div>
-      </div>
-    </section>
+    <section id="model" class="section"><div class="wrap"><div class="section-head reveal"><h2>From ambiguity to clarity to execution.</h2><p>Most growing companies do not need another bloated transformation project. They need an experienced operator who can identify the real constraint, shape the work, build the useful artifact, and make the system measurable.</p></div><div class="cards"><article class="card reveal"><span class="num">0</span><h3>Find the signal.</h3><p>Clarify customer problems, product direction, operational bottlenecks, data gaps, stakeholder alignment, and decision metrics.</p></article><article class="card reveal"><span class="num">1</span><h3>Build the first working version.</h3><p>Scope and deliver a practical POC, MVP, dashboard, automation workflow, AI prototype, Python tool, LabVIEW app, or SQL-backed reporting system.</p></article><article class="card reveal"><span class="num">100</span><h3>Make it repeatable.</h3><p>Improve reliability, usability, measurement, team execution, reporting logic, documentation, and operating cadence so the system can scale.</p></article></div></div></section>
 
-    <section id="proof" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Led by Christopher Mitchell. Built on real operating work.</h2>
-          <p>MitchellCo is informed by hands-on product, analytics, AI, robotics, and technical systems work. The aim is practical leverage: the kind that helps teams make better decisions and ship better artifacts faster.</p>
-        </div>
-        <div class="bio-grid">
-          <article class="card reveal">
-            <div class="eyebrow">Founder profile</div>
-            <h3 style="font-size:1.8rem;margin-bottom:.8rem">Christopher Mitchell</h3>
-            <p>Product and AI consulting leader with experience across autonomous robotics, healthcare, defense, energy, instrumentation, and technical software. Comfortable moving from board-level product questions to hands-on prototype, analytics, SQL, Python, and LabVIEW implementation.</p>
-            <div class="bio-meta">
-              <span class="bio-chip">Product strategy</span>
-              <span class="bio-chip">AI and LLM workflows</span>
-              <span class="bio-chip">Dashboards and KPIs</span>
-              <span class="bio-chip">Python, SQL, LabVIEW</span>
-            </div>
-            <p>Best for teams that need senior judgment, systems thinking, and enough technical fluency to get the first version built.</p>
-          </article>
-          <aside class="card reveal">
-            <h3>Selected proof points</h3>
-            <div class="proof-list">
-              <div class="proof-item"><b>30k+</b><p>Supported 30,000+ autonomous deliveries through product, fleet, and operational systems work at Refraction AI.</p></div>
-              <div class="proof-item"><b>Sensor fusion</b><p>Improved location precision in congested environments using GPS, IMU, and encoder data with Kalman-style fusion approaches.</p></div>
-              <div class="proof-item"><b>300%</b><p>Delivered two technical applications roughly 300% faster and improved accuracy by about 13% at VUV Analytics.</p></div>
-              <div class="proof-item"><b>Cross-sector</b><p>Worked across robotics, healthcare, defense, energy, academia, ad tech, and instrumentation, bringing transferable pattern recognition.</p></div>
-            </div>
-          </aside>
-        </div>
-        <div class="proof-work" style="margin-top:1rem">
-          <article class="card reveal">
-            <span class="tag">Refraction AI</span>
-            <h3>Fleet management and delivery operations</h3>
-            <p>Built product and operational systems for autonomous food delivery robots, including fleet workflows, tele-operation support, KPI dashboards, safety validation, and localization improvements.</p>
-            <ul>
-              <li>Connected product decisions to operational telemetry and support workflows.</li>
-              <li>Designed systems that helped teams move from ad hoc responses to measurable execution.</li>
-              <li>Improved clarity around robot status and proactive communication.</li>
-            </ul>
-          </article>
-          <article class="card reveal">
-            <span class="tag">Hypergiant</span>
-            <h3>Applied AI, CV, and platform thinking</h3>
-            <p>Worked on AI and machine learning platform ideas spanning healthcare, defense, GIS, grid, and computer vision use cases, turning technical capability into usable product directions.</p>
-            <ul>
-              <li>Bridged business problems and ML implementation paths.</li>
-              <li>Helped shape MLOps and low-code or AutoML workflows.</li>
-              <li>Focused on practical deployment, not AI theater.</li>
-            </ul>
-          </article>
-          <article class="card reveal">
-            <span class="tag">National Instruments</span>
-            <h3>Instrumentation, LabVIEW, and advanced support</h3>
-            <p>Led complex technical support and systems problem solving across RF, energy, defense, and measurement environments, with deep familiarity in LabVIEW-centered workflows.</p>
-            <ul>
-              <li>Comfortable with data acquisition, signal processing, and technical troubleshooting.</li>
-              <li>Experienced translating technical noise into usable operator guidance.</li>
-              <li>Useful where engineering systems and business outcomes must connect.</li>
-            </ul>
-          </article>
-          <article class="card reveal">
-            <span class="tag">VUV Analytics</span>
-            <h3>Faster applications and better analytical accuracy</h3>
-            <p>Shipped technical applications faster and with better analytical performance, reinforcing a pattern of improving both speed and quality rather than trading one for the other.</p>
-            <ul>
-              <li>Roughly 300% faster application delivery.</li>
-              <li>About 13% accuracy improvement.</li>
-              <li>Clear example of turning analysis into measurable gains.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section id="proof" class="section"><div class="wrap"><div class="section-head reveal"><h2>Led by Christopher Mitchell. Built on real operating work.</h2><p>MitchellCo is informed by hands-on product, analytics, AI, robotics, and technical systems work. The aim is practical leverage: the kind that helps teams make better decisions and ship better artifacts faster.</p></div><div class="bio-grid"><article class="card reveal"><div class="eyebrow">Founder profile</div><h3 style="font-size:1.8rem;margin-bottom:.8rem">Christopher Mitchell</h3><p>Product and AI consulting leader with experience across autonomous robotics, healthcare, defense, energy, instrumentation, and technical software. Comfortable moving from board-level product questions to hands-on prototype, analytics, SQL, Python, and LabVIEW implementation.</p><div class="bio-meta"><span class="bio-chip">Product strategy</span><span class="bio-chip">AI and LLM workflows</span><span class="bio-chip">Dashboards and KPIs</span><span class="bio-chip">Python, SQL, LabVIEW</span></div><p>Best for teams that need senior judgment, systems thinking, and enough technical fluency to get the first version built.</p></article><aside class="card reveal"><h3>Selected proof points</h3><div class="proof-list"><div class="proof-item"><b>30k+</b><p>Supported 30,000+ autonomous deliveries through product, fleet, and operational systems work at Refraction AI.</p></div><div class="proof-item"><b>Sensor fusion</b><p>Improved location precision in congested environments using GPS, IMU, and encoder data with Kalman-style fusion approaches.</p></div><div class="proof-item"><b>300%</b><p>Delivered two technical applications roughly 300% faster and improved accuracy by about 13% at VUV Analytics.</p></div><div class="proof-item"><b>Cross-sector</b><p>Worked across robotics, healthcare, defense, energy, academia, ad tech, and instrumentation, bringing transferable pattern recognition.</p></div></div></aside></div><div class="proof-work" style="margin-top:1rem"><article class="card reveal"><span class="tag">Refraction AI</span><h3>Fleet management and delivery operations</h3><p>Built product and operational systems for autonomous food delivery robots, including fleet workflows, tele-operation support, KPI dashboards, safety validation, and localization improvements.</p><ul><li>Connected product decisions to operational telemetry and support workflows.</li><li>Designed systems that helped teams move from ad hoc responses to measurable execution.</li><li>Improved clarity around robot status and proactive communication.</li></ul></article><article class="card reveal"><span class="tag">Hypergiant</span><h3>Applied AI, CV, and platform thinking</h3><p>Worked on AI and machine learning platform ideas spanning healthcare, defense, GIS, grid, and computer vision use cases, turning technical capability into usable product directions.</p><ul><li>Bridged business problems and ML implementation paths.</li><li>Helped shape MLOps and low-code or AutoML workflows.</li><li>Focused on practical deployment, not AI theater.</li></ul></article><article class="card reveal"><span class="tag">National Instruments</span><h3>Instrumentation, LabVIEW, and advanced support</h3><p>Led complex technical support and systems problem solving across RF, energy, defense, and measurement environments, with deep familiarity in LabVIEW-centered workflows.</p><ul><li>Comfortable with data acquisition, signal processing, and technical troubleshooting.</li><li>Experienced translating technical noise into usable operator guidance.</li><li>Useful where engineering systems and business outcomes must connect.</li></ul></article><article class="card reveal"><span class="tag">VUV Analytics</span><h3>Faster applications and better analytical accuracy</h3><p>Shipped technical applications faster and with better analytical performance, reinforcing a pattern of improving both speed and quality rather than trading one for the other.</p><ul><li>Roughly 300% faster application delivery.</li><li>About 13% accuracy improvement.</li><li>Clear example of turning analysis into measurable gains.</li></ul></article></div></div></section>
 
-    <section id="diagnostic" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Is this the right kind of help?</h2>
-          <p>Use the fit check to identify whether the work needs product clarity, execution structure, analytics, AI prototyping, or hands-on technical implementation.</p>
-        </div>
-        <div class="diagnostic reveal">
-          <form class="checklist" aria-label="Consulting fit checklist">
-            <label class="check"><input type="checkbox" data-score="1"> <span>We have disconnected data, unclear KPIs, or dashboards people do not use.</span></label>
-            <label class="check"><input type="checkbox" data-score="1"> <span>We need to turn a rough product or technical idea into a scoped POC or MVP.</span></label>
-            <label class="check"><input type="checkbox" data-score="1"> <span>We are evaluating AI, ML, LLMs, MCP, connectors, agents, or API integrations but need practical workflow design.</span></label>
-            <label class="check"><input type="checkbox" data-score="1"> <span>We need senior product or project execution help without adding a full-time leader.</span></label>
-            <label class="check"><input type="checkbox" data-score="1"> <span>We have SQL, Python, LabVIEW, reporting, or automation work blocking decisions.</span></label>
-          </form>
-          <aside class="scorebox" aria-live="polite">
-            <div class="score" id="fit-score">0/5</div>
-            <h3 id="fit-title">No blockers selected yet.</h3>
-            <p id="fit-copy">Select the problems that match your business. The more boxes selected, the more likely a focused MitchellCo engagement can create leverage quickly.</p>
-            <div class="actions"><a class="btn" href="mailto:mitchellcoinc012@gmail.com?subject=MitchellCo%20fit%20check%20discussion">Discuss the fit check</a></div>
-          </aside>
-        </div>
-      </div>
-    </section>
+    <section id="diagnostic" class="section"><div class="wrap"><div class="section-head reveal"><h2>Is this the right kind of help?</h2><p>Use the fit check to identify whether the work needs product clarity, execution structure, analytics, AI prototyping, or hands-on technical implementation.</p></div><div class="diagnostic reveal"><form class="checklist" aria-label="Consulting fit checklist"><label class="check"><input type="checkbox" data-score="1"> <span>We have disconnected data, unclear KPIs, or dashboards people do not use.</span></label><label class="check"><input type="checkbox" data-score="1"> <span>We need to turn a rough product or technical idea into a scoped POC or MVP.</span></label><label class="check"><input type="checkbox" data-score="1"> <span>We are evaluating AI, ML, LLMs, MCP, connectors, agents, or API integrations but need practical workflow design.</span></label><label class="check"><input type="checkbox" data-score="1"> <span>We need senior product or project execution help without adding a full-time leader.</span></label><label class="check"><input type="checkbox" data-score="1"> <span>We have SQL, Python, LabVIEW, reporting, or automation work blocking decisions.</span></label></form><aside class="scorebox" aria-live="polite"><div class="score" id="fit-score">0/5</div><h3 id="fit-title">No blockers selected yet.</h3><p id="fit-copy">Select the problems that match your business. The more boxes selected, the more likely a focused MitchellCo engagement can create leverage quickly.</p><div class="actions"><a class="btn" href="mailto:mitchellcoinc012@gmail.com?subject=MitchellCo%20fit%20check%20discussion">Discuss the fit check</a></div></aside></div></div></section>
 
-    <section id="services" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Strategy connected to implementation.</h2>
-          <p>MitchellCo works where product, analytics, automation, AI, and technical execution meet. The goal is not a slide deck. The goal is a clearer system and a usable artifact.</p>
-        </div>
-        <div class="service-tools reveal" role="toolbar" aria-label="Filter services">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="product">Product + execution</button>
-          <button class="filter" data-filter="analytics">Metrics + dashboards</button>
-          <button class="filter" data-filter="ai">AI + MVP</button>
-          <button class="filter" data-filter="technical">Technical systems</button>
-        </div>
-        <div class="service-grid">
-          <article class="card service reveal" data-kind="product"><div><span class="tag">Product</span><h3>Product management</h3><p>Clarify product direction, prioritize work, translate customer needs into execution, and connect roadmaps to measurable outcomes.</p></div></article>
-          <article class="card service reveal" data-kind="product"><div><span class="tag">Execution</span><h3>Project execution</h3><p>Align stakeholders, reduce ambiguity, surface risks early, and keep technical and business teams moving toward the same target.</p></div></article>
-          <article class="card service reveal" data-kind="analytics"><div><span class="tag">Metrics</span><h3>KPI design</h3><p>Design metrics that clarify performance, expose bottlenecks, and support decisions instead of creating reporting noise.</p></div></article>
-          <article class="card service reveal" data-kind="analytics"><div><span class="tag">Dashboards</span><h3>Dashboard design</h3><p>Turn messy data into clear operating views for leadership, product, operations, and customer-facing teams.</p></div></article>
-          <article class="card service reveal" data-kind="ai"><div><span class="tag">AI</span><h3>AI, ML, and LLM strategy</h3><p>Identify realistic AI opportunities, evaluate use cases, design workflows, and connect modern AI capability to measurable business value.</p></div></article>
-          <article class="card service reveal" data-kind="ai"><div><span class="tag">Build</span><h3>POC and MVP design</h3><p>Turn early concepts into testable systems with clear scope, assumptions, learning loops, and practical delivery plans.</p></div></article>
-          <article class="card service reveal" data-kind="technical"><div><span class="tag">Apps</span><h3>Python and LabVIEW applications</h3><p>Build technical applications, automation tools, analysis workflows, and prototypes that reduce manual work.</p></div></article>
-          <article class="card service reveal" data-kind="technical"><div><span class="tag">Data</span><h3>SQL optimization</h3><p>Improve slow queries, clean data logic, simplify reporting pipelines, and make data systems more reliable and useful.</p></div></article>
+    <section id="services" class="section"><div class="wrap"><div class="section-head reveal"><h2>Strategy connected to implementation.</h2><p>MitchellCo works where product, analytics, automation, AI, and technical execution meet. The goal is not a slide deck. The goal is a clearer system and a usable artifact.</p></div><div class="service-tools reveal" role="toolbar" aria-label="Filter services"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="product">Product + execution</button><button class="filter" data-filter="analytics">Metrics + dashboards</button><button class="filter" data-filter="ai">AI + MVP</button><button class="filter" data-filter="technical">Technical systems</button></div><div class="service-grid"><article class="card service reveal" data-kind="product"><div><span class="tag">Product</span><h3>Product management</h3><p>Clarify product direction, prioritize work, translate customer needs into execution, and connect roadmaps to measurable outcomes.</p></div></article><article class="card service reveal" data-kind="product"><div><span class="tag">Execution</span><h3>Project execution</h3><p>Align stakeholders, reduce ambiguity, surface risks early, and keep technical and business teams moving toward the same target.</p></div></article><article class="card service reveal" data-kind="analytics"><div><span class="tag">Metrics</span><h3>KPI design</h3><p>Design metrics that clarify performance, expose bottlenecks, and support decisions instead of creating reporting noise.</p></div></article><article class="card service reveal" data-kind="analytics"><div><span class="tag">Dashboards</span><h3>Dashboard design</h3><p>Turn messy data into clear operating views for leadership, product, operations, and customer-facing teams.</p></div></article><article class="card service reveal" data-kind="ai"><div><span class="tag">AI</span><h3>AI, ML, and LLM strategy</h3><p>Identify realistic AI opportunities, evaluate use cases, design workflows, and connect modern AI capability to measurable business value.</p></div></article><article class="card service reveal" data-kind="ai"><div><span class="tag">Build</span><h3>POC and MVP design</h3><p>Turn early concepts into testable systems with clear scope, assumptions, learning loops, and practical delivery plans.</p></div></article><article class="card service reveal" data-kind="technical"><div><span class="tag">Apps</span><h3>Python and LabVIEW applications</h3><p>Build technical applications, automation tools, analysis workflows, and prototypes that reduce manual work.</p></div></article><article class="card service reveal" data-kind="technical"><div><span class="tag">Data</span><h3>SQL optimization</h3><p>Improve slow queries, clean data logic, simplify reporting pipelines, and make data systems more reliable and useful.</p></div></article><article class="card service reveal" data-kind="ai"><div><span class="tag">Agents</span><h3>LLMs, MCP, connectors, and agent workflows</h3><p>Design practical LLM workflows using connectors, MCP-style tool access, retrieval patterns, and looping agent personas for research, critique, synthesis, and task execution.</p></div></article><article class="card service reveal" data-kind="technical"><div><span class="tag">APIs</span><h3>APIs and integrations</h3><p>Connect systems through APIs, data pipelines, webhooks, internal tools, and workflow integrations so information moves cleanly across teams and tools.</p></div></article><article class="card service reveal" data-kind="analytics"><div><span class="tag">Geo</span><h3>Geospatial analytics</h3><p>Analyze location, routing, fleet, service-area, coverage, and map-based patterns where physical operations and data need to meet.</p></div></article></div></div></section>
 
-          <article class="card service reveal" data-kind="ai"><div><span class="tag">Agents</span><h3>LLMs, MCP, connectors, and agent workflows</h3><p>Design practical LLM workflows using connectors, MCP-style tool access, retrieval patterns, and looping agent personas for research, critique, synthesis, and task execution.</p></div></article>
-          <article class="card service reveal" data-kind="technical"><div><span class="tag">APIs</span><h3>APIs and integrations</h3><p>Connect systems through APIs, data pipelines, webhooks, internal tools, and workflow integrations so information moves cleanly across teams and tools.</p></div></article>
-          <article class="card service reveal" data-kind="analytics"><div><span class="tag">Geo</span><h3>Geospatial analytics</h3><p>Analyze location, routing, fleet, service-area, coverage, and map-based patterns where physical operations and data need to meet.</p></div></article>
-        </div>
-      </div>
-    </section>
+    <section id="ai-systems" class="section"><div class="wrap"><div class="section-head reveal"><h2>Modern AI systems need more than a chatbot.</h2><p>LLMs create leverage when they are connected to the right tools, data, workflows, and review loops. MitchellCo helps teams design practical AI systems that support real work rather than isolated demos.</p></div><div class="cards"><article class="card reveal"><span class="num">LLM</span><h3>LLM workflows and vibe coding</h3><p>Use LLM agent loops to accelerate exploration, prototyping, code generation, documentation, analysis, and product discovery, while keeping human judgment, testing, and review in the loop.</p></article><article class="card reveal"><span class="num">MCP</span><h3>MCP, connectors, and tool access</h3><p>Design connector patterns that let AI systems safely reach relevant context, APIs, files, databases, dashboards, and business tools with clear boundaries and traceable outputs.</p></article><article class="card reveal"><span class="num">API</span><h3>APIs, integrations, and data movement</h3><p>Map the systems that need to talk to each other, then design lightweight integrations, API workflows, webhooks, and data paths that reduce manual handoffs and reporting friction.</p></article></div><div class="proof-work" style="margin-top:1rem"><article class="card reveal"><span class="tag">Agentic systems</span><h3>Looping agent personas for better decisions</h3><p>Use structured agent loops for research, critique, scenario planning, ranking, synthesis, and verification. This is useful when a single-pass prompt is too shallow for complex product, strategy, or technical questions.</p></article><article class="card reveal"><span class="tag">Location intelligence</span><h3>Geospatial analytics and operational maps</h3><p>Apply map-based analysis to fleet operations, routing, service areas, coverage, field work, delivery zones, asset placement, and other problems where location changes the decision.</p></article></div></div></section>
 
+    <section class="section" aria-labelledby="engagements-title"><div class="wrap proof-grid"><article class="card reveal"><div class="eyebrow">Best-fit engagements</div><h2 id="engagements-title" class="grad" style="font-size:clamp(2.2rem,4.7vw,4.8rem);line-height:.9;letter-spacing:-.07em;margin-bottom:1rem">Useful when the problem spans business, data, product, and build.</h2><p style="color:var(--muted);line-height:1.65">MitchellCo is built for situations where a team needs more than advice but less than a large transformation program. The work can start with discovery, then move quickly into a practical artifact: roadmap, KPI model, dashboard, prototype, SQL improvement, workflow, or MVP plan.</p></article><aside class="card reveal"><h3>Common entry points</h3><div class="proof-list"><div class="proof-item"><b>01</b><p>“We know something is broken, but we are not aligned on the real problem.”</p></div><div class="proof-item"><b>02</b><p>“Our data exists, but it is not helping leaders make decisions.”</p></div><div class="proof-item"><b>03</b><p>“We need to validate an AI, automation, or product idea before committing more spend.”</p></div><div class="proof-item"><b>04</b><p>“We need someone who can think strategically and still help build the first version.”</p></div></div></aside></div></section>
 
-    <section id="ai-systems" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Modern AI systems need more than a chatbot.</h2>
-          <p>LLMs create leverage when they are connected to the right tools, data, workflows, and review loops. MitchellCo helps teams design practical AI systems that support real work rather than isolated demos.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal">
-            <span class="num">LLM</span>
-            <h3>LLM workflows and vibe coding</h3>
-            <p>Use LLM agent loops to accelerate exploration, prototyping, code generation, documentation, analysis, and product discovery, while keeping human judgment, testing, and review in the loop.</p>
-          </article>
-          <article class="card reveal">
-            <span class="num">MCP</span>
-            <h3>MCP, connectors, and tool access</h3>
-            <p>Design connector patterns that let AI systems safely reach relevant context, APIs, files, databases, dashboards, and business tools with clear boundaries and traceable outputs.</p>
-          </article>
-          <article class="card reveal">
-            <span class="num">API</span>
-            <h3>APIs, integrations, and data movement</h3>
-            <p>Map the systems that need to talk to each other, then design lightweight integrations, API workflows, webhooks, and data paths that reduce manual handoffs and reporting friction.</p>
-          </article>
-        </div>
-        <div class="proof-work" style="margin-top:1rem">
-          <article class="card reveal">
-            <span class="tag">Agentic systems</span>
-            <h3>Looping agent personas for better decisions</h3>
-            <p>Use structured agent loops for research, critique, scenario planning, ranking, synthesis, and verification. This is useful when a single-pass prompt is too shallow for complex product, strategy, or technical questions.</p>
-          </article>
-          <article class="card reveal">
-            <span class="tag">Location intelligence</span>
-            <h3>Geospatial analytics and operational maps</h3>
-            <p>Apply map-based analysis to fleet operations, routing, service areas, coverage, field work, delivery zones, asset placement, and other problems where location changes the decision.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section class="section" aria-labelledby="industries-title"><div class="wrap"><div class="section-head reveal"><h2 id="industries-title">Built for real-world complexity.</h2><p>Cross-industry pattern recognition helps find failure modes early: adoption risk, operational ambiguity, physical-world constraints, messy data, regulatory pressure, reporting friction, and fast-changing technical requirements.</p></div><div class="industries reveal" aria-label="Industry experience"><span class="pill">Healthcare</span><span class="pill">Robotics</span><span class="pill">Defense / DoD</span><span class="pill">Petrochemicals</span><span class="pill">Academia</span><span class="pill">Dog grooming</span><span class="pill">Ad tech</span><span class="pill">Industrial systems</span><span class="pill">SMB operations</span></div></div></section>
 
-    <section class="section" aria-labelledby="engagements-title">
-      <div class="wrap proof-grid">
-        <article class="card reveal">
-          <div class="eyebrow">Best-fit engagements</div>
-          <h2 id="engagements-title" class="grad" style="font-size:clamp(2.2rem,4.7vw,4.8rem);line-height:.9;letter-spacing:-.07em;margin-bottom:1rem">Useful when the problem spans business, data, product, and build.</h2>
-          <p style="color:var(--muted);line-height:1.65">MitchellCo is built for situations where a team needs more than advice but less than a large transformation program. The work can start with discovery, then move quickly into a practical artifact: roadmap, KPI model, dashboard, prototype, SQL improvement, workflow, or MVP plan.</p>
-        </article>
-        <aside class="card reveal">
-          <h3>Common entry points</h3>
-          <div class="proof-list">
-            <div class="proof-item"><b>01</b><p>“We know something is broken, but we are not aligned on the real problem.”</p></div>
-            <div class="proof-item"><b>02</b><p>“Our data exists, but it is not helping leaders make decisions.”</p></div>
-            <div class="proof-item"><b>03</b><p>“We need to validate an AI, automation, or product idea before committing more spend.”</p></div>
-            <div class="proof-item"><b>04</b><p>“We need someone who can think strategically and still help build the first version.”</p></div>
-          </div>
-        </aside>
-      </div>
-    </section>
+    <section id="faq" class="section"><div class="wrap"><div class="section-head reveal"><h2>Questions prospects and search engines should understand.</h2><p>These answers are written plainly for humans and structured clearly for crawlers, AI answer engines, and LLM retrieval.</p></div><div class="faq reveal"><details open><summary>What does MitchellCo Inc. help with?</summary><p>Product management, project execution, KPI design, dashboard design, AI/ML/LLM strategy, POC and MVP design, Python and LabVIEW applications, and SQL optimization.</p></details><details><summary>What makes the engagement model different?</summary><p>The model is intentionally light-touch and high-leverage: senior judgment, practical artifacts, and direct implementation support without the drag of a large consulting program.</p></details><details><summary>What does “0 to 1 to 100” mean?</summary><p>0 means finding the signal in ambiguity. 1 means building the first usable version. 100 means making the system measurable, repeatable, and scalable.</p></details><details><summary>What kind of deliverables can come out of an engagement?</summary><p>A focused roadmap, KPI model, dashboard, technical prototype, AI workflow, MVP scope, SQL improvement, API integration plan, connector pattern, Python or LabVIEW tool, geospatial analysis, execution plan, or operating cadence.</p></details><details><summary>Can MitchellCo help with LLMs, MCP, connectors, APIs, and agent workflows?</summary><p>Yes. MitchellCo can help design practical LLM workflows, MCP-style connector patterns, API integrations, looping agent personas, and AI-assisted prototyping systems that connect to real business context instead of operating as isolated chatbot demos.</p></details><details><summary>Can MitchellCo help with geospatial analytics?</summary><p>Yes. Geospatial analytics can support fleet, routing, service-area, coverage, delivery, asset placement, and operations questions where location materially changes the decision.</p></details></div></div></section>
 
-    <section class="section" aria-labelledby="industries-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2 id="industries-title">Built for real-world complexity.</h2>
-          <p>Cross-industry pattern recognition helps find failure modes early: adoption risk, operational ambiguity, physical-world constraints, messy data, regulatory pressure, reporting friction, and fast-changing technical requirements.</p>
-        </div>
-        <div class="industries reveal" aria-label="Industry experience">
-          <span class="pill">Healthcare</span><span class="pill">Robotics</span><span class="pill">Defense / DoD</span><span class="pill">Petrochemicals</span><span class="pill">Academia</span><span class="pill">Dog grooming</span><span class="pill">Ad tech</span><span class="pill">Industrial systems</span><span class="pill">SMB operations</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Questions prospects and search engines should understand.</h2>
-          <p>These answers are written plainly for humans and structured clearly for crawlers, AI answer engines, and LLM retrieval.</p>
-        </div>
-        <div class="faq reveal">
-          <details open><summary>What does MitchellCo Inc. help with?</summary><p>Product management, project execution, KPI design, dashboard design, AI/ML/LLM strategy, POC and MVP design, Python and LabVIEW applications, and SQL optimization.</p></details>
-          <details><summary>What makes the engagement model different?</summary><p>The model is intentionally light-touch and high-leverage: senior judgment, practical artifacts, and direct implementation support without the drag of a large consulting program.</p></details>
-          <details><summary>What does “0 to 1 to 100” mean?</summary><p>0 means finding the signal in ambiguity. 1 means building the first usable version. 100 means making the system measurable, repeatable, and scalable.</p></details>
-          <details><summary>What kind of deliverables can come out of an engagement?</summary><p>A focused roadmap, KPI model, dashboard, technical prototype, AI workflow, MVP scope, SQL improvement, API integration plan, connector pattern, Python or LabVIEW tool, geospatial analysis, execution plan, or operating cadence.</p></details>
-          <details><summary>Can MitchellCo help with LLMs, MCP, connectors, APIs, and agent workflows?</summary><p>Yes. MitchellCo can help design practical LLM workflows, MCP-style connector patterns, API integrations, looping agent personas, and AI-assisted prototyping systems that connect to real business context instead of operating as isolated chatbot demos.</p></details>
-          <details><summary>Can MitchellCo help with geospatial analytics?</summary><p>Yes. Geospatial analytics can support fleet, routing, service-area, coverage, delivery, asset placement, and operations questions where location materially changes the decision.</p></details>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="wrap">
-        <div class="cta reveal">
-          <div>
-            <div class="eyebrow">Next step</div>
-            <h2>Make the next decision easier.</h2>
-            <p>Your business does not need more noise, more tools, or more generic advice. It needs clearer signals, better systems, and practical execution.</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="mailto:mitchellcoinc012@gmail.com?subject=MitchellCo%20consulting%20conversation">Start a conversation</a>
-            <a class="btn secondary" href="#diagnostic">Use the fit check</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="contact" class="section"><div class="wrap"><div class="cta reveal"><div><div class="eyebrow">Next step</div><h2>Make the next decision easier.</h2><p>Your business does not need more noise, more tools, or more generic advice. It needs clearer signals, better systems, and practical execution.</p></div><div class="actions"><a class="btn" href="mailto:mitchellcoinc012@gmail.com?subject=MitchellCo%20consulting%20conversation">Start a conversation</a><a class="btn secondary" href="#diagnostic">Use the fit check</a></div></div></div></section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-grid">
-      <span>© MitchellCo Inc. Product, analytics, AI, MVPs, technical systems, and execution support for modern SMBs.</span>
-      <a href="mailto:mitchellcoinc012@gmail.com">mitchellcoinc012@gmail.com</a>
-    </div>
-  </footer>
+  <footer class="footer"><div class="wrap footer-grid"><span>© MitchellCo Inc. Product, analytics, AI, MVPs, technical systems, and execution support for modern SMBs.</span><a href="mailto:mitchellcoinc012@gmail.com">mitchellcoinc012@gmail.com</a></div></footer>
 
   <script>
     const progress = document.querySelector('.progress');
-    function updateProgress(){
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-      progress.style.width = pct + '%';
-    }
-    updateProgress();
-    window.addEventListener('scroll', updateProgress, {passive:true});
-    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
-
-    const modelText = {
-      '0':'Clarify customer problems, workflows, bottlenecks, constraints, and the few metrics that should drive the next decision.',
-      '1':'Scope the first usable artifact: MVP, POC, dashboard, workflow, AI prototype, SQL improvement, or internal tool.',
-      '100':'Make the system repeatable through better KPIs, documentation, dashboards, operating cadence, reliability, and execution rituals.'
-    };
-    const modelCopy = document.getElementById('model-copy');
-    document.querySelectorAll('.node').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.node').forEach(n => {n.classList.remove('active'); n.setAttribute('aria-selected','false');});
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected','true');
-        modelCopy.textContent = modelText[btn.dataset.model];
-      });
-    });
-
-    document.querySelectorAll('.filter').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const kind = btn.dataset.filter;
-        document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.service').forEach(card => {
-          card.classList.toggle('hide', !(kind === 'all' || card.dataset.kind === kind));
-        });
-      });
-    });
-
-    const fitScore = document.getElementById('fit-score');
-    const fitTitle = document.getElementById('fit-title');
-    const fitCopy = document.getElementById('fit-copy');
-    function updateFit(){
-      const checked = [...document.querySelectorAll('.check input')].filter(i => i.checked).length;
-      fitScore.textContent = checked + '/5';
-      if(checked === 0){
-        fitTitle.textContent = 'No blockers selected yet.';
-        fitCopy.textContent = 'Select the problems that match your business. The more boxes selected, the more likely a focused MitchellCo engagement can create leverage quickly.';
-      } else if(checked < 3){
-        fitTitle.textContent = 'Focused advisory may be enough.';
-        fitCopy.textContent = 'A short engagement could clarify the problem, define the metric model, and identify the most useful first artifact.';
-      } else if(checked < 5){
-        fitTitle.textContent = 'Strong fit for a 0 → 1 engagement.';
-        fitCopy.textContent = 'The pattern suggests a mix of product clarity, metrics, technical design, and execution structure. This is where MitchellCo is strongest.';
-      } else {
-        fitTitle.textContent = 'Very strong fit for systems intervention.';
-        fitCopy.textContent = 'You likely need a practical bridge between strategy and implementation: clarify, prototype, measure, and create an operating system the team can reuse.';
-      }
-    }
-    document.querySelectorAll('.check input').forEach(input => input.addEventListener('change', updateFit));
+    function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;const pct=max>0?(window.scrollY/max)*100:0;progress.style.width=pct+'%';}
+    updateProgress();window.addEventListener('scroll',updateProgress,{passive:true});document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
+    const modelText={'0':'Clarify customer problems, workflows, bottlenecks, constraints, and the few metrics that should drive the next decision.','1':'Scope the first usable artifact: MVP, POC, dashboard, workflow, AI prototype, SQL improvement, or internal tool.','100':'Make the system repeatable through better KPIs, documentation, dashboards, operating cadence, reliability, and execution rituals.'};
+    const modelCopy=document.getElementById('model-copy');document.querySelectorAll('.node').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.node').forEach(n=>{n.classList.remove('active');n.setAttribute('aria-selected','false');});btn.classList.add('active');btn.setAttribute('aria-selected','true');modelCopy.textContent=modelText[btn.dataset.model];});});
+    document.querySelectorAll('.filter').forEach(btn=>{btn.addEventListener('click',()=>{const kind=btn.dataset.filter;document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.service').forEach(card=>{card.classList.toggle('hide',!(kind==='all'||card.dataset.kind===kind));});});});
+    const fitScore=document.getElementById('fit-score');const fitTitle=document.getElementById('fit-title');const fitCopy=document.getElementById('fit-copy');function updateFit(){const checked=[...document.querySelectorAll('.check input')].filter(i=>i.checked).length;fitScore.textContent=checked+'/5';if(checked===0){fitTitle.textContent='No blockers selected yet.';fitCopy.textContent='Select the problems that match your business. The more boxes selected, the more likely a focused MitchellCo engagement can create leverage quickly.';}else if(checked<3){fitTitle.textContent='Focused advisory may be enough.';fitCopy.textContent='A short engagement could clarify the problem, define the metric model, and identify the most useful first artifact.';}else if(checked<5){fitTitle.textContent='Strong fit for a 0 → 1 engagement.';fitCopy.textContent='The pattern suggests a mix of product clarity, metrics, technical design, and execution structure. This is where MitchellCo is strongest.';}else{fitTitle.textContent='Very strong fit for systems intervention.';fitCopy.textContent='You likely need a practical bridge between strategy and implementation: clarify, prototype, measure, and create an operating system the team can reuse.';}}document.querySelectorAll('.check input').forEach(input=>input.addEventListener('change',updateFit));
   </script>
 </body>
 </html>
