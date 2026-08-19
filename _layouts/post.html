@@ -100,6 +100,10 @@
     article code{background:rgba(255,255,255,.08);padding:.13rem .3rem;border-radius:6px}
     article pre{overflow:auto;background:#091727;border:1px solid var(--line);border-radius:16px;padding:1rem}
     article pre code{background:none;padding:0}
+    .comments{margin-top:4rem;padding-top:1.8rem;border-top:1px solid var(--line)}
+    .comments h2{font-size:1.7rem;letter-spacing:-.04em;margin:0 0 .45rem}
+    .comments p{color:var(--muted);margin:0 0 1.2rem;line-height:1.55}
+    .giscus,.giscus-frame{width:100%}
     .post-nav{margin-top:4rem;padding-top:1.3rem;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     .post-nav a{display:block;border:1px solid var(--line);border-radius:16px;background:rgba(15,30,51,.62);padding:1rem;color:var(--muted)}
     .post-nav a strong{display:block;color:var(--ink);margin-top:.3rem}
@@ -137,6 +141,30 @@
     <article>
       {{ content }}
     </article>
+
+    {% if site.giscus.category_id and site.giscus.category_id != "" %}
+    <section class="comments" aria-labelledby="comments-title">
+      <h2 id="comments-title">Comments</h2>
+      <p>Comments are powered by GitHub Discussions through Giscus.</p>
+      <div class="giscus"></div>
+      <script src="https://giscus.app/client.js"
+              data-repo="{{ site.giscus.repo }}"
+              data-repo-id="{{ site.giscus.repo_id }}"
+              data-category="{{ site.giscus.category }}"
+              data-category-id="{{ site.giscus.category_id }}"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="dark_dimmed"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </section>
+    {% endif %}
 
     <nav class="post-nav" aria-label="Previous and next posts">
       <div>
