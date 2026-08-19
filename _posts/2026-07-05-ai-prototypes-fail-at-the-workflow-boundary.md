@@ -3,115 +3,61 @@ layout: post
 title: "AI Prototypes Usually Fail at the Workflow Boundary"
 date: 2026-07-05 14:10:00 -0500
 category: AI + Product
-description: "A model can work perfectly in a demo and still fail as a product if it does not fit the surrounding workflow."
+description: "The model is only one component. Most of the product work lives in context, permissions, handoffs, review and recovery."
 read_time: "4 min read"
 ---
 
-AI demos are unusually good at creating false confidence.
+The most impressive part of an AI demo is often the least representative part of the eventual product.
 
-A model answers a question correctly, summarizes a document, classifies an image, or generates a useful recommendation.
+Give a model the right prompt, the right context and a clean example and it can do something genuinely useful in a few seconds. That's the fun part.
 
-Everyone in the room sees the capability and assumes the hard part is mostly solved.
+Production is where all the inconvenient questions show up.
 
-Often it isn't.
+Which context should the model see? How fresh is it? What is the user actually allowed to access? What happens when the model is uncertain? Where does the result go? Can a human correct it? Do we capture that correction? What happens on the third retry when an upstream service is down?
 
-The hard part is what happens **before and after the model runs.**
+I've seen versions of this problem across AI/ML, robotics and geospatial workflows. The model matters, obviously, but the handoffs around it usually decide whether the feature survives contact with real work.
 
-## The model is only one step
+## A good answer in the wrong place is still a bad product
 
-Imagine a team building an AI assistant for customer support.
+Take a support assistant.
 
-The prototype works like this:
+Generating a decent draft reply isn't the hard part anymore.
 
-1. Paste a customer message into the model.
-2. The model generates a good response.
-3. A support agent copies the response into the ticketing system.
+The useful system has to retrieve the right account history, respect permissions, know which product or configuration the customer has, surface uncertainty, put the draft where the agent is already working, and log what was actually sent.
 
-The model may be excellent.
+If the agent has to copy an identifier into another tool, wait, interpret a block of prose, copy the answer back and then clean it up, the AI can be technically impressive and operationally worse.
 
-But the actual production workflow needs to answer questions such as:
+One exercise I use is to draw the workflow with the model as only one box:
 
-- How does the model get the right customer history?
-- Which account data is safe to expose?
-- How does it know which product version the customer uses?
-- What happens when the model is uncertain?
-- Can the agent edit the answer before sending it?
-- How is the final response logged?
-- Can we measure whether the suggestion was helpful?
+> event arrives → retrieve context → run model → validate output → human review if needed → take action → capture outcome
 
-Those are not edge cases. They are the product.
+Then I spend more time on the arrows than the box.
 
-## Look for the handoffs
+That's where stale data, permission mistakes, formatting mismatches, retries and missing feedback tend to hide.
 
-A useful way to evaluate an AI feature is to draw the workflow around it.
+## Model metrics aren't enough
 
-For example:
+Accuracy, precision, recall, latency and cost all matter. I still want them.
 
-> incoming ticket → retrieve context → generate draft → human review → send response → measure outcome
+But I also want to know what happened to the job:
 
-Then inspect every arrow.
+- Did the user finish faster?
+- How often was the recommendation accepted?
+- When users changed it, what did they change?
+- Did the feature create a new support burden?
+- How often did the system escalate instead of guessing?
+- Did it hold up on the ugly edge cases, not just the demo set?
 
-The failures often occur at those boundaries:
+Sometimes the model gets better while the workflow gets worse. That's a pretty useful warning that the team is optimizing one component instead of the product.
 
-- wrong context retrieved
-- stale data passed to the model
-- permissions ignored
-- output returned in an unusable format
-- no obvious escalation path
-- no feedback captured after the decision
+## Prototype the boring parts earlier
 
-The model can be 95% accurate and the overall workflow can still be frustrating.
+Once the core model capability looks plausible, I like to prototype the unglamorous pieces sooner than feels natural.
 
-## Prototype the ugly parts early
+Can we get the right data automatically? Can we show provenance? Can the user recover from a wrong answer? Can the output fit into the existing system without opening another tab? Can we capture feedback without asking the user to fill out a survey every time?
 
-Teams naturally prototype the impressive part first.
+Those questions rarely make the demo video.
 
-That is understandable. The AI capability is usually the uncertain technical question.
+They're often the difference between a feature people try once and something they quietly start depending on.
 
-But once the capability is demonstrated, the next prototype should often focus on something much less exciting:
-
-**Can this fit into the real job without creating more work?**
-
-Suppose an analyst currently reviews 30 cases each morning.
-
-An AI system that generates a prediction for each case sounds useful.
-
-But if the analyst has to open another application, search for the case, copy an identifier, wait for the model, interpret an unstructured answer, and then return to the original system, the feature may actually slow the job down.
-
-A better product might place one ranked recommendation directly inside the analyst's existing queue.
-
-Same model. Very different product value.
-
-## Measure the whole workflow
-
-AI teams often measure model quality because it is easy to define.
-
-Precision, recall, accuracy, latency, and token cost matter.
-
-But product success may depend on different metrics:
-
-- time saved per task
-- percentage of suggestions accepted
-- percentage edited before use
-- escalation rate
-- error-recovery time
-- user trust
-- completion rate
-
-If the model gets better but users accept fewer suggestions, you may have improved the wrong thing.
-
-## The strongest AI products disappear into the work
-
-The goal usually should not be to make users admire the model.
-
-The goal should be to make a difficult task easier.
-
-That means AI product design is partly model design, but it is also integration design, permissions design, interface design, measurement design, and exception handling.
-
-A useful test is:
-
-> If we removed the word "AI" from the product description, would the workflow still sound valuable?
-
-If the answer is yes, you are probably building a product.
-
-If the answer is no, you may still be building a demo.
+That's usually what I'm after. I don't need the user to admire the model. I need the work to get easier.
