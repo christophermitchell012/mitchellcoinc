@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Every Operational Metric Needs an Owner, a Threshold, and an Action"
+title: "For an Operational Metric, Define the Owner, Threshold, and First Move"
 date: 2026-08-02 11:35:00 -0500
 category: Product + Analytics
-description: "Telemetry becomes operational only when the team agrees who responds, what abnormal means, and what happens next."
+description: "When a metric is intended to drive an operational response, define who responds, what abnormal means, and what happens first."
 read_time: "4 min read"
 ---
 
@@ -11,7 +11,7 @@ I've worked on autonomous robots, energy systems, analytical instruments and sof
 
 The dashboard isn't the scarce resource. Attention is.
 
-So for the small set of metrics that are supposed to drive operations, I want three things to be pretty clear: who owns the response, what abnormal means, and what the first move should be.
+So for the small set of metrics that are actually supposed to drive an operational response, I want three things to be pretty clear: who owns the response, what abnormal means, and what the first move should be.
 
 That sounds obvious. In practice, teams often discover those answers in the middle of the incident, which is exactly when you don't want to be figuring them out.
 
