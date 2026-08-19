@@ -1,1 +1,8 @@
+title: MitchellCo Inc.
+description: Product, AI, analytics, robotics, technical systems, and execution notes from Christopher Mitchell.
+url: https://mitchellcoinc.com
+baseurl: ""
+timezone: America/Chicago
+permalink: /blog/:year/:month/:day/:title/
+future: false
 exclude: [CNAME, README.md]
