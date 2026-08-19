@@ -3,7 +3,7 @@ layout: post
 title: "AI Prototypes Usually Fail at the Workflow Boundary"
 date: 2026-07-05 14:10:00 -0500
 category: AI + Product
- description: "A model can work perfectly in a demo and still fail as a product if it does not fit the surrounding workflow."
+description: "A model can work perfectly in a demo and still fail as a product if it does not fit the surrounding workflow."
 read_time: "4 min read"
 ---
 
