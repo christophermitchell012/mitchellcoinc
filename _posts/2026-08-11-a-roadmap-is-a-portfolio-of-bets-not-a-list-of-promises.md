@@ -3,116 +3,58 @@ layout: post
 title: "A Roadmap Is a Portfolio of Bets, Not a List of Promises"
 date: 2026-08-11 16:05:00 -0500
 category: Product
-description: "A useful roadmap makes assumptions, expected outcomes, and confidence visible instead of pretending every future item is equally certain."
+description: "Roadmaps are more useful when they expose the different levels of uncertainty behind infrastructure, product and 0-to-1 work."
 read_time: "4 min read"
 ---
 
-Roadmaps often look more certain than the future actually is.
+I don't like roadmaps that pretend every box has the same level of certainty.
 
-A feature sits in Q4, so everyone starts treating Q4 as a promise.
+Some work really is predictable. A known migration may have clear scope, a dependency list and a date that matters to another team.
 
-Then new customer evidence appears, an integration takes twice as long as expected, a competitor changes the market, or an early release teaches the team that the original problem was misunderstood.
+Other work isn't like that at all. I've managed roadmap items involving ML, robotics, integrations and new product concepts where the first milestone wasn't "ship the feature." It was more like, "find out whether this is worth building the way we currently imagine it."
 
-The roadmap changes.
+Putting both kinds of work on the same quarterly timeline without showing the difference creates fake precision.
 
-Someone concludes that product planning failed.
+## Commitment and confidence aren't the same thing
 
-Sometimes the problem is not the change.
+A team can be highly committed to solving a problem and still have low confidence in the solution. That's normal, especially in 0-to-1 work.
 
-The problem is that the roadmap was presented as a schedule of commitments instead of a **portfolio of bets.**
+If customers are struggling with onboarding, I may be confident the problem is real but unsure whether a guided setup flow, better diagnostics, a services intervention or a different integration strategy will actually fix it.
 
-## Different roadmap items have different confidence
+I don't want the roadmap to force the team to pretend that uncertainty has already disappeared.
 
-Consider three items:
-
-- migrate a known internal service
-- improve onboarding conversion
-- launch an AI assistant for a new workflow
-
-Those may all appear as boxes on the same roadmap.
-
-But they contain very different uncertainty.
-
-The migration may have relatively clear scope.
-
-The onboarding work may have a known problem but an uncertain solution.
-
-The AI assistant may have uncertainty about the customer need, workflow, technical performance, and cost.
-
-Treating all three items as equally predictable is misleading.
-
-A useful roadmap makes that difference visible.
-
-## Describe the bet
-
-For important roadmap items, write down four things:
-
-1. **Problem:** What behavior or business condition are we trying to change?
-2. **Bet:** What do we believe will improve it?
-3. **Evidence:** Why do we believe this?
-4. **Outcome:** How will we know whether it worked?
+I'd rather write the item around the problem and the next evidence we need.
 
 For example:
 
-> Problem: New customers frequently abandon setup before connecting their first data source.
+> Reduce failed first-time integrations. Test whether automatic connection diagnostics remove the two most common setup failures showing up in support cases.
 
-> Bet: A guided setup flow with automatic connection testing will reduce abandonment.
+That's concrete enough for engineering and design to work with, but it doesn't turn the first idea into a permanent promise.
 
-> Evidence: Support interviews show connection errors and unclear credentials are the dominant failure modes.
+## Some roadmap items are dates. Some are learning milestones.
 
-> Outcome: Increase successful first-day data connections from 62% to 78%.
+A fixed customer commitment may need a real delivery date. No argument there.
 
-That is much more informative than:
+An exploratory AI workflow may be better served by something like:
 
-> Q3: Improve onboarding.
+> By the end of the month, determine whether pilot users can complete the workflow with acceptable accuracy and without adding operator time.
 
-## Confidence should affect commitment
+That's still a commitment. It's just a commitment to produce evidence rather than a commitment to a feature name.
 
-Not every roadmap item deserves the same level of commitment.
+I've found this useful whenever technical feasibility and product value are tangled together. A model can work technically and still fail the workflow. A feature can be popular in interviews and still add too much operational cost. An integration can look promising until you discover the customer can't reliably provide the data it depends on.
 
-High-confidence infrastructure work might have a firm delivery target.
+Those aren't planning failures. They're things the plan needs to leave room to discover.
 
-A lower-confidence product idea might instead have a learning milestone:
+## I protect the outcome more than the noun
 
-> By September 15, validate whether at least 60% of pilot users complete the proposed workflow without assistance.
+Stakeholders naturally remember nouns: dashboard, API, PDF report, AI assistant.
 
-That lets the team commit to learning without pretending it already knows the final solution.
+The underlying need is usually closer to a verb: understand, reduce, detect, automate, decide.
 
-This is especially useful for AI, new markets, and 0-to-1 products where uncertainty is part of the work.
+If discovery shows that a Monday morning exception email solves the problem better than the "reporting dashboard" on the roadmap, I'd rather make that change than defend the original rectangle on the slide.
 
-## Protect outcomes, not feature names
+There are cases where the implementation really is the commitment. Compliance work, contractual deliverables and platform dependencies can be very specific. But when the goal is a product outcome, I want some room for the solution to get better as we learn.
 
-Roadmaps become brittle when stakeholders become attached to a specific implementation.
+For me, a roadmap is doing its job when I can look at an item and quickly answer three things: what are we trying to change, how confident are we in this approach, and what evidence would make us change direction?
 
-Suppose the roadmap promises:
-
-> Build automated weekly PDF reports.
-
-During discovery, customers may tell you they do not actually want PDFs. They want a Monday morning email containing three exceptions and links to the relevant records.
-
-If the commitment was to "PDF reports," changing direction looks like failure.
-
-If the commitment was to "reduce the time managers spend assembling weekly status information," the new solution may be a better fulfillment of the original goal.
-
-The outcome stayed stable while the implementation changed.
-
-That is healthy product development.
-
-## A roadmap should improve conversations
-
-A good roadmap should help people discuss:
-
-- why an item matters
-- what evidence supports it
-- how confident the team is
-- what has to be learned first
-- what outcome justifies continued investment
-- what would cause the team to stop or change direction
-
-If the roadmap only communicates dates and feature names, it is leaving out most of the information required to make good decisions.
-
-Plans still matter. Commitments still matter.
-
-But certainty should be earned, not implied by a rectangle on a timeline.
-
-**The strongest roadmap is not the one that changes the least. It is the one that makes it clear why the team is making each bet and what evidence would justify changing it.**
+That's a lot more useful than a box with a quarter printed on it.
