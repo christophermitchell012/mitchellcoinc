@@ -11,7 +11,7 @@ I've spent a lot of time around dashboards, both as a product manager and as the
 
 The charts usually aren't the hard part. It's deciding which numbers actually deserve attention.
 
-A fleet can have completion rate, latency, localization health, battery telemetry, route performance, support volume and another dozen signals. That's useful when you're trying to understand the system as a whole. It's less useful at 2:15 in the afternoon when performance suddenly drops and somebody needs to decide what to investigate first.
+A fleet can have completion rate, latency, localization health, battery telemetry, route performance, support volume, and another dozen signals. That's useful when you're trying to understand the system as a whole. It's less useful at 2:15 in the afternoon when performance suddenly drops and somebody needs to decide what to investigate first.
 
 That's the distinction I care about: **does the metric change a decision?**
 
@@ -25,7 +25,7 @@ What I really want is something closer to:
 
 - Which failures increased?
 - How many units are affected?
-- Is the problem concentrated in one location, software version or operating condition?
+- Is the problem concentrated in one location, software version, or operating condition?
 - Has this happened before?
 - Who owns the next investigation?
 
@@ -45,7 +45,7 @@ If customer-facing status errors increase, **trace** the event path that generat
 
 The action will be different for every system, but the metric should at least narrow the next move. A number that only produces the sentence "that looks bad" isn't finished yet.
 
-I also don't think every number needs an alert, an owner and a runbook. Some metrics are there for trends. Some belong in a weekly product review. Some are useful only after another signal fires.
+I also don't think every number needs an alert, an owner, and a runbook. Some metrics are there for trends. Some belong in a weekly product review. Some are useful only after another signal fires.
 
 The mistake is treating all of them as equally important because they happen to fit on the same screen.
 
@@ -56,3 +56,7 @@ So when I'm defining a KPI, I usually ask one extra question:
 **If this changes materially tomorrow, who will care, and what will they do differently?**
 
 If there's a clear answer, keep it prominent. If there isn't, it may still be useful data. I just wouldn't confuse it with an operational KPI.
+
+## Sources
+
+- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
