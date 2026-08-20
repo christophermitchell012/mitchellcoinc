@@ -9,13 +9,13 @@ read_time: "4 min read"
 
 The most impressive part of an AI demo is often the least representative part of the eventual product.
 
-Give a model the right prompt, the right context and a clean example and it can do something genuinely useful in a few seconds. That's the fun part.
+Give a model the right prompt, the right context, and a clean example, and it can do something genuinely useful in a few seconds. That's the fun part.
 
 Production is where all the inconvenient questions show up.
 
 Which context should the model see? How fresh is it? What is the user actually allowed to access? What happens when the model is uncertain? Where does the result go? Can a human correct it? Do we capture that correction? What happens on the third retry when an upstream service is down?
 
-I've seen versions of this problem across AI/ML, robotics and geospatial workflows. The model matters, obviously, but the handoffs around it usually decide whether the feature survives contact with real work.
+I've seen versions of this problem across AI/ML, robotics, and geospatial workflows. The model matters, obviously, but the handoffs around it usually decide whether the feature survives contact with real work.
 
 ## A good answer in the wrong place is still a bad product
 
@@ -25,7 +25,7 @@ Generating a decent draft reply isn't the hard part anymore.
 
 The useful system has to retrieve the right account history, respect permissions, know which product or configuration the customer has, surface uncertainty, put the draft where the agent is already working, and log what was actually sent.
 
-If the agent has to copy an identifier into another tool, wait, interpret a block of prose, copy the answer back and then clean it up, the AI can be technically impressive and operationally worse.
+If the agent has to copy an identifier into another tool, wait, interpret a block of prose, copy the answer back, and then clean it up, the AI can be technically impressive and operationally worse.
 
 One exercise I use is to draw the workflow with the model as only one box:
 
@@ -33,11 +33,11 @@ One exercise I use is to draw the workflow with the model as only one box:
 
 Then I spend more time on the arrows than the box.
 
-That's where stale data, permission mistakes, formatting mismatches, retries and missing feedback tend to hide.
+That's where stale data, permission mistakes, formatting mismatches, retries, and missing feedback tend to hide.
 
 ## Model metrics aren't enough
 
-Accuracy, precision, recall, latency and cost all matter. I still want them.
+Accuracy, precision, recall, latency, and cost all matter. I still want them.
 
 But I also want to know what happened to the job:
 
@@ -61,3 +61,7 @@ Those questions rarely make the demo video.
 They're often the difference between a feature people try once and something they quietly start depending on.
 
 That's usually what I'm after. I don't need the user to admire the model. I need the work to get easier.
+
+## Sources
+
+- [OpenAI: A practical guide to building agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)
