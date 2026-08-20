@@ -9,7 +9,7 @@ read_time: "4 min read"
 
 I like operational dashboards that get boring when everything is working.
 
-That sounds a little backwards because most dashboard demos try to look busy: maps, gauges, trend lines, counters and enough color to make the system feel alive.
+That sounds a little backwards because most dashboard demos try to look busy: maps, gauges, trend lines, counters, and enough color to make the system feel alive.
 
 But if I'm running an operation, I don't need the dashboard to entertain me. I need it to tell me which few things deserve attention.
 
@@ -19,7 +19,7 @@ That's why I tend to think of a good operations dashboard as an **exception queu
 
 ## Averages are still useful
 
-Average delivery time, completion rate, uptime and support volume can all tell you whether the system is generally getting better or worse. I'd keep those.
+Average delivery time, completion rate, uptime, and support volume can all tell you whether the system is generally getting better or worse. I'd keep those.
 
 I just wouldn't make an operator hunt through summary charts to discover a problem that's already visible in the underlying data.
 
@@ -39,7 +39,7 @@ I may care more about a moderate issue affecting twenty units than a severe one 
 
 So the queue needs some product judgment.
 
-Severity matters, but so can duration, customer impact, number of affected assets, recurrence and confidence in the diagnosis. You don't need an elaborate scoring model on day one. You just need to acknowledge that operators are prioritizing constantly, whether the software helps them or not.
+Severity matters, but so can duration, customer impact, number of affected assets, recurrence, and confidence in the diagnosis. You don't need an elaborate scoring model on day one. You just need to acknowledge that operators are prioritizing constantly, whether the software helps them or not.
 
 A weak alert basically says:
 
@@ -51,8 +51,12 @@ A useful exception card gets closer to:
 
 Now I know where I'd start.
 
-I usually want current state, recent history, likely contributing factors and a quick path to the underlying records. Not every case needs all of that. Every extra click should earn its keep.
+I usually want current state, recent history, likely contributing factors, and a quick path to the underlying records. Not every case needs all of that. Every extra click should earn its keep.
 
 The dashboard doesn't need to explain the entire system. It needs to make the abnormal thing hard to miss and cheap to investigate.
 
 And if everything is healthy, I'm perfectly happy for that screen to look quiet.
+
+## Sources
+
+- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
