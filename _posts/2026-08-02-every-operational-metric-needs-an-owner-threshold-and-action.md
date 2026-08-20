@@ -7,7 +7,7 @@ description: "When a metric is intended to drive an operational response, define
 read_time: "4 min read"
 ---
 
-I've worked on autonomous robots, energy systems, analytical instruments and software platforms. They all have one thing in common: once the instrumentation gets good, it's very easy to create more metrics than anyone can realistically pay attention to.
+I've worked on autonomous robots, energy systems, analytical instruments, and software platforms. They all have one thing in common: once the instrumentation gets good, it's very easy to create more metrics than anyone can realistically pay attention to.
 
 The dashboard isn't the scarce resource. Attention is.
 
@@ -43,7 +43,7 @@ It also cuts down on noisy alerts. Once operators stop trusting alerts, you're i
 
 ## Make the first investigation cheap
 
-A runbook doesn't need to be enormous. Often I only care that the first useful step is obvious.
+A runbook doesn't need to be enormous. Often, I only care that the first useful step is obvious.
 
 That might be:
 
@@ -62,3 +62,8 @@ But if a metric is supposed to cause a near-term response, I want the operating 
 Who notices it? Under what condition? What happens first?
 
 If those answers are still fuzzy, I treat the metric as reporting until the team proves otherwise.
+
+## Sources
+
+- [Google SRE: Incident Management Guide](https://sre.google/resources/practices-and-processes/incident-management-guide/)
+- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
