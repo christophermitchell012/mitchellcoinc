@@ -4,7 +4,7 @@ title: "Humanoid Robot ROI: What a Pilot Should Prove First"
 date: 2026-08-22 20:15:00 -0500
 category: Robotics + Product
 description: "Humanoid robot ROI depends on productive work, not demo fluency. Use pilot metrics for intervention, cycle time, recovery, utilization, and cost."
-read_time: "6 min read"
+read_time: "7 min read"
 ---
 
 Humanoid robots are reaching an awkward point in the product cycle: the demos are getting better faster than the business cases.
@@ -76,6 +76,38 @@ Imagine two robots that each cost $60,000. One performs productive work for 14 h
 This is why I'd be cautious about evaluating a general-purpose humanoid with a giant task catalog. Breadth looks good in a demonstration. A commercially useful pilot may be much narrower: one or two repetitive workflows, high utilization, measurable labor or throughput impact, and enough instrumentation to understand every failure.
 
 That is also why an [MVP should remove uncertainty rather than maximize features](/blog/2026/07/18/an-mvp-should-remove-uncertainty-not-maximize-features/). For a robotics pilot, the risky uncertainty may not be whether the robot can perform twenty tasks. It may be whether it can perform one economically important task often enough, fast enough, and reliably enough to justify deployment.
+
+## A simple humanoid robot ROI calculation
+
+I'd put a rough cost model next to the pilot metrics early, even when several inputs are still estimates. It makes the missing evidence obvious.
+
+Here's an intentionally simple example. These are illustrative assumptions, not market benchmarks.
+
+Suppose a $60,000 robot is expected to operate 250 days a year for three years and complete 120 useful work units per day. Assume $12,000 per year for maintenance and software, $8 per operating day for energy, and 12 remote interventions per day. If each intervention consumes two minutes of operator time at a fully loaded $35 per hour, remote support costs about $14 per day.
+
+The daily robot economics look like this:
+
+> capital allocation = $60,000 / (3 years × 250 days) = $80/day
+>
+> maintenance + software = $12,000 / 250 = $48/day
+>
+> energy = $8/day
+>
+> remote intervention = 12 × 2/60 hours × $35 = $14/day
+>
+> total = $150/day
+>
+> robot cost per completed work unit = $150 / 120 = $1.25
+
+Now compare that with the existing workflow. If the same work unit takes a person eight minutes at a fully loaded labor cost of $28 per hour, the direct labor cost is about $3.73 per work unit.
+
+For a simple payback calculation, I'd separate the $60,000 purchase price from recurring robot operating costs so I don't count the capital twice. Recurring maintenance, energy, and intervention labor total $70 per day. The baseline labor for 120 work units is about $448 per day, leaving roughly $378 per day before other costs and benefits.
+
+At 250 operating days per year, that's about $94,500 in annual gross savings and a simple hardware payback of roughly 0.63 years, or about 7.6 months.
+
+I wouldn't approve a deployment from that spreadsheet. The useful part is seeing which assumptions the pilot now has to prove. Can the robot actually sustain 120 completed units? Are 12 interventions realistic? Does maintenance really behave like a predictable annual cost? Does the workflow still need local labor that the model hasn't counted? What happens to throughput when the robot is charging or unavailable?
+
+Change any of those inputs and the answer can move quickly. That's exactly why I'd want the calculator before the pilot ends, not after someone has already decided the pilot was a success.
 
 ## The pilot should end with a deployment decision
 
