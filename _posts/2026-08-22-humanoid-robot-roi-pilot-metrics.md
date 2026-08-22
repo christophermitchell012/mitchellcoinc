@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Humanoid Robot ROI: What a Pilot Should Prove First"
-date: 2026-08-22 20:15:00 -0500
+date: 2026-08-22 14:40:00 -0500
 category: Robotics + Product
 description: "Humanoid robot ROI depends on productive work, not demo fluency. Use pilot metrics for intervention, cycle time, recovery, utilization, and cost."
 read_time: "7 min read"
