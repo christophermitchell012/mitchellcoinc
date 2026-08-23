@@ -1,109 +1,149 @@
 ---
 layout: post
-title: "AI Agent Memory: Decide What the Agent Should Forget"
+title: "AI Agent Memory: Should It Remember Everything?"
 date: 2026-08-23 09:45:00 -0500
 category: AI + Product
-description: "AI agent memory improves continuity but creates durable product risk. Define provenance, scope, expiration, correction, and deletion before storing context."
-read_time: "6 min read"
+description: "AI agent memory can improve continuity while making bad information persistent. Product teams need rules for what gets stored, corrected, expired, and forgotten."
+read_time: "4 min read"
 ---
 
-Persistent memory is starting to look like a standard feature of AI agents. Google Cloud published documentation this week for Agent Platform Memory Bank, which can generate long-term memories from conversations and reuse them across sessions. That's useful. An agent that remembers the project, the customer's preferences, or what happened yesterday doesn't have to reconstruct the world on every run.
+A bad AI answer can ruin one session.
 
-It also creates a product question that I think is getting less attention than retrieval quality: **what should the agent be allowed to remember, and when should it forget?**
+A bad AI memory can quietly contaminate the next hundred.
 
-A bad answer in one session is a problem. A bad fact written into memory can become input to many future sessions. The failure has persistence now.
+That's becoming a more important distinction as persistent memory moves into mainstream agent platforms. Google Cloud's Agent Platform Memory Bank, for example, can extract information from conversations and reuse it across future sessions.
 
-Palo Alto Networks' August Prisma AIRS update makes that risk concrete. Its AI red-teaming product now includes memory-poisoning tests for agents that can write information to persistent storage and retrieve it later. Tencent's Zhuque Lab recently demonstrated another memory-related attack path in which an agent with web access could be manipulated into leaking stored information through outbound requests.
+Useful? Absolutely.
 
-Those are security examples, but I don't think memory belongs only in a security review. The PM has to define what persistence means for the product.
+But I'd ask a different product question before celebrating that your agent finally remembers things:
 
-## AI agent memory needs a write policy
+**What has earned the right to be remembered?**
 
-When teams talk about agent memory, the conversation often jumps to architecture: vector stores, graphs, summaries, embeddings, retrieval latency. I'd start one step earlier.
+Storage is cheap. Persistent bad assumptions aren't.
 
-What earns the right to become durable state?
+## Not every fact deserves to become memory
 
-Imagine a customer-support agent sees this sentence during a conversation:
+Imagine a customer-support agent encounters this:
 
-> Don't ship replacement units to our old Dallas office anymore. We moved receiving to Austin.
+> Don't ship replacement units to our Dallas office anymore. We moved receiving to Austin.
 
-That could be valuable memory. It could also be an offhand comment from someone without authority to change shipping instructions.
+The model may have no trouble extracting:
 
-The model's ability to extract a clean fact doesn't answer whether the product should store it.
+**Shipping address = Austin**
 
-I'd classify memory writes by consequence. A low-risk preference such as output format may be safe to learn automatically. A shipping location, account entitlement, approval rule, or production configuration deserves a different path. Some information should remain session context. Some should become a proposed update that a person confirms. Some should never be treated as agent memory because another system is already the source of truth.
+That doesn't mean the product should store it.
 
-This is closely related to the [authority ladder I use for AI agent permissions](/blog/2026/08/20/ai-agent-permissions-are-a-product-decision/). Reading, proposing, and acting aren't the same authority level. Neither are observing a fact and making it persistent.
+Who said it? Were they authorized to change shipping instructions? Is the CRM actually the system of record? Was this a temporary change?
 
-## Provenance matters more once a memory survives the session
+The model solved the extraction problem. The product still has an authority problem.
 
-If an agent tells me, "The customer prefers weekly reports," I want to know where that came from.
+I'd treat memory writes much like [AI agent permissions](/blog/2026/08/20/ai-agent-permissions-are-a-product-decision/).
 
-Was it stated by the customer yesterday? Extracted from a six-month-old support ticket? Inferred from three prior actions? Written by another agent? Copied from a document that has since been replaced?
+A preference like "give me concise answers" might be safe to remember automatically.
 
-Without provenance, a memory can look authoritative simply because it has been retrieved.
+A shipping address, account entitlement, approval rule, or production configuration probably deserves confirmation or should remain owned by another system entirely.
 
-For durable memories, I'd want enough metadata to answer at least:
+The useful question isn't simply *can the agent remember this?*
 
-> source → who or what wrote it → when → confidence/status → scope → expiration or review condition
+It's *who gave it permission to make this durable?*
 
-That doesn't mean exposing a database record beside every response. It means the product should be able to trace an important remembered fact when someone questions it.
+## Remember where the memory came from
 
-This also changes how I'd think about [production evidence in AI evaluations](/blog/2026/08/21/an-ai-eval-needs-production-evidence/). A production miss caused by bad memory isn't just another prompt to add to an eval. The team needs to determine whether retrieval chose the wrong memory, the stored fact was wrong, the fact was once right but became stale, or the agent should never have stored it in the first place.
+Persistent memory also needs provenance.
 
-Those are different product defects.
+Suppose an agent tells you:
 
-## Expiration should be designed, not left to storage capacity
+> The customer prefers weekly reports.
 
-Human organizations are full of facts with half-lives.
+Great. Says who?
 
-A user's preference for concise answers may remain useful for years. An incident workaround may be obsolete after tomorrow's deployment. A customer's temporary shipping restriction may expire Friday. A project assumption can become false after one executive decision.
+Maybe the customer said it yesterday. Maybe the agent inferred it from three meetings. Maybe another agent wrote it. Maybe it came from a six-month-old support ticket that stopped being true four months ago.
 
-So I wouldn't give every memory the same retention behavior.
+Once information survives the session, retrieval alone can make it look authoritative.
 
-I'd think in terms of a few practical classes: durable preferences, time-bounded facts, task state, inferred observations, and authoritative business records. The names don't matter much. The lifecycle does.
+For consequential memories, I'd want enough metadata to reconstruct something like:
 
-For each class, I'd ask what causes a memory to expire, what supersedes it, and whether deletion means actual deletion or simply removal from retrieval.
+> source → author → time → status → scope → expiration
 
-That last distinction matters. If a user corrects an agent from "Dallas" to "Austin," keeping both facts equally retrievable and hoping the model notices the newer timestamp isn't a robust correction mechanism.
+That doesn't need to clutter the user experience. It does need to exist when someone asks, "Why does the agent think this?"
 
-The system should know which one is active.
+This also matters for [AI evaluations based on production evidence](/blog/2026/08/21/an-ai-eval-needs-production-evidence/).
 
-## Give users and operators a correction path
+If an agent acts on a bad memory, "memory accuracy dropped" isn't much of a diagnosis.
 
-Memory makes an agent feel smarter right up until it confidently remembers something wrong.
+Did retrieval select the wrong fact?
 
-Then the product needs a way out.
+Was the stored fact wrong?
 
-For consumer software, that may be a simple view where the user can inspect and delete remembered preferences. In an enterprise workflow, correction may need permissions, an audit trail, or synchronization with the system that owns the underlying record.
+Did a once-correct fact become stale?
 
-I'd also instrument corrections. If users repeatedly delete one class of automatically generated memory, that's product evidence. Maybe the extraction is poor. Maybe the scope is wrong. Maybe that information never belonged in persistent memory.
+Should the agent never have stored it?
 
-The same principle applies to operations generally: [a useful metric should narrow the next action](/blog/2026/08/19/the-best-kpi-is-the-one-that-changes-a-decision/). "Memory accuracy" as one aggregate percentage won't tell me what to fix. Correction rate by memory type, stale-memory incidents, cross-user retrieval errors, and unsupported memory writes are much closer to actionable signals.
+Those are four different defects with four different fixes.
 
-## The memory feature should have a forgetting test
+## Facts have half-lives
 
-Before I ship persistent memory, I'd test more than whether the agent remembers the right things.
+A user may prefer concise answers for years.
 
-I'd create cases where information changes, expires, conflicts, comes from an untrusted source, belongs to another user, or is explicitly deleted. Then I'd verify that future behavior changes appropriately.
+An incident workaround might survive until tomorrow morning.
 
-A useful acceptance test might look like this:
+A temporary shipping restriction may expire Friday.
 
-> Session 1: authorized user changes a preference from A to B.
+A project assumption can die during one executive meeting.
+
+Giving all of those the same retention policy is convenient for the database and not particularly useful for the product.
+
+I'd define a few memory classes and give each one an expiration or review rule.
+
+The important part isn't the taxonomy. It's the lifecycle.
+
+And correction has to actually mean correction.
+
+If a customer changes a location from Dallas to Austin, keeping both memories around and hoping the model notices the timestamp is not a correction system. It's a trivia contest.
+
+The product should know which fact is active.
+
+## Test forgetting, not just remembering
+
+Most memory demos ask:
+
+**Did the agent remember?**
+
+I'd add the opposite acceptance test:
+
+**Did the agent forget when it was supposed to?**
+
+For example:
+
+> Session 1: An authorized user changes preference A to B.  
 >
-> Session 2: agent retrieves B and can show its source.
+> Session 2: The agent retrieves B and can identify its source.  
 >
-> Session 3: user deletes B.
+> Session 3: The user deletes B.  
 >
-> Session 4: agent no longer uses B and doesn't silently reconstruct it from an obsolete summary.
+> Session 4: The agent no longer uses B or reconstructs it from some forgotten summary.
 
-I'd run similar tests for tenant isolation and poisoned input. If an external webpage tells the agent to remember a new "company policy," does that ever become durable state? If another agent writes a conclusion into shared memory, is its provenance preserved? If the source document is revoked, what happens to facts derived from it?
+Then make it nastier.
 
-An agent that remembers everything isn't necessarily more capable. It may just accumulate more ways to be confidently wrong later.
+What happens when two memories conflict?
 
-The product requirement I'd write is narrower: **remember information that improves future work, preserve enough provenance to challenge it, and make forgetting a first-class operation.**
+What happens when the source document gets revoked?
 
-That gives engineering something more useful than "add memory." It defines the lifecycle of the state we're asking the agent to carry forward.
+Can an external webpage trick the agent into storing a new "company policy"?
+
+Can one user's memory leak into another user's session?
+
+Security teams are already testing these failure modes. Palo Alto Networks has added memory-poisoning scenarios to Prisma AIRS red-team testing, and Tencent's Zhuque Lab has demonstrated attacks targeting stored agent information.
+
+Those are security problems, but they're also product requirements.
+
+A PM defining persistent memory should be specifying write authority, provenance, scope, expiration, correction, deletion, and tests for each.
+
+Otherwise "add memory" isn't much of a requirement.
+
+It's just a request to make today's context somebody else's future problem.
+
+**The best AI agent memory isn't the one that remembers everything. It's the one that knows what deserves to survive the session.**
 
 ## Sources
 
