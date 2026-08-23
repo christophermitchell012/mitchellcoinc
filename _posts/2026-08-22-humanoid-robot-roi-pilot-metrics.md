@@ -1,125 +1,96 @@
 ---
 layout: post
-title: "Humanoid Robot ROI: What a Pilot Should Prove First"
+title: "Humanoid Robot ROI: Can It Earn Its Keep?"
 date: 2026-08-22 14:40:00 -0500
 category: Robotics + Product
-description: "Humanoid robot ROI depends on productive work, not demo fluency. Use pilot metrics for intervention, cycle time, recovery, utilization, and cost."
-read_time: "7 min read"
+description: "Humanoid robot ROI depends on useful work, intervention, recovery, utilization, and cost per task. A pilot should prove the economics, not the demo."
+read_time: "5 min read"
 ---
 
-Humanoid robots are reaching an awkward point in the product cycle: the demos are getting better faster than the business cases.
+Backflips make great video. They don't pay the invoice.
 
-Reuters reported this week from China's World Robot Conference that more than 300 companies showed over 2,000 exhibits, with more than 150 product launches. The more important detail was the shift in the questions around them. Buyers and investors are increasingly looking for productivity, autonomy, and return on investment rather than another impressive dance or backflip.
+Humanoid robots are reaching the point where the product question is shifting from *can it do the task?* to *can it do enough useful work, with little enough help, to change the economics?*
 
-That's the right shift. If I were evaluating a humanoid robot pilot, I wouldn't start by asking how many tasks the robot can perform in a demo. I'd start with a narrower question: **can this system complete enough useful work, with little enough human intervention, to change the economics of the workflow?**
+Reuters reported this week that China's World Robot Conference featured more than 300 companies, over 2,000 exhibits, and more than 150 product launches. The more interesting shift was in the buyer conversation: productivity, autonomy, and return on investment are starting to matter more than another polished demo.
 
-That sounds like an ROI question. In practice, it's also a product instrumentation problem.
+That's the right test.
 
-## Humanoid robot ROI starts with the work unit
+If I were running a humanoid pilot, I'd measure the economics around one useful workflow before I cared about a giant catalog of capabilities.
 
-Before measuring autonomy, I'd define the smallest unit of useful work.
+## Measure work, not motion
 
-In a factory, that might be moving a tote from a staging area to a workstation. In a warehouse, it could be picking an item and placing it into the correct container. In a hotel, it might be completing a delivery from dispatch through handoff.
+Start with the smallest unit of useful work.
 
-The unit needs a clear start, a clear successful outcome, and a way to identify incomplete work. Otherwise, teams end up measuring robot activity instead of customer value.
+In a warehouse, maybe it's picking an item and placing it into the correct tote. In a factory, it might be moving material from staging to a workstation. In a hotel, it could be completing a delivery from dispatch through handoff.
 
-This is similar to how I've thought about autonomous delivery systems. A robot moving for forty minutes isn't necessarily productive. What matters is whether the intended job completed, how long it took, and what the operation had to do to make that happen.
+The unit needs a clear start and a clear successful outcome.
 
-For a humanoid pilot, I'd want the basic denominator to be something like:
+A robot moving for forty minutes isn't necessarily productive. I learned the same lesson around autonomous delivery systems: movement, uptime, and autonomy are useful diagnostics, but the operation ultimately cares whether the intended job finished, how long it took, and what humans had to do along the way.
+
+So I'd start with:
 
 > successful work units / attempted work units
 
-Then I'd attach time and operating cost to it.
+Then attach time and cost.
 
-A robot that completes 95% of tasks but takes four times as long as the existing process may not be useful. A robot with a lower raw completion rate might still be interesting if it works during otherwise uncovered hours or removes a difficult staffing bottleneck.
+A 95% completion rate can still be a bad product if the robot takes four times as long as the existing workflow. A lower rate might still be interesting if the robot covers an otherwise unstaffed shift or removes a persistent labor bottleneck.
 
-The economics live in the workflow, not in the headline autonomy percentage.
+The denominator matters. So does the clock.
 
-## Human intervention belongs in the cost model
+## Count the human hiding behind the autonomy number
 
-One metric I'd watch closely is interventions per completed work unit.
+One of the easiest ways to make a robotics pilot look better is to quietly add people behind the curtain.
 
-Suppose a robot completes 80 tote moves during a shift but needs a remote operator 16 times. Calling that an 80-task autonomous shift hides a meaningful part of the operation.
+That's fine during development. It isn't fine in the ROI spreadsheet.
 
-I'd want to know why each intervention happened and how expensive it was. A five-second confirmation is different from a teleoperator spending four minutes recovering a robot from a bad grasp. A local worker pressing a reset button has a different cost than a centralized operator who can support several robots.
+If a robot completes 80 tote moves but needs 16 remote interventions, I want to know what those interventions cost. A five-second approval is different from four minutes of teleoperation. A local worker pressing reset is different from one centralized operator supporting ten robots.
 
-This is where an [exception-first operations view](/blog/2026/06/26/build-dashboards-around-exceptions-not-averages/) becomes useful. I don't need an operator staring at twenty healthy robots. I need the exceptions organized well enough that one person can understand which system needs help, why, and what action is available.
+I'd track interventions per completed work unit and classify why they happened.
 
-Intervention rate also exposes a common pilot trap. Teams can quietly add human labor behind the scenes until the robot appears reliable. That's reasonable during development. It becomes a problem when that labor disappears from the ROI calculation.
+This is where an [exception-first operations view](/blog/2026/06/26/build-dashboards-around-exceptions-not-averages/) helps. Operators shouldn't stare at twenty healthy robots. They should see the few machines that need help, why they need it, and what recovery path is available.
 
 If the product needs a person, count the person.
 
-## Recovery time can matter more than failure rate
+## Recovery is part of the economics
 
-Robots will fail. The operational question is what happens next.
+Robots will fail. The expensive question is what happens next.
 
-I care about mean time to recovery, but I'd break it down by recovery mechanism. Did the robot recover itself? Did software retry the task? Did a remote operator intervene? Did someone have to walk across the building?
+Two systems can have the same completion rate and very different business value if one recovers itself in seconds while the other needs somebody to walk across the building.
 
-Two systems with the same task completion rate can have very different economics if one recovers from most failures in seconds while the other routinely needs physical assistance.
+I'd split recovery into categories: self-recovery, automatic retry, remote intervention, and physical intervention. I'd also watch recurrence. Ten unrelated edge cases are annoying. The same grasp failure ten times is a product roadmap.
 
-I'd also track recurrence. Ten unrelated edge cases are different from the same grasp failure happening ten times. The latter is much easier to prioritize and potentially much more valuable to fix.
+That connects to [operational metrics that should trigger a response](/blog/2026/08/02/every-operational-metric-needs-an-owner-threshold-and-action/). A failure metric gets much more useful once the team knows what threshold matters, who owns the first look, and what action follows.
 
-That connects to the way I think about [operational metrics that should trigger a response](/blog/2026/08/02/every-operational-metric-needs-an-owner-threshold-and-action/). A pilot metric becomes much more useful when the team knows what condition deserves investigation and who owns the first move.
+## Put a rough cost model inside the pilot
 
-## Utilization is where the hardware economics show up
+I like a simple cost model early because it tells the team what evidence the pilot still owes them.
 
-Reuters reported humanoid prices in China around 300,000 to 500,000 yuan for some systems. Hardware price matters, but purchase price by itself doesn't tell me much about ROI.
+Consider an intentionally simplified example. These are illustrative assumptions, not market benchmarks.
 
-I'd want productive utilization:
+Suppose a robot costs $60,000, operates 250 days per year for three years, and completes 120 useful work units per day. Assume $12,000 per year for maintenance and software, $8 per operating day for energy, and 12 remote interventions per day. Each intervention takes two minutes of operator time at a fully loaded $35 per hour.
 
-> time doing useful work / time available for assigned work
+That gives roughly:
 
-Charging, maintenance, waiting for tasks, blocked paths, software faults, intervention time, and changeovers all eat into that number.
+> capital allocation = $60,000 / (3 × 250) = $80/day  
+> maintenance + software = $12,000 / 250 = $48/day  
+> energy = $8/day  
+> remote intervention = 12 × 2/60 × $35 = $14/day  
+> total = $150/day  
+> cost per completed work unit = $150 / 120 = $1.25
 
-Imagine two robots that each cost $60,000. One performs productive work for 14 hours per day. The other manages four because its workflow has long idle periods and frequent resets. The same capital cost produces very different economics.
+If the current workflow takes a person eight minutes per unit at $28 per hour, direct labor is about $3.73 per unit.
 
-This is why I'd be cautious about evaluating a general-purpose humanoid with a giant task catalog. Breadth looks good in a demonstration. A commercially useful pilot may be much narrower: one or two repetitive workflows, high utilization, measurable labor or throughput impact, and enough instrumentation to understand every failure.
+That looks attractive, but the spreadsheet isn't the conclusion. It's the list of assumptions the pilot now has to attack.
 
-That is also why an [MVP should remove uncertainty rather than maximize features](/blog/2026/07/18/an-mvp-should-remove-uncertainty-not-maximize-features/). For a robotics pilot, the risky uncertainty may not be whether the robot can perform twenty tasks. It may be whether it can perform one economically important task often enough, fast enough, and reliably enough to justify deployment.
+Can the robot really sustain 120 completed units? Are 12 interventions realistic? Does maintenance stay predictable? Is local labor still required? How much time disappears into charging, blocked paths, changeovers, or resets?
 
-## A simple humanoid robot ROI calculation
+Change one of those inputs and the economics can move quickly.
 
-I'd put a rough cost model next to the pilot metrics early, even when several inputs are still estimates. It makes the missing evidence obvious.
+That's why I'd rather run a narrow pilot that measures one economically important workflow well than a broad pilot that proves the robot can do twenty impressive things once. It's the same reason [an MVP should remove uncertainty rather than maximize features](/blog/2026/07/18/an-mvp-should-remove-uncertainty-not-maximize-features/).
 
-Here's an intentionally simple example. These are illustrative assumptions, not market benchmarks.
+**The product question:** What has to be true for the next ten robots to make economic sense?
 
-Suppose a $60,000 robot is expected to operate 250 days a year for three years and complete 120 useful work units per day. Assume $12,000 per year for maintenance and software, $8 per operating day for energy, and 12 remote interventions per day. If each intervention consumes two minutes of operator time at a fully loaded $35 per hour, remote support costs about $14 per day.
-
-The daily robot economics look like this:
-
-> capital allocation = $60,000 / (3 years × 250 days) = $80/day
->
-> maintenance + software = $12,000 / 250 = $48/day
->
-> energy = $8/day
->
-> remote intervention = 12 × 2/60 hours × $35 = $14/day
->
-> total = $150/day
->
-> robot cost per completed work unit = $150 / 120 = $1.25
-
-Now compare that with the existing workflow. If the same work unit takes a person eight minutes at a fully loaded labor cost of $28 per hour, the direct labor cost is about $3.73 per work unit.
-
-For a simple payback calculation, I'd separate the $60,000 purchase price from recurring robot operating costs so I don't count the capital twice. Recurring maintenance, energy, and intervention labor total $70 per day. The baseline labor for 120 work units is about $448 per day, leaving roughly $378 per day before other costs and benefits.
-
-At 250 operating days per year, that's about $94,500 in annual gross savings and a simple hardware payback of roughly 0.63 years, or about 7.6 months.
-
-I wouldn't approve a deployment from that spreadsheet. The useful part is seeing which assumptions the pilot now has to prove. Can the robot actually sustain 120 completed units? Are 12 interventions realistic? Does maintenance really behave like a predictable annual cost? Does the workflow still need local labor that the model hasn't counted? What happens to throughput when the robot is charging or unavailable?
-
-Change any of those inputs and the answer can move quickly. That's exactly why I'd want the calculator before the pilot ends, not after someone has already decided the pilot was a success.
-
-## The pilot should end with a deployment decision
-
-I'd define the decision before starting the pilot.
-
-Maybe expansion requires a minimum completed-work rate, intervention below a certain level, recovery under a target time, and a cost per work unit that is competitive with the current process. The exact thresholds depend on the workflow, labor environment, safety requirements, and what the robot is replacing or augmenting.
-
-The point is to prevent the pilot from ending with a highlight reel and a vague sense that the technology is promising.
-
-A useful robotics pilot should leave the team able to answer a harder question: **what has to be true for the next ten robots to make economic sense?**
-
-That's a much better product requirement than proving the first robot can do something impressive once.
+A pilot that can't answer that may still prove the robot can walk, lift, sort, or wave for the camera. It just hasn't proved it can earn its keep.
 
 ## Sources
 

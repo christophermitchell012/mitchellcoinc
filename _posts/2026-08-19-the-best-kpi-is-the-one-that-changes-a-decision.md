@@ -1,41 +1,48 @@
 ---
 layout: post
-title: "The Best KPI Is the One That Changes a Decision"
+title: "Product KPIs: If the Number Moves, What Changes?"
 date: 2026-08-19 12:58:00 -0500
 category: Product + Analytics
-description: "If a metric moves and nobody knows what to do next, it is probably reporting rather than an operational KPI."
+description: "Product KPIs should narrow a decision or action when they move. If nobody changes what they do, the metric may be reporting rather than a KPI."
 read_time: "4 min read"
 ---
 
-I've spent a lot of time around dashboards, both as a product manager and as the person trying to figure out why an operational system is misbehaving.
+A dashboard can hold fifty metrics.
 
-The charts usually aren't the hard part. It's deciding which numbers actually deserve attention.
+An operator can still make one decision at a time.
 
-A fleet can have completion rate, latency, localization health, battery telemetry, route performance, support volume, and another dozen signals. That's useful when you're trying to understand the system as a whole. It's less useful at 2:15 in the afternoon when performance suddenly drops and somebody needs to decide what to investigate first.
+I've spent a lot of time around dashboards, both as a product manager and as the person trying to figure out why an operational system is misbehaving. The charts usually aren't the hard part.
 
-That's the distinction I care about: **does the metric change a decision?**
+The hard part is deciding which numbers deserve attention.
 
-## Start with the person who has to act
+A fleet can track completion rate, latency, localization health, battery telemetry, route performance, support volume, and another dozen signals. That's useful for understanding the system.
 
-In robotics and fleet operations, two very different failures can push the same top-line KPI in the wrong direction. A localization problem may reduce completed missions. So can a routing problem. So can a hardware issue.
+It's less useful at 2:15 in the afternoon when performance suddenly drops and somebody has to decide what to investigate first.
 
-If the dashboard only tells me completion fell from yesterday, I still have to do the diagnostic work manually.
+That's the test I care about for a KPI:
 
-What I really want is something closer to:
+**If the number moves, what changes?**
 
-- Which failures increased?
+## Start with the decision, not the chart
+
+In robotics and fleet operations, several different failures can push the same top-line KPI in the wrong direction. Localization trouble can reduce completed missions. So can routing. So can hardware.
+
+If the dashboard only tells me completion fell, I still have most of the diagnostic work ahead of me.
+
+What I want is context that narrows the next move:
+
+- Which failure types increased?
 - How many units are affected?
-- Is the problem concentrated in one location, software version, or operating condition?
-- Has this happened before?
+- Is the problem concentrated by location, software version, or operating condition?
 - Who owns the next investigation?
 
-At Refraction AI, some of the most useful observability work wasn't about adding more charts. It was about making abnormal behavior easier to separate from normal fleet noise.
+At Refraction AI, some of the most useful observability work wasn't adding more charts. It was making abnormal behavior easier to separate from normal fleet noise.
 
-That's as much a product problem as an analytics problem.
+That's a product problem as much as an analytics problem.
 
 ## I like metrics with an implied verb
 
-One quick test I use is to put a verb after the metric.
+One quick test is to put a verb after the number.
 
 If route failures rise, **inspect** the affected routes.
 
@@ -43,19 +50,23 @@ If localization confidence degrades, **compare** sensor and positioning data.
 
 If customer-facing status errors increase, **trace** the event path that generates those updates.
 
-The action will be different for every system, but the metric should at least narrow the next move. A number that only produces the sentence "that looks bad" isn't finished yet.
+The action changes by system, but the metric should at least narrow the next move.
 
-I also don't think every number needs an alert, an owner, and a runbook. Some metrics are there for trends. Some belong in a weekly product review. Some are useful only after another signal fires.
+A number that only produces "well, that looks bad" isn't finished yet.
+
+This doesn't mean every metric needs an alert, owner, and runbook. Some numbers are there for trend analysis. Some belong in a weekly review. Some are diagnostic signals you only open after something else fires.
 
 The mistake is treating all of them as equally important because they happen to fit on the same screen.
 
-I'd rather have five metrics that consistently trigger good decisions than fifty metrics that create the appearance of visibility.
+I'd rather have five metrics that reliably produce good decisions than fifty that produce the appearance of visibility.
 
-So when I'm defining a KPI, I usually ask one extra question:
+That connects directly to [operational metrics with explicit owners and thresholds](/blog/2026/08/02/every-operational-metric-needs-an-owner-threshold-and-action/) and to [exception-first dashboards](/blog/2026/06/26/build-dashboards-around-exceptions-not-averages/). The common thread is attention: surface what matters, then make the next decision cheaper.
 
-**If this changes materially tomorrow, who will care, and what will they do differently?**
+**The product question:** If this changes materially tomorrow, who will care and what will they do differently?
 
-If there's a clear answer, keep it prominent. If there isn't, it may still be useful data. I just wouldn't confuse it with an operational KPI.
+If there's a clear answer, keep the KPI prominent. If there isn't, the number may still be useful data.
+
+If the number moves and nothing changes, it's probably useful reporting. It just isn't the KPI you thought it was.
 
 ## Sources
 

@@ -1,67 +1,81 @@
 ---
 layout: post
-title: "For an Operational Metric, Define the Owner, Threshold, and First Move"
+title: "Operational Metrics: Your Number Moved. Who Acts Next?"
 date: 2026-08-02 11:35:00 -0500
 category: Product + Analytics
-description: "When a metric is intended to drive an operational response, define who responds, what abnormal means, and what happens first."
+description: "Operational metrics need an owner, a meaningful threshold, and an obvious first action. Otherwise a moving number is only reporting."
 read_time: "4 min read"
 ---
 
-I've worked on autonomous robots, energy systems, analytical instruments, and software platforms. They all have one thing in common: once the instrumentation gets good, it's very easy to create more metrics than anyone can realistically pay attention to.
+A metric crosses a threshold at 2:15 in the afternoon.
 
-The dashboard isn't the scarce resource. Attention is.
+Now what?
 
-So for the small set of metrics that are actually supposed to drive an operational response, I want three things to be pretty clear: who owns the response, what abnormal means, and what the first move should be.
+I've worked on autonomous robots, energy systems, analytical instruments, and software platforms. Once the instrumentation gets good, all of them can produce more metrics than anyone can realistically watch.
 
-That sounds obvious. In practice, teams often discover those answers in the middle of the incident, which is exactly when you don't want to be figuring them out.
+The dashboard isn't the scarce resource.
 
-## "Engineering owns it" usually isn't enough
+Attention is.
 
-Suppose a fleet starts showing a higher rate of localization failures.
+For the small set of numbers that are supposed to trigger an operational response, I want three things to be obvious before the number moves: who owns the response, what abnormal actually means, and what happens first.
 
-Who actually takes the first look?
+Otherwise the team gets to discover those answers during the incident, which is a strangely popular time to redesign the operating model.
+
+## Ownership should identify the first responder, not assign blame
+
+Suppose a robot fleet suddenly shows a higher rate of localization failures.
+
+Who takes the first look?
 
 Autonomy? Fleet operations? The engineer responsible for sensor fusion? Whoever pushed the latest build?
 
-The right answer depends on the organization, and it can change as the product matures. What matters is that the people dealing with the problem don't have to reconstruct the org chart while the system is misbehaving.
+The right answer depends on the organization, and it may change as the product matures. What matters is that nobody has to reconstruct the org chart while the fleet is misbehaving.
 
-Ownership isn't blame. It's just the role responsible for making sure the signal turns into a response.
+Ownership isn't blame. It's the role accountable for turning the signal into investigation.
 
-## Thresholds need context, not just a number
+That first owner can always pull in somebody else.
 
-I'm suspicious of thresholds that are simply "above X is bad."
+## A useful threshold has context
+
+I'm suspicious of thresholds that amount to "above X is bad."
 
 A CPU spike for three seconds is different from the same value for twenty minutes. One failed delivery is different from twenty failures clustered in the same neighborhood. A sensor dropout on a parked system may be irrelevant and critical while the system is moving.
 
-So I tend to think about the condition as some combination of:
+I usually think about an operational condition as some combination of:
 
-> value + duration + operating context + impact
+> value + duration + context + impact
 
-That's much closer to how people reason about real systems.
+That's much closer to how operators actually reason.
 
-It also cuts down on noisy alerts. Once operators stop trusting alerts, you're in a bad place because the monitoring system starts becoming background decoration.
+It also helps with alert fatigue. Once people learn that an alert usually means nothing, you've built an expensive notification generator.
 
-## Make the first investigation cheap
+The threshold should narrow attention, not merely create noise.
 
-A runbook doesn't need to be enormous. Often, I only care that the first useful step is obvious.
+## Make the first move cheap
 
-That might be:
+A runbook doesn't need to be a small novel.
 
-- compare affected units with the latest deployment
-- check whether the problem is geographic
-- inspect the largest contributing error category
-- verify whether an upstream dependency changed
-- pull the raw telemetry for one of the first affected events
+Often, the most useful thing is simply making the first investigation step obvious.
 
-The point is to remove the dead time before useful investigation begins.
+For a fleet problem, that might mean comparing affected units with the latest deployment, checking whether failures cluster geographically, inspecting the largest error category, or pulling raw telemetry from one of the first incidents.
 
-I don't operationalize every metric this way. Weekly trends don't need paging rules. Product adoption metrics don't need an on-call engineer. Plenty of numbers are there simply to help a team understand what changed over time.
+For a SaaS integration, the first move may be checking dependency health or looking for a configuration change shared by the affected tenants.
 
-But if a metric is supposed to cause a near-term response, I want the operating contract to be obvious.
+The exact action changes. The principle doesn't.
 
-Who notices it? Under what condition? What happens first?
+The metric should make the next useful question cheaper to answer.
 
-If those answers are still fuzzy, I treat the metric as reporting until the team proves otherwise.
+This connects to the way I think about [exception-first dashboards](/blog/2026/06/26/build-dashboards-around-exceptions-not-averages/). Summary trends tell me whether the system is moving. Exceptions tell me where to look.
+
+And [a KPI should change a decision](/blog/2026/08/19/the-best-kpi-is-the-one-that-changes-a-decision/). An operational metric needs an even tighter contract because somebody may need to act now rather than at next week's review.
+
+I don't operationalize every number this way. Adoption metrics, weekly trends, and diagnostic data can be useful without an owner or paging rule.
+
+But if the metric is supposed to trigger a near-term response, I want the operating contract to be obvious.
+
+**The product question:** If this number crosses its threshold tomorrow, who sees it first and what do they do?
+
+If the number moved and nobody knows who acts next, you don't have an operational metric yet. You have reporting.
 
 ## Sources
 

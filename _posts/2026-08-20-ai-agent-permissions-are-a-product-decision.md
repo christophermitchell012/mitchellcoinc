@@ -1,75 +1,81 @@
 ---
 layout: post
-title: "AI Agent Permissions Are a Product Decision"
+title: "AI Agent Permissions: How Much Authority Is Too Much?"
 date: 2026-08-20 10:46:00 -0500
 category: AI + Product
-description: "As AI agents move from recommending work to taking actions, permission design becomes part of the product contract, not just a security setting."
+description: "AI agent permissions should expand with evidence, reversibility, and blast radius. Capability alone is not a reason to grant more authority."
 read_time: "5 min read"
 ---
 
-I've been watching the conversation around AI agents move in a useful direction this week. Less attention is going to whether an agent can complete an impressive demo, and more is going to what happens when we give it credentials and let it touch real systems.
+Giving an AI agent another tool isn't just an engineering change.
 
-On August 17, Fortinet announced that it acquired Virtue AI, whose technology includes runtime protection, automated validation, and monitoring of autonomous agents. Two days later, Info-Tech Research Group published guidance arguing that agentic systems are moving into enterprise workflows while many organizations are still carrying architecture designed for pilots. CIO Dive also reported this week that only 35% of executives in an HFS Research/TCS survey said AI consistently delivers intended outcomes while remaining controllable and trusted.
+It changes what a mistake can become.
 
-I don't read those as three separate security stories. I read them as a product signal.
+A support copilot that reads account history and drafts a response can be wrong while still giving a person a chance to catch it. Give the same system permission to issue a refund, change an entitlement, or send the response automatically, and you've changed the product even if the model and interface stay exactly the same.
 
-The interesting question is becoming: **what is this agent allowed to do when nobody is watching it?**
+That's why I think AI agent permissions belong in product requirements, not only in a security review.
 
-## Read access and action access are different products
+Recent enterprise security news is moving in the same direction. Fortinet acquired Virtue AI, whose technology includes runtime protection and validation for autonomous agents. Info-Tech Research Group has warned that many organizations are moving agentic systems into enterprise workflows while still carrying architecture designed for pilots. CIO Dive recently reported that only 35% of executives in an HFS Research/TCS survey said AI consistently delivers intended outcomes while remaining controllable and trusted.
 
-A support copilot that reads account history and drafts a response can be wrong and still give the user a chance to catch the mistake.
+Those are security and governance signals, but the product question underneath them is simpler:
 
-Give the same system permission to issue a refund, change an account entitlement, or send the response automatically, and you've changed the product substantially, even if the model and user interface are identical.
+**What is this agent allowed to do when nobody is watching?**
 
-The same thing happens in technical workflows. An agent that can inspect telemetry is different from one that can restart a service. Reading a Jira ticket is different from closing it. Recommending a configuration change is different from pushing it.
+## Capability and authority should move at different speeds
 
-I think product requirements need to represent those differences explicitly.
+I've worked around remote operations and automated systems where the system could technically perform an operation before I was comfortable removing the fallback path.
 
-When I've worked with remote operations and automated systems, I've generally wanted the authority of the system to increase more slowly than its capability. A robot may technically be able to perform an operation before I'm comfortable removing the fallback path. Software agents deserve the same skepticism.
+Software agents deserve the same skepticism.
 
-## I'd design an authority ladder
+Reading telemetry is different from restarting a service. Reading a Jira ticket is different from closing it. Recommending a configuration change is different from pushing it to production.
 
-For a consequential workflow, I'd rather start with a few deliberate levels than a single "agent enabled" switch.
+A single toggle labeled "agent enabled" is doing a lot of work there.
 
-A useful progression might be:
+I'd make the authority levels explicit.
+
+For a consequential workflow, a simple progression might be:
 
 1. **Observe:** retrieve context and explain what it sees.
 2. **Recommend:** propose an action but cannot execute it.
-3. **Act with approval:** prepare the action and wait for a human confirmation.
-4. **Act inside limits:** execute a defined class of reversible, bounded actions.
-5. **Act autonomously:** operate without approval inside an explicitly defined scope.
+3. **Act with approval:** prepare the action and wait for confirmation.
+4. **Act inside limits:** execute a bounded class of reversible actions.
+5. **Act autonomously:** operate without approval inside a defined scope.
 
-That ladder isn't universal. A low-risk internal workflow may skip steps. A safety, financial, or customer-facing workflow may never need level five.
+The ladder isn't universal. A low-risk internal workflow may move faster. A safety, financial, or customer-facing workflow may never need the last step.
 
-The product decision is where to put the boundary and what evidence is required to move it.
+The useful product decision is what evidence earns the next level.
 
-This is where evaluation gets more interesting than a benchmark score. I want to know how often the agent chooses the wrong tool, whether it requests an action outside its scope, how it behaves with stale context, what happens after an API failure, and whether the operator can tell what it actually did.
+## Reversibility changes the amount of autonomy I can tolerate
 
-Those are product acceptance criteria.
+An agent incorrectly tagging an internal record is inconvenient.
 
-## Reversibility buys a lot of freedom
+An agent deleting customer data, moving money, or changing production configuration is a different species of mistake.
 
-I also care about whether an action can be undone.
+So I put reversibility beside confidence when deciding how much autonomy to allow.
 
-If an agent labels an internal record incorrectly, recovery may be cheap. If it deletes customer data, sends money, or changes a production configuration, the same error rate has a completely different meaning.
+That can create slightly awkward boundaries, and I'm fine with that. Maybe the agent can automatically route a support case but needs approval to close it. Maybe it can generate a deployment plan but can't execute it. Maybe it can restart one unhealthy edge device but must escalate when the same symptom appears across twenty devices.
 
-So I'd put reversibility beside confidence when deciding how much autonomy to allow.
+Those boundaries aren't proof that the product is unfinished.
 
-That can lead to slightly awkward product behavior, and I'm fine with that. Maybe an agent can automatically tag and route a support case but needs approval to close it. Maybe it can generate a deployment plan but can't execute against production. Maybe it can restart one unhealthy edge device but has to escalate when the same symptom appears across twenty devices.
+They're part of the product.
 
-Those boundaries aren't evidence that the AI product is unfinished. They're part of the product.
+## Permission design should include failure behavior
 
-## This extends the workflow argument
+Once an agent can act, I want acceptance criteria around authority, not just task completion.
 
-I wrote recently that AI prototypes often fail at the workflow boundary because the model is only one box in a larger system. Permissions are one of those boundaries, but they deserve special attention once the agent can take action.
+How often does it choose the wrong tool? Does it request actions outside its scope? What happens when context is stale? What happens after an API fails halfway through a multi-step task? Can an operator reconstruct what the agent actually did?
 
-Context tells the agent what it knows. Permissions determine what a mistake can become.
+This extends the [workflow-boundary problem I wrote about earlier](/blog/2026/07/05/ai-prototypes-fail-at-the-workflow-boundary/). Context tells the agent what it knows. Permissions determine what a mistake can become.
 
-That's why I wouldn't treat agent permissions as a security review that happens after product design. Product, engineering, security, and operations should decide the authority model together, then instrument it well enough to learn whether the boundary is in the right place.
+I'd also instrument denied actions and approval overrides. If humans constantly approve one class of action, maybe the boundary is too conservative. If they frequently reject another, the agent hasn't earned more room yet.
 
-As agents get better, the temptation will be to keep moving that boundary outward. Sometimes that's exactly the right move.
+That gives the team evidence instead of vibes.
 
-I just want the decision to be based on observed behavior, blast radius, and recovery cost, not on how good the last demo looked.
+**The product question:** What evidence would make us comfortable moving this action one level higher?
+
+As agents improve, the temptation will be to keep expanding their authority. Sometimes that's exactly right.
+
+But authority becomes too much when the blast radius grows faster than the evidence that the agent has earned it.
 
 ## Sources
 
