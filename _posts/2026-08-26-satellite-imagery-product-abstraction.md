@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Satellite Imagery: Hide the Machinery, Keep the Receipt"
-date: 2026-08-26 12:00:00 -0500
+date: 2026-08-26 11:18:00 -0500
 category: Geospatial + Product
 description: "Satellite imagery is getting easier to query. The product challenge is hiding geospatial complexity without hiding the evidence customers need to trust."
 read_time: "4 min read"
