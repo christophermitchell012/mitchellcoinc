@@ -39,7 +39,7 @@ That changes product discovery because search logs from a conversational system 
 
 Repeated questions about construction progress, for example, could reveal a workflow-shaped product hiding inside what looked like one-off imagery purchases. The product team can then decide whether to package that workflow, automate more of it, or leave it as a flexible query.
 
-The risk is over-abstraction when every request becomes a friendly text box, customers may lose useful ways to express constraints, compare alternatives, or understand why one answer costs more than another. Power users also notice quickly when a simplified interface makes a precise job slower.
+The risk appears when every request becomes a friendly text box: customers may lose useful ways to express constraints, compare alternatives, or understand why one answer costs more than another. Power users also notice quickly when a simplified interface makes a precise job slower.
 
 A good abstraction should therefore have an escape hatch. Plain language gets the user to a sensible starting point; explicit controls remain available when resolution, acquisition timing, sensor choice, budget, or geometry matters.
 
