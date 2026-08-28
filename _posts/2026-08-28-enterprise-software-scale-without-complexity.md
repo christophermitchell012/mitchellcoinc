@@ -9,7 +9,7 @@ read_time: "5 min read"
 
 Linear passed $100 million in annual recurring revenue this week, and the number is interesting for a reason beyond startup scorekeeping.
 
-The company says more than 40,000 organizations use its product, while its enterprise tier adds SAML, SCIM, granular administration, advanced organization modeling, migration help, priority support, account management, and other controls aimed at larger enterprise deployments worldwide in practice.
+The company says more than 40,000 organizations use its product, while its enterprise tier adds SAML, SCIM, granular administration, advanced organization modeling, migration help, priority support, account management, and other controls aimed at larger enterprise deployments today.
 
 Those are unmistakably enterprise requirements, yet the daily product doesn't have to become a cockpit built from every procurement questionnaire the company has ever received.
 
@@ -73,11 +73,12 @@ It also connects to [product roadmaps as portfolios of different commitments](/b
 
 The product test I'd use is simple: if we add this enterprise capability, who should notice it?
 
-Sometimes the answer is every user. Usually, I hope it isn't. Enterprise software has to fit a large organization without making every user feel the weight of one.
+Sometimes the answer is every user. I hope it isn't. Enterprise software has to fit a large organization without making every user feel the weight of one.
 
 ## Sources
 
 - [Linear: Sharing Linear's growth with the people building it](https://linear.app/now/sharing-growth-with-the-people-building-linear)
 - [Linear: Pricing and Enterprise features](https://linear.app/pricing)
+- [Linear: How Automattic migrated to Linear and unified its product teams](https://linear.app/customers/automattic)
 - [Linear: Remote switched its 1,000-person team to Linear](https://linear.app/customers/remote)
 - [Linear: Why OpenAI chose Linear and scaled to 3,000 users](https://linear.app/customers/openai)
