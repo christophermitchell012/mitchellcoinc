@@ -8,10 +8,6 @@ description: "Build-vs-buy decisions should price more than engineering cost. A 
 read_time: "4 min read"
 ---
 
-## TL;DR
-
-Build-versus-buy decisions get more interesting when a supplier starts constraining a product property customers actually pay for, such as cost, latency, availability, or differentiation. Price the freedom you lose to the dependency alongside engineering cost; ownership deserves another look when supposedly replaceable infrastructure begins acquiring roadmap authority.
-
 A reported $7 billion acquisition can reveal a product decision even when the acquisition doesn't happen.
 
 Reuters reported on August 27 that Anthropic explored buying AI-chip startup MatX for roughly $7 billion before discussions shifted toward a partnership, according to people familiar with the matter. Whether that particular deal closes matters less here. Anthropic considered an enormous commitment to gain more control over compute, a resource sitting underneath nearly every interaction its customers have with the product.
