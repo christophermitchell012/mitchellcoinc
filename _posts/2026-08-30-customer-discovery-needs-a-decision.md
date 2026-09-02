@@ -7,10 +7,6 @@ description: "Customer discovery works better when research starts with a decisi
 read_time: "4 min read"
 ---
 
-## TL;DR
-
-Customer discovery gets expensive when every interview creates another interview instead of a decision. Before recruiting participants, write down what evidence would change the roadmap, narrow the problem, or kill the idea; research without a decision boundary can become very thoughtful procrastination.
-
 GitLab's current handbook treats customer discovery as a continuous product-management activity, recommending dedicated discovery meetings, continuous interviews, documented findings, and adjustments to strategy, epics, and personas afterward. I like the continuity, although the dangerous word is continuous.
 
 A team can always learn one more thing from one more customer, particularly in B2B products where workflows vary by company, role, regulation, and installed software. Eventually the research repository gets richer while the product decision stays exactly where it started.
