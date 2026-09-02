@@ -7,10 +7,6 @@ description: "Product tiers work better when real constraints define the boundar
 read_time: "4 min read"
 ---
 
-## TL;DR
-
-Product tiers work better when they separate constraints that genuinely change the design, rather than customer labels that merely sound different. Before creating another SKU or plan, name the requirement that becomes materially harder or more expensive if both customer groups share one product.
-
 A product portfolio gets messy when tiers are organized around customer labels instead of the constraints that actually change the underlying design. Qualcomm's new Dragonwing Q-2390 and IQ-2390 are a useful example: much of the compute foundation is shared, while the industrial version spends its differentiation budget on temperature range, memory protection, deterministic networking, and longevity.
 
 Qualcomm announced both processors on September 1. The Q-2390 is aimed at commercial and consumer devices such as kiosks, access control, appliances, and enterprise terminals. The IQ-2390 targets industrial HMI, machine vision, PLCs, gateways, building controls, and energy systems. The labels matter less.
