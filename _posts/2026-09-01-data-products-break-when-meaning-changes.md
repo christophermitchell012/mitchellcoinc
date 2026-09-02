@@ -7,10 +7,6 @@ description: "Data products need compatibility promises beyond schema. A pipelin
 read_time: "4 min read"
 ---
 
-## TL;DR
-
-A data product can stay technically healthy while quietly breaking teams that depend on it. Schema evolution protects ingestion, but compatibility also includes field meaning, null behavior, freshness, units, and assumptions that downstream code has turned into dependencies.
-
 Databricks updated its schema-enforcement documentation on August 25, and the mechanics are sensible: Delta Lake validates columns and types on write. Separate schema-evolution features can add new columns when producers change, while Snowflake can automatically add columns and relax NOT NULL constraints as incoming data changes.
 
 Useful plumbing, although automatic schema evolution can make a product team feel safer than its consumers are.
