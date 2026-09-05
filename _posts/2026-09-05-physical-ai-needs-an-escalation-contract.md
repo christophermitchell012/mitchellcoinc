@@ -19,9 +19,11 @@ A 60-second timer looks trivial, but writing down what sits on either side turns
 
 The timer is product; around it sits a sensing chain, a fallback path, and assumptions about connectivity and human response that deserve requirements too.
 
-Doova combines LiDAR, microphone-based sound localization, vision-based skeletal recognition, mobility, video calling, and autonomous charging in one moving device. Tuya also positions it as a smart-home hub rather than a single-purpose emergency device for one narrow task. More sensors can provide better context, but every additional dependency gives the decision chain another place to fail when conditions get messy.
+Doova carries several sensing and communication systems. Its stack combines LiDAR, microphone-based sound localization, vision-based skeletal recognition, mobility, video calling, and autonomous charging, while Tuya also positions the moving device as a smart-home hub rather than a single-purpose emergency appliance.
 
-A PM should trace this escalation end to end. Which signal started it, which signals corroborated it, what did the device try locally, how long did it wait, and who receives the alert when silence continues? The flow also needs an answer when Wi-Fi, video, or the intended recipient is unavailable at exactly the wrong moment.
+More sensors can improve context. Every added dependency also gives the decision chain another place to fail when conditions get messy, which is why a PM should trace the escalation from observation through local response and onward to another person.
+
+Which signal started it? The requirement should say which signals corroborate the event, what the device tries locally, how long it waits, who receives the alert when silence continues, and what happens when Wi-Fi, video, or the intended recipient is unavailable at exactly the wrong moment.
 
 That’s still a product flow, even though most of it happens without anybody tapping through a screen.
 
