@@ -23,7 +23,7 @@ Doova carries several sensing and communication systems. Its stack combines LiDA
 
 More sensors can improve context. Every added dependency also gives the decision chain another place to fail when conditions get messy, which is why a PM should trace the escalation from observation through local response and onward to another person.
 
-Which signal started it? The requirement should say which signals corroborate the event, what the device tries locally, how long it waits, who receives the alert when silence continues, and what happens when Wi-Fi, video, or the intended recipient is unavailable at exactly the wrong moment.
+Which signal started it, and what corroborates that signal? The requirement should say what the device tries locally, how long it waits, who receives the alert when silence continues, and what happens when Wi-Fi, video, or the intended recipient is unavailable at exactly the wrong moment.
 
 That’s still a product flow, even though most of it happens without anybody tapping through a screen.
 
