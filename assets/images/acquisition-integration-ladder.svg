@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Acquisition integration ladder</title>
+  <desc id="desc">Three ascending stages: Preserve, Connect, Converge. Customer switching cost rises across the stages.</desc>
+  <rect width="1200" height="520" rx="24" fill="#111827"/>
+  <text x="70" y="70" fill="#f9fafb" font-family="Arial, sans-serif" font-size="34" font-weight="700">Acquisition integration is a sequence, not a merge button.</text>
+  <rect x="90" y="330" width="290" height="105" rx="16" fill="#1f2937" stroke="#6ee7b7" stroke-width="3"/>
+  <text x="125" y="375" fill="#f9fafb" font-family="Arial, sans-serif" font-size="28" font-weight="700">1. PRESERVE</text>
+  <text x="125" y="408" fill="#d1d5db" font-family="Arial, sans-serif" font-size="18">Keep working workflows working</text>
+  <rect x="455" y="235" width="290" height="105" rx="16" fill="#1f2937" stroke="#6ee7b7" stroke-width="3"/>
+  <text x="490" y="280" fill="#f9fafb" font-family="Arial, sans-serif" font-size="28" font-weight="700">2. CONNECT</text>
+  <text x="490" y="313" fill="#d1d5db" font-family="Arial, sans-serif" font-size="18">Add useful cross-product paths</text>
+  <rect x="820" y="140" width="290" height="105" rx="16" fill="#1f2937" stroke="#6ee7b7" stroke-width="3"/>
+  <text x="855" y="185" fill="#f9fafb" font-family="Arial, sans-serif" font-size="28" font-weight="700">3. CONVERGE</text>
+  <text x="855" y="218" fill="#d1d5db" font-family="Arial, sans-serif" font-size="18">Only when switching pays back</text>
+  <path d="M380 382 C420 382 420 287 455 287 M745 287 C785 287 785 192 820 192" fill="none" stroke="#9ca3af" stroke-width="5" stroke-linecap="round"/>
+  <text x="835" y="390" fill="#9ca3af" font-family="Arial, sans-serif" font-size="18">customer switching cost →</text>
+  <line x1="835" y1="410" x2="1095" y2="410" stroke="#9ca3af" stroke-width="3"/>
+  <polygon points="1095,410 1078,400 1078,420" fill="#9ca3af"/>
+</svg>
