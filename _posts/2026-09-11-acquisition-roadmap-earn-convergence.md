@@ -29,9 +29,9 @@ There is a legitimate counterargument: maintaining two products creates duplicat
 
 I've worked on enough platform and integration problems to distrust diagrams where two boxes become one box with an arrow labeled "synergy." That arrow is usually where the product work lives, along with the ugly dependencies the acquisition deck didn't have room to draw.
 
-Envestnet and Vestmark have publicly committed to no forced migration while continuing both roadmaps, so whether that holds through integration is the interesting product test. An acquisition roadmap should earn convergence by removing customer work; until then, connect the products without making customers reorganize their world because your company reorganized its own.
+This is the same reason [build-vs-buy decisions should price the product freedom you lose](/blog/2026/08/31/build-vs-buy-price-product-freedom/): the architecture bill eventually lands on somebody's desk after the acquisition closes.
 
-This is the same reason [build-vs-buy decisions should price the product freedom you lose](/blog/2026/08/31/build-vs-buy-price-product-freedom/): the architecture bill eventually lands on somebody's desk.
+Envestnet and Vestmark have publicly committed to no forced migration while continuing both roadmaps, so whether that holds through integration is the interesting product test. An acquisition roadmap should earn convergence by removing customer work; until then, connect the products without making customers reorganize their world because your company reorganized its own.
 
 ## Sources
 - [Envestnet to acquire Vestmark](https://www.vestmark.com/press-releases/envestnet-to-acquire-vestmark-extending-its-capabilities-to-meet-the-advisor-markets-growing-demand-for-increasingly-sophisticated-trading-and-tax-solutions)
