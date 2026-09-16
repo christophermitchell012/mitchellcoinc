@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic data relational integrity</title><desc id="desc">Four database tables connected by key relationships, showing that plausible rows become useful test data when relationships and constraints survive.</desc>
+<rect width="1200" height="630" fill="#0b1220"/>
+<text x="70" y="82" fill="#f8fafc" font-family="Arial,sans-serif" font-size="38" font-weight="700">Synthetic data has to survive the JOIN</text>
+<text x="70" y="126" fill="#94a3b8" font-family="Arial,sans-serif" font-size="22">Plausible rows are only the beginning.</text>
+<g font-family="Arial,sans-serif">
+<rect x="80" y="210" width="220" height="150" rx="14" fill="#111827" stroke="#64748b" stroke-width="2"/><text x="110" y="255" fill="#e2e8f0" font-size="25" font-weight="700">Customers</text><text x="110" y="300" fill="#94a3b8" font-size="19">customer_id</text><text x="110" y="330" fill="#94a3b8" font-size="19">region · tier</text>
+<rect x="490" y="170" width="220" height="150" rx="14" fill="#111827" stroke="#22c55e" stroke-width="3"/><text x="520" y="215" fill="#e2e8f0" font-size="25" font-weight="700">Orders</text><text x="520" y="260" fill="#94a3b8" font-size="19">order_id</text><text x="520" y="290" fill="#94a3b8" font-size="19">customer_id · product_id</text>
+<rect x="900" y="210" width="220" height="150" rx="14" fill="#111827" stroke="#64748b" stroke-width="2"/><text x="930" y="255" fill="#e2e8f0" font-size="25" font-weight="700">Products</text><text x="930" y="300" fill="#94a3b8" font-size="19">product_id</text><text x="930" y="330" fill="#94a3b8" font-size="19">price · eligibility</text>
+<rect x="490" y="410" width="220" height="120" rx="14" fill="#111827" stroke="#64748b" stroke-width="2"/><text x="520" y="455" fill="#e2e8f0" font-size="25" font-weight="700">Payments</text><text x="520" y="495" fill="#94a3b8" font-size="19">order_id · status</text>
+<path d="M300 270 L490 245" stroke="#22c55e" stroke-width="4"/><path d="M710 245 L900 270" stroke="#22c55e" stroke-width="4"/><path d="M600 320 L600 410" stroke="#22c55e" stroke-width="4"/>
+<text x="330" y="235" fill="#86efac" font-size="17">foreign key</text><text x="755" y="235" fill="#86efac" font-size="17">foreign key</text><text x="620" y="370" fill="#86efac" font-size="17">relationship</text>
+<text x="80" y="585" fill="#f8fafc" font-size="24" font-weight="700">Rows that look real ≠ a system that behaves real</text>
+</g></svg>
