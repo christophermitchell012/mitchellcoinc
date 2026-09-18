@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Data deletion is a state machine</title>
+<desc id="desc">A MitchellCo diagram showing enterprise data moving from Active to Candidate to Quarantine to Delete, with Restore returning quarantined data to Active.</desc>
+<rect width="1200" height="630" fill="#101820"/>
+<text x="70" y="92" fill="#ffffff" font-family="Arial, sans-serif" font-size="46" font-weight="700">Data deletion is a state machine</text>
+<text x="70" y="137" fill="#b9c3cc" font-family="Arial, sans-serif" font-size="23">Good lifecycle products make the irreversible step the last step.</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="70" y="245" width="210" height="105" rx="14" fill="#1d2a34" stroke="#68d391" stroke-width="3"/><text x="175" y="308" fill="#fff" font-size="30">ACTIVE</text>
+<rect x="355" y="245" width="210" height="105" rx="14" fill="#1d2a34" stroke="#d6bcfa" stroke-width="3"/><text x="460" y="308" fill="#fff" font-size="30">CANDIDATE</text>
+<rect x="640" y="245" width="210" height="105" rx="14" fill="#1d2a34" stroke="#f6ad55" stroke-width="3"/><text x="745" y="308" fill="#fff" font-size="30">QUARANTINE</text>
+<rect x="925" y="245" width="210" height="105" rx="14" fill="#1d2a34" stroke="#fc8181" stroke-width="3"/><text x="1030" y="308" fill="#fff" font-size="30">DELETE</text>
+</g>
+<g stroke="#9fb0bd" stroke-width="4" fill="none"><path d="M280 298 H345"/><path d="M565 298 H630"/><path d="M850 298 H915"/><path d="M745 365 C745 470 175 470 175 365"/></g>
+<g fill="#9fb0bd"><path d="M345 298 l-14 -8 v16z"/><path d="M630 298 l-14 -8 v16z"/><path d="M915 298 l-14 -8 v16z"/><path d="M175 365 l-8 14 h16z"/></g>
+<g fill="#cbd5df" font-family="Arial, sans-serif" font-size="19" text-anchor="middle"><text x="312" y="278">policy + context</text><text x="598" y="278">reversible</text><text x="882" y="278">approval</text><text x="460" y="445">RESTORE</text></g>
+<text x="70" y="565" fill="#68d391" font-family="Arial, sans-serif" font-size="25" font-weight="700">MitchellCo</text><text x="208" y="565" fill="#8293a0" font-family="Arial, sans-serif" font-size="20">Product thinking for technical systems</text>
+</svg>
