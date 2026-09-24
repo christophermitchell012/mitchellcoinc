@@ -39,7 +39,7 @@ This connects to [developer onboarding that manufactures first success](/blog/20
 
 Holibob's sandbox makes the distinction unusually concrete. Developers can search the live catalogue and exercise booking flows without sending bookings to suppliers or settling payments, then move the same integration toward production after commercial approval.
 
-For a product manager, there's a useful SDK question. How much unnecessary choice disappears without removing necessary choice from developers whose products eventually stop looking like your starter implementation?
+For a product manager, there's an SDK question. How much unnecessary choice disappears without removing necessary choice from developers whose products eventually stop looking much like your starter implementation?
 
 Pave the road customers travel most, then leave exits where their product becomes theirs again.
 
