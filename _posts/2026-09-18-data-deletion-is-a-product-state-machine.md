@@ -27,7 +27,7 @@ Teams can automate the low-risk transition into quarantine, observe exceptions, 
 
 ## Deletion needs metadata too
 
-The same principle applies beyond security software. Product teams building data platforms should treat deletion metadata as seriously as creation metadata: provenance, owner, retention class, dependencies, last meaningful use, and disposition state. Those fields are the evidence behind a later removal decision. In [synthetic data work](/2026/09/16/synthetic-data-only-good-as-joins/), relationships determine whether generated records behave like a system. Here, relationships determine whether removing a record damages one.
+The same principle applies beyond security software. Product teams building data platforms should treat deletion metadata as seriously as creation metadata: provenance, owner, retention class, dependencies, last meaningful use, and disposition state. Those fields are the evidence behind a later removal decision. In [synthetic data work](/blog/2026/09/16/synthetic-data-only-good-as-joins/), relationships determine whether generated records behave like a system. Here, relationships determine whether removing a record damages one.
 
 There's a counterweight: more context can become another excuse to retain everything, especially when legal, security, finance, and engineering each have a different definition of "needed." A good lifecycle product therefore needs explicit policy precedence and an audit trail, rather than a committee-shaped exception queue that grows forever while storage quietly compounds.
 
