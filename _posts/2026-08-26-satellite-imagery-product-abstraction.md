@@ -51,6 +51,10 @@ The product opportunity in satellite imagery isn't removing the sensor from the 
 
 A good geospatial product can hide the machinery. It shouldn't hide the receipt.
 
+## Related interactive map
+
+A concrete example of keeping the evidence visible is [Dark Sky Tonight](https://christophermitchell012.github.io/maps/26-dark-sky-tonight.html). It combines NASA nighttime-light imagery with Moon and cloud context, and labels what each layer can and cannot say about tonight.
+
 ## Sources
 
 - [SkyFi: Rowan AI navigator announcement](https://www.prnewswire.com/news-releases/skyfi-launches-rowan-a-native-ai-navigator-that-turns-satellite-imagery-into-decision-ready-answers-302860100.html)

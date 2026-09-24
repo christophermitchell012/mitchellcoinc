@@ -39,6 +39,10 @@ Schema evolution keeps those data pipes flowing without manual intervention. Tha
 
 If the column still loads while the decision it feeds changes underneath it, though, the data product broke anyway.
 
+## Related interactive map
+
+The [Watershed Explorer](https://christophermitchell012.github.io/maps/25-watershed-explorer.html) is a small example of why definitions matter. Its upstream and downstream lines represent modeled network connectivity, not a flood forecast or travel time. That boundary needs to survive any data or interface change.
+
 ## Sources
 
 - [Databricks: Schema enforcement](https://docs.databricks.com/aws/en/tables/schema-enforcement)

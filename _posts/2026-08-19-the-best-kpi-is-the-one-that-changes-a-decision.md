@@ -68,6 +68,10 @@ If there's a clear answer, keep the KPI prominent. If there isn't, the number ma
 
 If the number moves and nothing changes, it's probably useful reporting. It just isn't the KPI you thought it was.
 
+## Related interactive map
+
+The [Reservoir & Water Shortage Monitor](https://christophermitchell012.github.io/maps/16-reservoir-water-shortage-monitor.html) shows how a public-data map can put a changing measure next to its geographic context. The useful next step is still to define who acts, at what threshold, and with which local constraints.
+
 ## Sources
 
 - [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
