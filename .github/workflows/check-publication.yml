@@ -1,11 +1,34 @@
 name: Check blog publication
+
 on:
   push:
+    branches: [main]
+    paths:
+      - "_posts/**"
+      - "blog/**"
+      - "sitemap.xml"
+      - "robots.txt"
+      - "_config.yml"
+      - "scripts/check_publication.py"
+      - ".github/workflows/check-publication.yml"
   pull_request:
+
+concurrency:
+  group: publication-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Validate post links and site navigation
         run: python3 scripts/check_publication.py
+      - name: Verify validation did not modify the checkout
+        run: git diff --exit-code
