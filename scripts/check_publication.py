@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 POSTS = ROOT / "_posts"
-MAPS = "https://christophermitchell012.github.io/maps/"
+MAPS = "https://mitchellcoinc.com/maps/"
 
 
 def main():

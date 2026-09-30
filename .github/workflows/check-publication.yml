@@ -1,9 +1,12 @@
-name: Check blog publication
+name: Check site publication
 
 on:
   push:
     branches: [main]
     paths:
+      - "maps/**"
+      - "index.html"
+      - "_layouts/**"
       - "_posts/**"
       - "blog/**"
       - "sitemap.xml"
@@ -30,5 +33,9 @@ jobs:
           persist-credentials: false
       - name: Validate post links and site navigation
         run: python3 scripts/check_publication.py
+      - name: Validate maps and deterministic sitemap
+        run: |
+          python3 maps/scripts/build_sitemap.py --check
+          python3 maps/scripts/check_publication.py
       - name: Verify validation did not modify the checkout
         run: git diff --exit-code

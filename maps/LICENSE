@@ -1,0 +1,54 @@
+MIT License
+
+Copyright (c) 2026 MitchellCo Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+Scope, documentation, artwork, and third-party materials
+
+The MIT License above applies to MitchellCo-authored software in this project,
+including HTML, CSS, JavaScript, Python, and other software source code, unless
+a file or component states otherwise.
+
+MitchellCo-authored documentation, explanatory prose, and original non-software
+SVG artwork are licensed under Creative Commons Attribution 4.0 International
+(CC BY 4.0), unless otherwise noted:
+
+https://creativecommons.org/licenses/by/4.0/
+
+Third-party data, imagery, map tiles, software, trademarks, logos, and other
+third-party materials are NOT relicensed by MitchellCo under the MIT License or
+CC BY 4.0. They remain subject to their respective licenses, EULAs, attribution
+requirements, copyright notices, and terms of use. See:
+
+https://mitchellcoinc.com/maps/data-sources-licenses.html
+
+When copying, modifying, hosting, or redistributing these maps, including for
+commercial use, you are responsible for complying with those source-specific
+requirements. A third-party layer may need to be removed or replaced if its
+terms do not permit your intended use.
+
+TL;DR: Use and redistribute these maps freely, including commercially, but you
+remain responsible for complying with every underlying data-source license and
+attribution requirement.
+
+This scope section describes which project materials are covered by each
+license. It does not modify the text or permissions of the MIT License above.

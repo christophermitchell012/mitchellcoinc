@@ -17,4 +17,10 @@ layout: null
     <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
   </url>
   {% endfor %}
+  {% for file in site.static_files %}
+  {% assign map_prefix = file.path | slice: 0, 6 %}
+  {% if map_prefix == '/maps/' and file.extname == '.html' and file.name != '404.html' %}
+  <url><loc>{{ site.url }}{% if file.name == 'index.html' %}/maps/{% else %}{{ file.path }}{% endif %}</loc></url>
+  {% endif %}
+  {% endfor %}
 </urlset>

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://mitchellcoinc.com/sitemap.xml
+Sitemap: https://mitchellcoinc.com/maps/sitemap.xml

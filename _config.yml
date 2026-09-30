@@ -12,4 +12,4 @@ giscus:
   category: Announcements
   category_id: DIC_kwDOTCbWR84DDvqG
 
-exclude: [CNAME, README.md]
+exclude: [CNAME, README.md, scripts, maps/scripts, maps/README.md, maps/GITHUB-RELIABILITY.md, maps/DATA_SOURCE_POLICY.md, maps/LICENSE]
