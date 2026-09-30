@@ -86,6 +86,12 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <p><b>Validation:</b> the local coefficient file is pinned to SHA-256 <code>06791cd95faba7bdf4a709808f2715a53fe689b29c23b9886bc2196fa9b3eb13</code>. Before enabling calculations, Map 27 evaluates six NOAA surface test vectors spanning 2025.0 and 2027.5 and checks field components plus secular variation against the published rounded values.</p>
 <p><b>Interpretation:</b> WMM models the long-wavelength internal magnetic field. NOAA states that crustal, upper-mantle, ionospheric and magnetospheric effects are not fully represented; a physical compass can also be disturbed by local magnetic material. Declination is therefore a model value, not a local magnetic survey. Map 27 flags NOAA's caution zone at 2,000–6,000 nT horizontal intensity and blackout/unreliable zone below 2,000 nT.</p>
 
+<h2 id="map32">Map 32 · Hail Warning Exposure &amp; Property Risk Context</h2>
+<h3>NOAA / National Weather Service Alerts API</h3><span class="tag">Active warning data</span>
+<p>Map 32 makes one anonymous browser request for active Severe Thunderstorm Warnings and displays alerts that include a positive structured <code>maxHailSize</code> value. It retains the NWS warning geometry, area, expiry, office and headline. The size filter is only a viewing control; MitchellCo does not create a hail forecast, damage estimate or risk score.</p>
+<ul><li><a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">NWS API documentation</a></li><li><a href="https://www.weather.gov/disclaimer" target="_blank" rel="noopener">NWS disclaimer and reuse conditions</a></li><li><a href="data/map32-source-license.md">Map 32 source contract</a></li></ul>
+<p><b>Availability:</b> no runtime data are cached. If the API request fails, the page reports that current data are unavailable rather than displaying stale warnings. Hail size is a warning hazard estimate, not a claim that hail occurs everywhere inside the polygon.</p>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
 <p class="muted">Last source-policy review: 2026-09-23 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
