@@ -52,10 +52,11 @@ Static, slow-changing, rate-limited, or browser-incompatible source data should 
 ## Current roadmap
 
 Next candidates:
-- 31 Lightning Activity & Wildfire Ignition Potential
-- 32 Tornado Climatology & Current Severe Weather Context
+- 32 Lightning Activity & Wildfire Ignition Potential
 - 33 Hail Exposure & Crop/Property Risk
 - 34 High Wind & Infrastructure Exposure
+
+Tornado Climatology & Current Severe Weather Context is already published as Map 31 and is removed from the pending candidates. Assign each passing candidate the lowest unused map number after checking the published collection; if a candidate is deferred, do not reserve its number.
 
 Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbered backlog until a stable anonymous/keyless NASA LHASA path passes the source gate. Global Aviation Weather remains deferred. BloomWatch remains deferred until observation-record licensing/redistribution is clearly compatible with commercial/public reuse.
 
