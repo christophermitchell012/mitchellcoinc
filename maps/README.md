@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The repository contains Maps 00 through 30:
+The collection contains Maps 00 through 31:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -43,9 +43,9 @@ The repository contains Maps 00 through 30:
 
 ## Repository architecture
 
-Numbered maps live at the repository root as `NN-map-name.html`. Saved snapshots and reusable reference data live under `data/`. Topic identity SVGs live under `assets/icons/` and are linked as resources rather than embedded in HTML.
+The authoritative repository is `christophermitchell012/mitchellcoinc`, branch `main`. Numbered maps live under `maps/` as `NN-map-name.html`. Saved snapshots and reusable reference data live under `maps/data/`. Topic identity SVGs live under `maps/assets/icons/` and are linked as resources rather than embedded in HTML.
 
-Publication is intentionally simple: prepare the complete map/data/index/sitemap/docs state, run `python3 scripts/check_publication.py`, commit the coherent tree, then let the read-only publication Action validate it and GitHub Pages deploy the exact committed tree. Actions do not generate, commit, or push repository content.
+Publication is intentionally simple: prepare the complete map/data/index/sitemap/docs state, run `python3 maps/scripts/check_publication.py`, commit the coherent tree, then let the read-only publication Action validate it and GitHub Pages deploy the exact committed tree. Actions do not generate, commit, or push repository content.
 
 Static, slow-changing, rate-limited, or browser-incompatible source data should be acquired and normalized at build time. Runtime cross-origin requests are reserved for authoritative anonymous/keyless browser-CORS sources with safe client fan-out.
 
@@ -89,3 +89,10 @@ Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbe
 ## License
 
 See [LICENSE](LICENSE).
+
+
+## Migration and deployed verification
+
+The old `christophermitchell012/maps` repository preserves legacy URLs with immediate redirects and new canonical URLs. New maps must be published only in this repository's `maps/` directory. The root Jekyll sitemap retains blog discovery and includes the static map HTML; `maps/sitemap.xml` is deterministic and generated before committing.
+
+Run `python3 scripts/check_publication.py`, `python3 maps/scripts/build_sitemap.py --check`, and `python3 maps/scripts/check_publication.py` before publication. Read-only CI additionally runs `python3 maps/scripts/check_deployment.py` after pushes to main, verifying all numbered maps, support pages, local assets/data, and both sitemaps against the published site. External runtime APIs and browser rendering require separate checks.
