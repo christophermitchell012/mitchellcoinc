@@ -39,3 +39,17 @@ jobs:
           python3 maps/scripts/check_publication.py
       - name: Verify validation did not modify the checkout
         run: git diff --exit-code
+
+  deployed-maps:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify deployed maps, data, assets and sitemaps
+        run: python3 maps/scripts/check_deployment.py
+      - name: Verify deployment checks did not modify the checkout
+        run: git diff --exit-code
