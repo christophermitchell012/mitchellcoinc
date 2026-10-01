@@ -92,6 +92,12 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <ul><li><a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">NWS API documentation</a></li><li><a href="https://www.weather.gov/disclaimer" target="_blank" rel="noopener">NWS disclaimer and reuse conditions</a></li><li><a href="data/map32-source-license.md">Map 32 source contract</a></li></ul>
 <p><b>Availability:</b> no runtime data are cached. If the API request fails, the page reports that current data are unavailable rather than displaying stale warnings. Hail size is a warning hazard estimate, not a claim that hail occurs everywhere inside the polygon.</p>
 
+<h2 id="map33">Map 33 · High Wind Alerts &amp; Infrastructure Impact Context</h2>
+<h3>NOAA / National Weather Service Alerts and Zones APIs</h3><span class="tag">Active alert and official affected-area data</span>
+<p>Map 33 requests active High Wind Warnings, Wind Advisories, Extreme Wind Warnings and Severe Thunderstorm Warnings. It uses official alert geometry when available and official NWS affected-zone geometry otherwise, with a maximum of 80 unique zone requests per page load.</p>
+<p>Structured <code>maxWindGust</code> values are displayed when supplied. Missing gusts are not inferred from prose. Official alert text may describe potential effects on trees, power lines, roofs, vehicles, marine operations or travel; MitchellCo does not inventory infrastructure, predict outages, estimate damage or calculate a wind-risk score.</p>
+<ul><li><a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">NWS API documentation</a></li><li><a href="https://www.weather.gov/disclaimer" target="_blank" rel="noopener">NWS disclaimer and reuse conditions</a></li><li><a href="data/map33-source-license.md">Map 33 source contract</a></li></ul>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
 <p class="muted">Last source-policy review: 2026-09-23 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
