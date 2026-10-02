@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 33:
+The collection contains Maps 00 through 34:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -42,6 +42,7 @@ The collection contains Maps 00 through 33:
 - 31 Tornado Climatology & Current Severe Weather Context
 - 32 Hail Warning Exposure & Property Risk Context
 - 33 High Wind Alerts & Infrastructure Impact Context
+- 34 Freeze & Frost Alerts: Crop, Pipe & Health Context
 
 ## Repository architecture
 
@@ -75,6 +76,7 @@ Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbe
 - **Map 31:** NOAA SPC `1950-2025_actual_tornadoes.csv`, stored as a dated same-origin snapshot (`scripts/map31_build_snapshot.py` rebuilds it). Historical counts are 1-degree start-point counts with no forecast or risk score. A live layer requests active NWS tornado alerts from `api.weather.gov` in the visitor's browser and degrades to a status message if it fails. See `data/map31-source-license.md`.
 - **Map 32:** NOAA/NWS active Severe Thunderstorm Warnings requested anonymously from `api.weather.gov` in the visitor's browser. The page displays only warnings with a positive structured `maxHailSize`, preserves NWS geometry and wording, and calculates no forecast, damage estimate, or proprietary risk score. See `data/map32-source-license.md`.
 - **Map 33:** NOAA/NWS active wind-related alerts requested anonymously from `api.weather.gov`. Official alert polygons are used when present; a bounded 80-zone fallback retrieves official affected-zone geometry for alerts such as Wind Advisories. Structured gusts are displayed without inferring missing values, and no outage, damage, or proprietary risk score is calculated. See `data/map33-source-license.md`.
+- **Map 34:** NOAA/NWS active Freeze Warnings, Frost Advisories, Hard Freeze Warnings, Freeze Watches, and Cold Weather Advisories. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page calculates no crop, plumbing, health, or loss score. See `data/map34-source-license.md`.
 
 ## Site/search files
 
