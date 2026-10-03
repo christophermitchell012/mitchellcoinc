@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Beach and surf hazard alerts</title>
+  <path d="M7 39c7-8 14-8 21 0s14 8 21 0 8-4 8-4" fill="none" stroke="#39a7d8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M7 51c7-6 14-6 21 0s14 6 21 0 8-3 8-3" fill="none" stroke="#77cbb9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32 5 48 32H16Z" fill="#f28e55" stroke="#f7d27a" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 14v10" stroke="#132131" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="32" cy="28" r="2.2" fill="#132131"/>
+</svg>
