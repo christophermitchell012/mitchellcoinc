@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Dense fog alerts</title>
+  <path d="M8 22h36M15 31h41M7 40h43M18 49h35" fill="none" stroke="#a8d7e8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="13" cy="13" r="5" fill="#f4c95d" opacity=".85"/>
+  <path d="M5 56h54" stroke="#7f95a8" stroke-width="3" stroke-linecap="round"/>
+</svg>
