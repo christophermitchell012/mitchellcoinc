@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 37:
+The collection contains Maps 00 through 38:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -46,6 +46,7 @@ The collection contains Maps 00 through 37:
 - 35 Beach & Surf Hazard Alerts: Shoreline Safety Context
 - 36 Dense Fog Alerts: Transportation Visibility Context
 - 37 Fire Weather Alerts: Wildfire Readiness Context
+- 38 Gale & Storm Marine Alerts: Coastal Operations Context
 
 ## Repository architecture
 
@@ -85,6 +86,7 @@ Civil Emergency Alerts & Public Safety Context is deferred because the active NW
 - **Map 35:** NOAA/NWS active Rip Current Statements, Beach Hazards Statements, High Surf Advisories, and High Surf Warnings. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no lifeguard, closure, rescue, proprietary risk, or personal-safety claim. See `data/map35-source-license.md`.
 - **Map 36:** NOAA/NWS active Dense Fog Advisories and Freezing Fog Advisories. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no measured visibility, crash, closure, delay, pavement-condition, proprietary risk, or route-safety claim. See `data/map36-source-license.md`.
 - **Map 37:** NOAA/NWS active Red Flag Warnings and Fire Weather Watches. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no active-fire, ignition, spread, evacuation, restriction, loss, proprietary-risk, or readiness recommendation. See `data/map37-source-license.md`.
+- **Map 38:** NOAA/NWS active Gale Warnings/Watches, Storm Warnings/Watches, Hurricane Force Wind Warnings/Watches, Hazardous Seas Warnings/Watches, and Special Marine Warnings. The alert feed loads anonymously; exact NWS marine-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page provides no vessel routing, port-closure, inferred wave-height, loss, proprietary-risk, or operating recommendation. See `data/map38-source-license.md`.
 
 ## Site/search files
 
