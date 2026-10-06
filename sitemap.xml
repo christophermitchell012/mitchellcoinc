@@ -5,7 +5,8 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}/</loc>
-    <lastmod>2026-08-19</lastmod>
+    {% assign homepage = site.pages | where: 'url', '/' | first %}
+    <lastmod>{{ homepage.last_modified_at | date: '%Y-%m-%d' }}</lastmod>
   </url>
   <url>
     <loc>{{ site.url }}/blog/</loc>
