@@ -10,7 +10,17 @@ layout: null
   </url>
   <url>
     <loc>{{ site.url }}/blog/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% assign blog_page = site.pages | where: 'url', '/blog/' | first %}
+    {% assign blog_modified_date = blog_page.last_modified_at %}
+    {% assign blog_modified = blog_modified_date | date: '%s' | plus: 0 %}
+    {% for post in site.posts %}
+      {% assign post_modified = post.last_modified_at | default: post.date | date: '%s' | plus: 0 %}
+      {% if post_modified > blog_modified %}
+        {% assign blog_modified = post_modified %}
+        {% assign blog_modified_date = post.last_modified_at | default: post.date %}
+      {% endif %}
+    {% endfor %}
+    <lastmod>{{ blog_modified_date | date_to_xmlschema }}</lastmod>
   </url>
   {% for post in site.posts %}
   <url>
@@ -21,7 +31,7 @@ layout: null
   {% for file in site.static_files %}
   {% assign map_prefix = file.path | slice: 0, 6 %}
   {% if map_prefix == '/maps/' and file.extname == '.html' and file.name != '404.html' %}
-  <url><loc>{{ site.url }}{% if file.name == 'index.html' %}/maps/{% else %}{{ file.path }}{% endif %}</loc></url>
+  <url><loc>{{ site.url }}{% if file.name == 'index.html' %}/maps/{% else %}{{ file.path }}{% endif %}</loc><lastmod>{{ site.data.map_lastmod[file.path] }}</lastmod></url>
   {% endif %}
   {% endfor %}
 </urlset>
