@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 38:
+The collection contains Maps 00 through 39:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -47,6 +47,7 @@ The collection contains Maps 00 through 38:
 - 36 Dense Fog Alerts: Transportation Visibility Context
 - 37 Fire Weather Alerts: Wildfire Readiness Context
 - 38 Gale & Storm Marine Alerts: Coastal Operations Context
+- 39 Superfund National Priorities List Sites & Cleanup Status
 
 ## Repository architecture
 
@@ -69,6 +70,8 @@ Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbe
 
 Civil Emergency Alerts & Public Safety Context is deferred because the active NWS-distributed alert tested on 2026-10-05 supplied neither polygon geometry nor resolvable affected-zone URLs. Reconsider only when the source supports a truthful map rather than an area-name list.
 
+Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters service exposed the needed points through an ArcGIS FeatureServer rather than a qualifying zero-Esri source, while the guessed OpenFEMA endpoint returned 404. It remains unnumbered and deferred until an authoritative non-Esri snapshot or API passes the source gate.
+
 ## Recent source contracts
 
 - **Map 21:** U.S. National Ice Center IMS daily chart images, displayed directly; no snow-depth or ice-thickness claim.
@@ -87,6 +90,7 @@ Civil Emergency Alerts & Public Safety Context is deferred because the active NW
 - **Map 36:** NOAA/NWS active Dense Fog Advisories and Freezing Fog Advisories. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no measured visibility, crash, closure, delay, pavement-condition, proprietary risk, or route-safety claim. See `data/map36-source-license.md`.
 - **Map 37:** NOAA/NWS active Red Flag Warnings and Fire Weather Watches. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no active-fire, ignition, spread, evacuation, restriction, loss, proprietary-risk, or readiness recommendation. See `data/map37-source-license.md`.
 - **Map 38:** NOAA/NWS active Gale Warnings/Watches, Storm Warnings/Watches, Hurricane Force Wind Warnings/Watches, Hazardous Seas Warnings/Watches, and Special Marine Warnings. The alert feed loads anonymously; exact NWS marine-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page provides no vessel routing, port-closure, inferred wave-height, loss, proprietary-risk, or operating recommendation. See `data/map38-source-license.md`.
+- **Map 39:** U.S. EPA Envirofacts SEMS proposed, final, and deleted National Priorities List site records. A dated, normalized same-origin snapshot contains 1,840 official source points retrieved anonymously on 2026-10-07; the page calculates no contamination boundary, exposure, cleanup-completion, liability, health-risk, or property-safety score. See `data/map39-source-license.md`.
 
 ## Site/search files
 

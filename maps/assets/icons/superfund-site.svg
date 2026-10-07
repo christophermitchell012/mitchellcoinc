@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Superfund site map marker</title>
+  <desc id="desc">A transparent map pin containing layered cleanup rings</desc>
+  <path d="M32 4C18.8 4 8 14.8 8 28c0 17.5 24 32 24 32s24-14.5 24-32C56 14.8 45.2 4 32 4Z" fill="#14271f" stroke="#72d69b" stroke-width="3"/>
+  <circle cx="32" cy="28" r="13" fill="none" stroke="#ffd166" stroke-width="3"/>
+  <circle cx="32" cy="28" r="7" fill="none" stroke="#f27c62" stroke-width="3"/>
+  <circle cx="32" cy="28" r="2.5" fill="#f4f8f6"/>
+</svg>

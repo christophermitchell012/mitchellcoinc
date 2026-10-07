@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-06T14:54:36Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-07T14:26:11Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -40,6 +40,7 @@
   <url><loc>https://mitchellcoinc.com/maps/36-dense-fog-alerts-transportation-visibility-context.html</loc><lastmod>2026-10-04T14:39:28Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/37-fire-weather-alerts-wildfire-readiness-context.html</loc><lastmod>2026-10-05T15:13:13Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/38-gale-storm-marine-alerts-coastal-operations-context.html</loc><lastmod>2026-10-06T14:54:36Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-06T14:54:36Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/39-superfund-national-priorities-list-sites-cleanup-status.html</loc><lastmod>2026-10-07T14:26:11Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-07T14:26:11Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
