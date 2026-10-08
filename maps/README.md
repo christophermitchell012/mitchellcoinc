@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 39:
+The collection contains Maps 00 through 40:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -48,6 +48,7 @@ The collection contains Maps 00 through 39:
 - 37 Fire Weather Alerts: Wildfire Readiness Context
 - 38 Gale & Storm Marine Alerts: Coastal Operations Context
 - 39 Superfund National Priorities List Sites & Cleanup Status
+- 40 Global Natural Events: NASA EONET Open Events
 
 ## Repository architecture
 
@@ -91,6 +92,7 @@ Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters
 - **Map 37:** NOAA/NWS active Red Flag Warnings and Fire Weather Watches. The alert feed loads anonymously; exact NWS affected-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page reports no active-fire, ignition, spread, evacuation, restriction, loss, proprietary-risk, or readiness recommendation. See `data/map37-source-license.md`.
 - **Map 38:** NOAA/NWS active Gale Warnings/Watches, Storm Warnings/Watches, Hurricane Force Wind Warnings/Watches, Hazardous Seas Warnings/Watches, and Special Marine Warnings. The alert feed loads anonymously; exact NWS marine-zone geometry loads only on explicit user action with caching, four-request concurrency, and an 80-zone ceiling. The page provides no vessel routing, port-closure, inferred wave-height, loss, proprietary-risk, or operating recommendation. See `data/map38-source-license.md`.
 - **Map 39:** U.S. EPA Envirofacts SEMS proposed, final, and deleted National Priorities List site records. A dated, normalized same-origin snapshot contains 1,840 official source points retrieved anonymously on 2026-10-07; the page calculates no contamination boundary, exposure, cleanup-completion, liability, health-risk, or property-safety score. See `data/map39-source-license.md`.
+- **Map 40:** NASA EONET v3 open natural-event records requested anonymously at runtime, capped at 500 records. The page displays each event's latest supplied geometry and treats “open” only as an EONET lifecycle status; it calculates no alert, forecast, risk, exposure, loss, or evacuation guidance. See `data/map40-source-license.md`.
 
 ## Site/search files
 
