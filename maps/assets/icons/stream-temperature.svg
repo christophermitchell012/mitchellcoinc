@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Stream temperature map</title>
+  <desc id="desc">A thermometer beside flowing water</desc>
+  <path d="M9 42c8-8 15 8 23 0s15 8 23 0v12H9z" fill="#197fbd" opacity=".9"/>
+  <path d="M9 36c8-8 15 8 23 0s15 8 23 0" fill="none" stroke="#73d7ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M28 10a7 7 0 0 1 14 0v25.5a12 12 0 1 1-14 0z" fill="#112535" stroke="#f4f8fb" stroke-width="3"/>
+  <path d="M35 18v24" stroke="#ff8b5c" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="35" cy="46" r="7" fill="#ff8b5c"/>
+</svg>

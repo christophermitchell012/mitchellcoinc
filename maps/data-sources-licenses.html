@@ -8,7 +8,7 @@ and remain subject to their own licenses, EULAs, attribution requirements, and t
 See LICENSE and data-sources-licenses.html.
 -->
 <html lang="en"><head>
-<meta name="last-modified" content="2026-10-08T14:16:58Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="last-modified" content="2026-10-09T14:25:42Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Data Sources and Licenses | MitchellCo Interactive Maps</title>
 <meta name="description" content="Data provenance, citations, licenses, EULA notes and attribution for MitchellCo interactive maps.">
 <meta name="robots" content="index,follow"><link rel="icon" href="assets/icons/2219cec3095bdb7c.svg"><link rel="canonical" href="https://mitchellcoinc.com/maps/data-sources-licenses.html">
@@ -141,7 +141,13 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <p>“Open” means the EONET record has no closing date. It is not an emergency declaration or proof that conditions persist throughout an area. Latest geometry may be a reference point rather than a complete footprint, and reaching the 500-record cap means additional open events may exist. The map calculates no alert, forecast, risk, exposure, loss, closure or evacuation guidance.</p>
 <ul><li><a href="https://eonet.gsfc.nasa.gov/docs/v3" target="_blank" rel="noopener">EONET v3 API documentation</a></li><li><a href="https://eonet.gsfc.nasa.gov/" target="_blank" rel="noopener">EONET project page</a></li><li><a href="https://www.earthdata.nasa.gov/data/tools/eonet" target="_blank" rel="noopener">NASA Earthdata EONET listing</a></li><li><a href="data/map40-source-license.md">Map 40 source contract</a></li></ul>
 
+<h2 id="map41">Map 41 · Stream Temperature Explorer: Latest USGS Measurements</h2>
+<h3>USGS Water Data APIs · OGC latest-continuous collection</h3><span class="tag">Anonymous recent stream-temperature observations</span>
+<p>Map 41 requests parameter 00010 (water temperature in degrees Celsius) from the USGS Water Data OGC <code>latest-continuous</code> collection only after explicit user action. Each request is limited to stream sites in the visible map area, the prior 48 hours and at most 500 records, with a 60-second client cooldown.</p>
+<p>Observations retain USGS site identifiers, measurement times, values and data-quality codes. The page excludes older observations returned by the service. Its temperature bands are descriptive display labels, not safety, ecological, regulatory or biological thresholds; MitchellCo does not infer trends, causes, dissolved oxygen, pathogens, algae, fish stress, recreational safety, drinking-water safety or compliance.</p>
+<ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/openapi" target="_blank" rel="noopener">USGS Water Data OGC API definition</a></li><li><a href="https://api.waterdata.usgs.gov/docs/instantaneous-values/" target="_blank" rel="noopener">USGS instantaneous-values documentation</a></li><li><a href="data/map41-source-license.md">Map 41 source contract</a></li></ul>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
-<p class="muted">Last source-policy review: 2026-10-08 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
+<p class="muted">Last source-policy review: 2026-10-09 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
 </main></body></html>
