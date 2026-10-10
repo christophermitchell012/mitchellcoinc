@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Dissolved oxygen map</title>
+  <desc id="desc">Oxygen bubbles rising above flowing water</desc>
+  <path d="M7 43c8-8 16 8 25 0s16 8 25 0v13H7z" fill="#147fa8" opacity=".95"/>
+  <path d="M7 37c8-8 16 8 25 0s16 8 25 0" fill="none" stroke="#77dcff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="19" cy="25" r="7" fill="none" stroke="#5cdec4" stroke-width="3"/>
+  <circle cx="36" cy="17" r="9" fill="none" stroke="#ffd166" stroke-width="3"/>
+  <circle cx="51" cy="28" r="5" fill="none" stroke="#bb9cff" stroke-width="3"/>
+</svg>

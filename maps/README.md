@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 41:
+The collection contains Maps 00 through 42:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -50,6 +50,7 @@ The collection contains Maps 00 through 41:
 - 39 Superfund National Priorities List Sites & Cleanup Status
 - 40 Global Natural Events: NASA EONET Open Events
 - 41 Stream Temperature Explorer: Latest USGS Measurements
+- 42 Dissolved Oxygen Explorer: Recent USGS Measurements
 
 ## Repository architecture
 
@@ -95,6 +96,7 @@ Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters
 - **Map 39:** U.S. EPA Envirofacts SEMS proposed, final, and deleted National Priorities List site records. A dated, normalized same-origin snapshot contains 1,840 official source points retrieved anonymously on 2026-10-07; the page calculates no contamination boundary, exposure, cleanup-completion, liability, health-risk, or property-safety score. See `data/map39-source-license.md`.
 - **Map 40:** NASA EONET v3 open natural-event records requested anonymously at runtime, capped at 500 records. The page displays each event's latest supplied geometry and treats “open” only as an EONET lifecycle status; it calculates no alert, forecast, risk, exposure, loss, or evacuation guidance. See `data/map40-source-license.md`.
 - **Map 41:** USGS Water Data OGC `latest-continuous`, parameter 00010, requested anonymously only after explicit user action for the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. Temperature bands are descriptive labels, not safety, ecological, regulatory, or biological thresholds. See `data/map41-source-license.md`.
+- **Map 42:** USGS Water Data OGC `latest-continuous`, parameter 00300, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map preserves time-series IDs and treats value colors only as descriptive display bands, not ecological, safety, impairment, or regulatory thresholds. See `data/map42-source-license.md`.
 
 ## Site/search files
 
