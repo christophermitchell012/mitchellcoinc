@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Stream pH map</title>
+  <desc id="desc">A water drop with a pH scale</desc>
+  <path d="M31.8 5C25 16 14 27 14 39a18 18 0 0 0 36 0C50 27 39 16 31.8 5z" fill="#147fa8" opacity=".95"/>
+  <path d="M22 40h20" fill="none" stroke="#f4fafc" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="40" r="4" fill="#78c8ff"/><circle cx="32" cy="40" r="4" fill="#5cdec4"/><circle cx="40" cy="40" r="4" fill="#ffd166"/>
+  <path d="M23 28h18" fill="none" stroke="#f4fafc" stroke-width="3" stroke-linecap="round"/>
+</svg>
