@@ -8,7 +8,7 @@ and remain subject to their own licenses, EULAs, attribution requirements, and t
 See LICENSE and data-sources-licenses.html.
 -->
 <html lang="en"><head>
-<meta name="last-modified" content="2026-10-11T14:29:17Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="last-modified" content="2026-10-12T14:44:19Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Data Sources and Licenses | MitchellCo Interactive Maps</title>
 <meta name="description" content="Data provenance, citations, licenses, EULA notes and attribution for MitchellCo interactive maps.">
 <meta name="robots" content="index,follow"><link rel="icon" href="assets/icons/2219cec3095bdb7c.svg"><link rel="canonical" href="https://mitchellcoinc.com/maps/data-sources-licenses.html">
@@ -159,7 +159,13 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <p>Measurements retain USGS site and time-series identifiers, times, reported units and data-quality codes. The page excludes older observations returned by the service. Its value colors are descriptive display bands, not ecological, drinking-water, recreational-safety, impairment, corrosivity or regulatory thresholds; MitchellCo does not infer causes, trends, ecosystem health, safety or compliance.</p>
 <ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous?f=html" target="_blank" rel="noopener">USGS latest-continuous collection</a></li><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/parameter-codes?f=html" target="_blank" rel="noopener">USGS parameter-code collection</a></li><li><a href="data/map43-source-license.md">Map 43 source contract</a></li></ul>
 
+<h2 id="map44">Map 44 · Specific Conductance Explorer: Recent USGS Measurements</h2>
+<h3>USGS Water Data APIs · OGC latest-continuous collection</h3><span class="tag">Anonymous recent stream specific-conductance measurements</span>
+<p>Map 44 requests parameter 00095, specific conductance of unfiltered water in microsiemens per centimeter at 25 degrees Celsius, from the USGS Water Data OGC <code>latest-continuous</code> collection only after explicit user action. Each request is limited to stream sites in the visible map area, the prior 48 hours and at most 500 records, with a 60-second client cooldown.</p>
+<p>Measurements retain USGS site and time-series identifiers, times, reported units and data-quality codes. Missing, nonnumeric, negative, nonpoint and older records are excluded. The colors are descriptive display bins, not salinity, drinking-water, ecological, agricultural, contamination, impairment, corrosivity or regulatory thresholds; MitchellCo does not infer constituents, causes, trends, safety, suitability or compliance.</p>
+<ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/parameter-codes/items/00095?f=html" target="_blank" rel="noopener">USGS parameter 00095</a></li><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous?f=html" target="_blank" rel="noopener">USGS latest-continuous collection</a></li><li><a href="data/map44-source-license.md">Map 44 source contract</a></li></ul>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
-<p class="muted">Last source-policy review: 2026-10-11 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
+<p class="muted">Last source-policy review: 2026-10-12 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
 </main></body></html>

@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 43:
+The collection contains Maps 00 through 44:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -52,6 +52,7 @@ The collection contains Maps 00 through 43:
 - 41 Stream Temperature Explorer: Latest USGS Measurements
 - 42 Dissolved Oxygen Explorer: Recent USGS Measurements
 - 43 Stream pH Explorer: Recent USGS Measurements
+- 44 Specific Conductance Explorer: Recent USGS Measurements
 
 ## Repository architecture
 
@@ -99,6 +100,7 @@ Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters
 - **Map 41:** USGS Water Data OGC `latest-continuous`, parameter 00010, requested anonymously only after explicit user action for the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. Temperature bands are descriptive labels, not safety, ecological, regulatory, or biological thresholds. See `data/map41-source-license.md`.
 - **Map 42:** USGS Water Data OGC `latest-continuous`, parameter 00300, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map preserves time-series IDs and treats value colors only as descriptive display bands, not ecological, safety, impairment, or regulatory thresholds. See `data/map42-source-license.md`.
 - **Map 43:** USGS Water Data OGC `latest-continuous`, parameter 00400, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map preserves time-series IDs and treats pH colors only as descriptive display bands, not ecological, drinking-water, recreational-safety, impairment, corrosivity, or regulatory thresholds. See `data/map43-source-license.md`.
+- **Map 44:** USGS Water Data OGC `latest-continuous`, parameter 00095, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, and treats colors only as descriptive bins, not salinity, ecological, drinking-water, agricultural, contamination, impairment, or regulatory thresholds. See `data/map44-source-license.md`.
 
 ## Site/search files
 

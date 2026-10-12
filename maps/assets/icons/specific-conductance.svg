@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Specific conductance map</title>
+  <desc id="desc">Water drop crossed by an electrical conductivity symbol</desc>
+  <path d="M32 5C25 16 14 28 14 40a18 18 0 0 0 36 0C50 28 39 16 32 5z" fill="#147f9e" opacity=".96"/>
+  <path d="M17 41h10l4-12 5 22 4-10h8" fill="none" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="22" r="3" fill="#78c8ff"/><circle cx="40" cy="24" r="3" fill="#5cdec4"/>
+</svg>
