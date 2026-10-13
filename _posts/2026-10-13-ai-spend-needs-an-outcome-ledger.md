@@ -50,5 +50,5 @@ AI spend governance will earn its place when teams can trace a dollar from model
 ## Sources
 
 - [Freshworks to Extend Freshservice into AI and Software Spend Governance with Agreement to Acquire Torii](https://www.freshworks.com/pressrelease/freshworks-to-extend-freshservice-into-ai-and-software-spend-governance-with-agreement-to-acquire-torii/)
-- [IT Asset Management | Freshservice](https://www.freshworks.com/freshservice/it-asset-management/)
-- [Software Asset Management | Freshservice ITAM](https://www.freshworks.com/freshservice/it-asset-management/software-asset-management/)
+- [IT Asset Management: Freshservice](https://www.freshworks.com/freshservice/it-asset-management/)
+- [Software Asset Management: Freshservice ITAM](https://www.freshworks.com/freshservice/it-asset-management/software-asset-management/)
