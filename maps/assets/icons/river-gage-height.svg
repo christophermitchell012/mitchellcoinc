@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">River gage height</title>
+  <desc id="desc">A transparent icon showing a river wave beside a graduated staff gage.</desc>
+  <path fill="none" stroke="#78c8ff" stroke-width="5" stroke-linecap="round" d="M5 43c8-7 14-7 22 0s14 7 22 0 8-7 10-7"/>
+  <path fill="none" stroke="#5cdec4" stroke-width="5" stroke-linecap="round" d="M5 53c8-7 14-7 22 0s14 7 22 0 8-7 10-7"/>
+  <path fill="none" stroke="#ffd166" stroke-width="4" stroke-linecap="round" d="M45 8v31"/>
+  <path fill="none" stroke="#ffd166" stroke-width="3" stroke-linecap="round" d="M45 12h9m-9 8h6m-6 8h9m-9 8h6"/>
+</svg>
