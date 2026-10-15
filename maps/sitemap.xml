@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-14T14:28:27Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-15T14:08:47Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -48,6 +48,7 @@
   <url><loc>https://mitchellcoinc.com/maps/44-specific-conductance-recent-usgs-measurements.html</loc><lastmod>2026-10-12T14:44:19Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/45-streamflow-discharge-recent-usgs-measurements.html</loc><lastmod>2026-10-13T14:35:00Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/46-river-gage-height-recent-usgs-measurements.html</loc><lastmod>2026-10-14T14:28:27Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-14T14:28:27Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/47-stream-turbidity-recent-usgs-measurements.html</loc><lastmod>2026-10-15T14:08:47Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-15T14:08:47Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>

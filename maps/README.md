@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 46:
+The collection contains Maps 00 through 47:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -55,6 +55,7 @@ The collection contains Maps 00 through 46:
 - 44 Specific Conductance Explorer: Recent USGS Measurements
 - 45 Streamflow Explorer: Recent USGS Discharge Measurements
 - 46 River Gage Height Explorer: Recent USGS Measurements
+- 47 Stream Turbidity Explorer: Recent USGS Measurements
 
 ## Repository architecture
 
@@ -78,6 +79,8 @@ Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbe
 Civil Emergency Alerts & Public Safety Context is deferred because the active NWS-distributed alert tested on 2026-10-05 supplied neither polygon geometry nor resolvable affected-zone URLs. Reconsider only when the source supports a truthful map rather than an area-name list.
 
 Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters service exposed the needed points through an ArcGIS FeatureServer rather than a qualifying zero-Esri source, while the guessed OpenFEMA endpoint returned 404. It remains unnumbered and deferred until an authoritative non-Esri snapshot or API passes the source gate.
+
+Stream Velocity Explorer was evaluated on 2026-10-15 using USGS parameter 00055. The recent nationwide stream-site query returned only one series, so it remains unnumbered and deferred until the source supplies enough current observations for a useful geographic view.
 
 ## Recent source contracts
 
@@ -105,6 +108,7 @@ Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters
 - **Map 44:** USGS Water Data OGC `latest-continuous`, parameter 00095, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, and treats colors only as descriptive bins, not salinity, ecological, drinking-water, agricultural, contamination, impairment, or regulatory thresholds. See `data/map44-source-license.md`.
 - **Map 45:** USGS Water Data OGC `latest-continuous`, parameter 00060, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, and treats colors only as descriptive magnitude bins, not low-flow, normal-flow, flood, navigability, safety, ecological, drought, or regulatory thresholds. See `data/map45-source-license.md`.
 - **Map 46:** USGS Water Data OGC `latest-continuous`, parameter 00065, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map preserves finite negative values because gage height is relative to a local datum, preserves time-series IDs, and uses one marker color to avoid implying cross-site flood, bankfull, navigation, safety, ecological, or regulatory thresholds. See `data/map46-source-license.md`.
+- **Map 47:** USGS Water Data OGC `latest-continuous`, parameter 63680, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, normalizes the API's `_FNU` display string to the official `FNU` unit, and treats colors only as descriptive bands, not water-clarity, drinking-water, ecological, recreational, impairment, or regulatory thresholds. See `data/map47-source-license.md`.
 
 ## Site/search files
 
