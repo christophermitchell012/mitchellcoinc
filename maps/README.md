@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 47:
+The collection contains Maps 00 through 48:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -56,6 +56,7 @@ The collection contains Maps 00 through 47:
 - 45 Streamflow Explorer: Recent USGS Discharge Measurements
 - 46 River Gage Height Explorer: Recent USGS Measurements
 - 47 Stream Turbidity Explorer: Recent USGS Measurements
+- 48 Dissolved Oxygen Saturation Explorer: Recent USGS Measurements
 
 ## Repository architecture
 
@@ -109,6 +110,7 @@ Stream Velocity Explorer was evaluated on 2026-10-15 using USGS parameter 00055.
 - **Map 45:** USGS Water Data OGC `latest-continuous`, parameter 00060, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, and treats colors only as descriptive magnitude bins, not low-flow, normal-flow, flood, navigability, safety, ecological, drought, or regulatory thresholds. See `data/map45-source-license.md`.
 - **Map 46:** USGS Water Data OGC `latest-continuous`, parameter 00065, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map preserves finite negative values because gage height is relative to a local datum, preserves time-series IDs, and uses one marker color to avoid implying cross-site flood, bankfull, navigation, safety, ecological, or regulatory thresholds. See `data/map46-source-license.md`.
 - **Map 47:** USGS Water Data OGC `latest-continuous`, parameter 63680, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, normalizes the API's `_FNU` display string to the official `FNU` unit, and treats colors only as descriptive bands, not water-clarity, drinking-water, ecological, recreational, impairment, or regulatory thresholds. See `data/map47-source-license.md`.
+- **Map 48:** USGS Water Data OGC `latest-continuous`, parameter 00301, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, expands the API's `%` unit label to `% saturation`, and treats colors only as descriptive bands, not oxygen-stress, ecosystem-health, impairment, treatment, safety, or regulatory thresholds. See `data/map48-source-license.md`.
 
 ## Site/search files
 

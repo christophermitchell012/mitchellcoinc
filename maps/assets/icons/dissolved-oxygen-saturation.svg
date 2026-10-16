@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Dissolved oxygen saturation</title>
+  <desc id="desc">A transparent icon showing an oxygen bubble inside a water drop with a percent mark.</desc>
+  <path fill="none" stroke="#78c8ff" stroke-width="5" stroke-linecap="round" d="M32 5C23 18 16 27 16 38a16 16 0 0 0 32 0C48 27 41 18 32 5Z"/>
+  <circle cx="27" cy="34" r="6" fill="none" stroke="#5cdec4" stroke-width="3"/><path d="M37 28 27 45" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="43" r="2.5" fill="#ffd166"/>
+  <path d="M8 55c7-5 12-5 19 0s12 5 19 0 9-5 12-4" fill="none" stroke="#5cdec4" stroke-width="4" stroke-linecap="round"/>
+</svg>

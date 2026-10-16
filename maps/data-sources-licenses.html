@@ -8,7 +8,7 @@ and remain subject to their own licenses, EULAs, attribution requirements, and t
 See LICENSE and data-sources-licenses.html.
 -->
 <html lang="en"><head>
-<meta name="last-modified" content="2026-10-15T14:08:47Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="last-modified" content="2026-10-16T14:44:30Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Data Sources and Licenses | MitchellCo Interactive Maps</title>
 <meta name="description" content="Data provenance, citations, licenses, EULA notes and attribution for MitchellCo interactive maps.">
 <meta name="robots" content="index,follow"><link rel="icon" href="assets/icons/2219cec3095bdb7c.svg"><link rel="canonical" href="https://mitchellcoinc.com/maps/data-sources-licenses.html">
@@ -183,7 +183,13 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <p>Measurements retain USGS site and time-series identifiers, times, reported units and data-quality codes. Missing, nonnumeric, negative, nonpoint and older records are excluded. The API's `_FNU` unit string is displayed as the official `FNU` unit. Colors are descriptive display bands, not water-clarity, drinking-water, ecological, recreational, impairment or regulatory thresholds; MitchellCo does not infer sediment mass, contaminants, pathogens, causes, trends, safety or compliance.</p>
 <ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/parameter-codes/items/63680?f=html" target="_blank" rel="noopener">USGS parameter 63680</a></li><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous?f=html" target="_blank" rel="noopener">USGS latest-continuous collection</a></li><li><a href="data/map47-source-license.md">Map 47 source contract</a></li></ul>
 
+<h2 id="map48">Map 48 · Dissolved Oxygen Saturation Explorer: Recent USGS Measurements</h2>
+<h3>USGS Water Data APIs · OGC latest-continuous collection</h3><span class="tag">Anonymous recent stream dissolved-oxygen saturation measurements</span>
+<p>Map 48 requests parameter 00301, dissolved oxygen in unfiltered water expressed as percent of saturation, from the USGS Water Data OGC <code>latest-continuous</code> collection only after explicit user action. Each request is limited to stream sites in the visible map area, the prior 48 hours and at most 500 records, with a 60-second client cooldown.</p>
+<p>Measurements retain USGS site and time-series identifiers, times, reported units and data-quality codes. Missing, nonnumeric, negative, nonpoint and older records are excluded. The API's <code>%</code> unit label is displayed as <code>% saturation</code>. Colors are descriptive display bands, not oxygen-stress, ecosystem-health, impairment, treatment, safety or regulatory thresholds; MitchellCo does not infer causes, trends, treatment need, safety or compliance.</p>
+<ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/parameter-codes/items/00301?f=html" target="_blank" rel="noopener">USGS parameter 00301</a></li><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous?f=html" target="_blank" rel="noopener">USGS latest-continuous collection</a></li><li><a href="data/map48-source-license.md">Map 48 source contract</a></li></ul>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
-<p class="muted">Last source-policy review: 2026-10-15 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
+<p class="muted">Last source-policy review: 2026-10-16 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
 </main></body></html>
