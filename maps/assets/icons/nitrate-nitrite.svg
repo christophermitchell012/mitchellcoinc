@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Nitrate plus nitrite water measurement</title>
+  <desc id="desc">A transparent water droplet containing three connected nutrient molecules</desc>
+  <path fill="#78c8ff" d="M32 3C25 16 13 28 13 42a19 19 0 0 0 38 0C51 28 39 16 32 3Z"/>
+  <path fill="#102a35" d="M23 37a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm18-5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 15a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/>
+  <path fill="none" stroke="#102a35" stroke-width="3" stroke-linecap="round" d="m27 40 9-4m-9 8 10 6"/>
+</svg>
