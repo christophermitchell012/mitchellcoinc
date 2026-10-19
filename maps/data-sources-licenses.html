@@ -8,7 +8,7 @@ and remain subject to their own licenses, EULAs, attribution requirements, and t
 See LICENSE and data-sources-licenses.html.
 -->
 <html lang="en"><head>
-<meta name="last-modified" content="2026-10-18T14:30:41Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="last-modified" content="2026-10-19T14:53:36Z"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Data Sources and Licenses | MitchellCo Interactive Maps</title>
 <meta name="description" content="Data provenance, citations, licenses, EULA notes and attribution for MitchellCo interactive maps.">
 <meta name="robots" content="index,follow"><link rel="icon" href="assets/icons/2219cec3095bdb7c.svg"><link rel="canonical" href="https://mitchellcoinc.com/maps/data-sources-licenses.html">
@@ -201,7 +201,13 @@ NASA VIIRS Land Science Investigator-led Processing System. (2025). <i>VIIRS/NPP
 <p>Records retain USGS site, time-series and supplied statistic identifiers, observation times, reported units and data-quality status. Missing, nonnumeric, negative, nonpoint and older records are excluded. The parameter definition supplies no universal statistical or accumulation time basis, so the map uses one marker color and does not infer comparable storm totals, daily totals, rates, intensities, forecasts, flood conditions, damage, safety or compliance.</p>
 <ul><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/parameter-codes/items/00045?f=html" target="_blank" rel="noopener">USGS parameter 00045</a></li><li><a href="https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous?f=html" target="_blank" rel="noopener">USGS latest-continuous collection</a></li><li><a href="data/map50-source-license.md">Map 50 source contract</a></li></ul>
 
+<h2 id="map51">Map 51 · Global Soil Moisture &amp; Drought Watch</h2>
+<h3>NOAA Climate Prediction Center · Global Land Surface Monitor</h3><span class="tag">Daily modeled soil-moisture context</span>
+<p>Map 51 displays the official CPC global soil-moisture percentile and recent-anomaly images one at a time. The browser retrieves the selected raster directly from NOAA without credentials, polling, proxying or an Esri service. The image's embedded valid date, legend and units remain authoritative.</p>
+<p>CPC describes a one-layer leaky-bucket model driven by observed precipitation and temperature on a 0.5° grid, with spatially constant parameters and a 760 mm maximum holding capacity. Percentile is relative to the 1979–2019 modeled record. The interface does not sample pixels, georegister the product to parcels or infer sensor readings, drought declarations, flash-drought onset, crop loss, fire potential, water availability, causes, forecasts, safety or regulatory status.</p>
+<ul><li><a href="https://www.cpc.ncep.noaa.gov/products/Drought/leaky/" target="_blank" rel="noopener">NOAA CPC model documentation</a></li><li><a href="https://www.cpc.ncep.noaa.gov/products/Drought/leaky/smp/" target="_blank" rel="noopener">Official percentile products</a></li><li><a href="data/map51-source-license.md">Map 51 source contract</a></li></ul>
+
 <h2>Release philosophy</h2>
 <p>When a source requires a specific notice, year, copyright statement, citation, or license link, MitchellCo retains it. If the required year is not known from the source data, publication is held rather than guessed. Sources with unresolved commercial-use or redistribution terms are excluded until cleared.</p>
-<p class="muted">Last source-policy review: 2026-10-18 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
+<p class="muted">Last source-policy review: 2026-10-19 · © 2026 <a href="https://mitchellcoinc.com/" target="_blank" rel="noopener">MitchellCo Inc.</a></p>
 </main></body></html>

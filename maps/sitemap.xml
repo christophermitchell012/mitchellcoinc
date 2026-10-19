@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-18T14:30:41Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-19T14:53:36Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -52,6 +52,7 @@
   <url><loc>https://mitchellcoinc.com/maps/48-dissolved-oxygen-saturation-recent-usgs-measurements.html</loc><lastmod>2026-10-16T14:44:30Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/49-nitrate-plus-nitrite-recent-usgs-measurements.html</loc><lastmod>2026-10-17T14:42:34Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/50-recent-usgs-precipitation-values.html</loc><lastmod>2026-10-18T14:30:41Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-18T14:30:41Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/51-global-soil-moisture-drought-watch.html</loc><lastmod>2026-10-19T14:53:36Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-19T14:53:36Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>

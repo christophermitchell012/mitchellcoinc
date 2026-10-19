@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 50:
+The collection contains Maps 00 through 51:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -59,6 +59,7 @@ The collection contains Maps 00 through 50:
 - 48 Dissolved Oxygen Saturation Explorer: Recent USGS Measurements
 - 49 Nitrate + Nitrite Explorer: Recent USGS Measurements
 - 50 Precipitation Observation Explorer: Recent USGS Values
+- 51 Global Soil Moisture & Drought Watch
 
 ## Repository architecture
 
@@ -70,8 +71,20 @@ Static, slow-changing, rate-limited, or browser-incompatible source data should 
 
 ## Current roadmap
 
-Next candidates:
-- No number is reserved. Select the next feasible public-issue candidate after source-gate review.
+The approved sequence below governs the next releases. Numbers identify sequence, not a promise to publish a candidate that fails the source gate. A failed candidate is documented and deferred without consuming its number; the next feasible candidate inherits the lowest unused number.
+
+| Sequence | Candidate | Primary source | Status |
+|---|---|---|---|
+| 51 | Global Soil Moisture & Drought Watch | NOAA CPC | Published |
+| 52 | Coastal Erosion & Shoreline Change | USGS Coastal Change Hazards | Next |
+| 53 | Beach Water Quality & Advisory History | EPA BEACON | Planned |
+| 54 | Global Marine Heatwave & Ocean Temperature Watch | NOAA OISST / Coral Reef Watch | Planned |
+| 55 | Rail Network Weather & Hazard Exposure | BTS NTAD / NOAA | Planned |
+| 56 | Highway Weather & Bridge Exposure | BTS NTAD / NOAA | Planned |
+| 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Planned |
+| 58 | Global Dams, Reservoirs & Water Exposure | FAO | Planned |
+| 59 | Levee & Flood-Control Infrastructure Risk | USACE National Levee Database | Planned |
+| 60 | Global Water Stress & Supply Pressure | FAO AQUASTAT | Planned |
 
 Lightning Activity & Wildfire Ignition Potential is deferred until a stable authoritative lightning source passes the anonymous/keyless, browser-safe source gate.
 
@@ -117,6 +130,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 48:** USGS Water Data OGC `latest-continuous`, parameter 00301, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, expands the API's `%` unit label to `% saturation`, and treats colors only as descriptive bands, not oxygen-stress, ecosystem-health, impairment, treatment, safety, or regulatory thresholds. See `data/map48-source-license.md`.
 - **Map 49:** USGS Water Data OGC `latest-continuous`, parameter 99133, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series IDs, and treats colors only as descriptive bands, not drinking-water, aquatic-life, health, agricultural, impairment, treatment, or regulatory thresholds. See `data/map49-source-license.md`.
 - **Map 50:** USGS Water Data OGC `latest-continuous`, parameter 00045, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series and supplied statistic IDs, and uses one marker color because the parameter definition supplies no universal accumulation time basis. It makes no storm-total, daily-total, rate, intensity, forecast, flood, damage, safety, or compliance claim. See `data/map50-source-license.md`.
+- **Map 51:** NOAA CPC Global Land Surface Monitor soil-moisture percentile and anomaly images, loaded one at a time directly from the official source without credentials. The interface preserves the official embedded date and legend, does not sample or georegister image pixels, and makes no sensor-reading, parcel, drought-declaration, flash-drought, crop-loss, fire, water-availability, forecast, safety, or regulatory claim. See `data/map51-source-license.md`.
 
 ## Site/search files
 
