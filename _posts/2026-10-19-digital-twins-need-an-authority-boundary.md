@@ -53,7 +53,7 @@ Every proposed or executed action should leave a receipt containing the state sn
 
 It also makes authority reviewable. Teams can see which recommendations operators reject, which approved commands fail, and where automatic actions leave the expected control envelope. Without that record, the twin may improve its predictions while the operational product stays opaque.
 
-This extends the principle that [physical AI needs an escalation contract](/blog/2026/09/05/physical-ai-needs-escalation-contract/). Escalation decides when software hands a situation to a person. The authority boundary decides how far the software may go before that handoff.
+This extends the principle that [physical AI needs an escalation contract](/blog/2026/09/05/physical-ai-needs-an-escalation-contract/). Escalation decides when software hands a situation to a person. The authority boundary decides how far the software may go before that handoff.
 
 A digital twin earns more authority through evidence, not visual realism. Start by making state legible. Add predictions with their assumptions. Then promote individual actions only when their limits, fallback, and receipt are ready.
 

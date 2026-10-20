@@ -1,0 +1,21 @@
+{
+  "title": "California long-term shoreline change summary",
+  "source": "USGS Data Report 1187 and associated data release 10.5066/P94J0K7Z",
+  "published": "2024-01-16",
+  "shoreline_years": "mid-1800s through 2016",
+  "method": "Linear regression shoreline change rates calculated with the USGS Digital Shoreline Analysis System",
+  "regions": [
+    {"id":"north","name":"Northern California","extent":"Oregon border to Tomales Bay","center":[39.9,-123.9],"transects":5793,"net_rate":0.02,"net_ci":0.05,"erosion_share":55,"erosion_rate":-0.4,"erosion_rate_ci":0.01,"accretion_share":44,"accretion_rate":0.5,"accretion_rate_ci":0.02},
+    {"id":"central","name":"Central California","extent":"Tomales Bay to El Capitán State Beach","center":[36.6,-121.9],"transects":6584,"net_rate":-0.16,"net_ci":0.04,"erosion_share":66,"erosion_rate":-0.4,"erosion_rate_ci":0.01,"accretion_share":33,"accretion_rate":0.3,"accretion_rate_ci":0.01},
+    {"id":"south","name":"Southern California","extent":"El Capitán State Beach to the Mexico border","center":[33.8,-118.3],"transects":6686,"net_rate":0.3,"net_ci":0.03,"erosion_share":41,"erosion_rate":-0.2,"erosion_rate_ci":0.01,"accretion_share":58,"accretion_rate":0.6,"accretion_rate_ci":0.02}
+  ],
+  "hotspots": [
+    {"region":"Northern California","type":"erosion","name":"South of Eel River, Humboldt County","position":[40.57,-124.22],"rate":-2.5,"ci":3.8,"significant":false},
+    {"region":"Northern California","type":"accretion","name":"Samoa Dunes State Recreation Area north jetty, Humboldt County","position":[40.77,-124.24],"rate":6.6,"ci":4.8,"significant":true},
+    {"region":"Central California","type":"erosion","name":"Point Año Nuevo, San Mateo County","position":[37.11,-122.34],"rate":-3.2,"ci":2.6,"significant":true},
+    {"region":"Central California","type":"accretion","name":"Morro Rock Beach, San Luis Obispo County","position":[35.37,-120.87],"rate":3.5,"ci":1.3,"significant":true},
+    {"region":"Southern California","type":"erosion","name":"Point Mugu State Park, Ventura County","position":[34.09,-119.04],"rate":-1.5,"ci":0.5,"significant":true},
+    {"region":"Southern California","type":"accretion","name":"Seal Beach, Orange County","position":[33.74,-118.11],"rate":3.4,"ci":0.8,"significant":true}
+  ],
+  "position_note": "Marker coordinates are approximate orientation points for named USGS table locations, not source transect coordinates or hazard boundaries."
+}
