@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 52:
+The collection contains Maps 00 through 53:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -61,6 +61,7 @@ The collection contains Maps 00 through 52:
 - 50 Precipitation Observation Explorer: Recent USGS Values
 - 51 Global Soil Moisture & Drought Watch
 - 52 California Coastal Erosion & Shoreline Change
+- 53 U.S. Beach Water Quality & Advisory History
 
 ## Repository architecture
 
@@ -78,8 +79,8 @@ The approved sequence below governs the next releases. Numbers identify sequence
 |---|---|---|---|
 | 51 | Global Soil Moisture & Drought Watch | NOAA CPC | Published |
 | 52 | Coastal Erosion & Shoreline Change | USGS Coastal Change Hazards | Published |
-| 53 | Beach Water Quality & Advisory History | EPA BEACON | Next |
-| 54 | Global Marine Heatwave & Ocean Temperature Watch | NOAA OISST / Coral Reef Watch | Planned |
+| 53 | Beach Water Quality & Advisory History | EPA BEACON | Published |
+| 54 | Global Marine Heatwave & Ocean Temperature Watch | NOAA OISST / Coral Reef Watch | Next |
 | 55 | Rail Network Weather & Hazard Exposure | BTS NTAD / NOAA | Planned |
 | 56 | Highway Weather & Bridge Exposure | BTS NTAD / NOAA | Planned |
 | 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Planned |
@@ -133,6 +134,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 50:** USGS Water Data OGC `latest-continuous`, parameter 00045, requested anonymously only after explicit user action for stream sites in the visible map area and prior 48 hours, capped at 500 records with a 60-second client cooldown. The map excludes missing and negative values, preserves time-series and supplied statistic IDs, and uses one marker color because the parameter definition supplies no universal accumulation time basis. It makes no storm-total, daily-total, rate, intensity, forecast, flood, damage, safety, or compliance claim. See `data/map50-source-license.md`.
 - **Map 51:** NOAA CPC Global Land Surface Monitor soil-moisture percentile and anomaly images, loaded one at a time directly from the official source without credentials. The interface preserves the official embedded date and legend, does not sample or georegister image pixels, and makes no sensor-reading, parcel, drought-declaration, flash-drought, crop-loss, fire, water-availability, forecast, safety, or regulatory claim. See `data/map51-source-license.md`.
 - **Map 52:** USGS Data Report 1187 long-term California shoreline-change summary statistics, stored as a dated same-origin snapshot. The map presents the three regional rates, erosional/accretional shares, confidence intervals, and six named maximum-rate locations. Location markers are approximate orientation points, not source transects, parcels, hazard boundaries, live shorelines, forecasts, surveys, setback maps, engineering assessments, or property estimates. See `data/map52-source-license.md`.
+- **Map 53:** EPA BEACH Program national geospatial download, stored as a dated same-origin snapshot of 8,450 beach profiles with valid reference coordinates. Each point links to EPA BEACON's official advisory/closure and monitoring reports; those report rows are not copied locally. The map is a directory, not a live advisory feed, current closure list, sampling feed, beach boundary, monitoring-station map, contamination footprint, or swimming-safety determination. See `data/map53-source-license.md`.
 
 ## Site/search files
 
