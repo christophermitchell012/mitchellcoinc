@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 54:
+The collection contains Maps 00 through 55:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -63,6 +63,7 @@ The collection contains Maps 00 through 54:
 - 52 California Coastal Erosion & Shoreline Change
 - 53 U.S. Beach Water Quality & Advisory History
 - 54 Global Marine Heatwave & Ocean Temperature Watch
+- 55 U.S. Rail Network Weather & Hazard Exposure
 
 ## Repository architecture
 
@@ -82,8 +83,8 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 52 | Coastal Erosion & Shoreline Change | USGS Coastal Change Hazards | Published |
 | 53 | Beach Water Quality & Advisory History | EPA BEACON | Published |
 | 54 | Global Marine Heatwave & Ocean Temperature Watch | NOAA OISST / Coral Reef Watch | Published |
-| 55 | Rail Network Weather & Hazard Exposure | BTS NTAD / NOAA | Next |
-| 56 | Highway Weather & Bridge Exposure | BTS NTAD / NOAA | Planned |
+| 55 | Rail Network Weather & Hazard Exposure | BTS NTAD / NOAA | Published |
+| 56 | Highway Weather & Bridge Exposure | BTS NTAD / NOAA | Next |
 | 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Planned |
 | 58 | Global Dams, Reservoirs & Water Exposure | FAO | Planned |
 | 59 | Levee & Flood-Control Infrastructure Risk | USACE National Levee Database | Planned |
@@ -137,6 +138,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 52:** USGS Data Report 1187 long-term California shoreline-change summary statistics, stored as a dated same-origin snapshot. The map presents the three regional rates, erosional/accretional shares, confidence intervals, and six named maximum-rate locations. Location markers are approximate orientation points, not source transects, parcels, hazard boundaries, live shorelines, forecasts, surveys, setback maps, engineering assessments, or property estimates. See `data/map52-source-license.md`.
 - **Map 53:** EPA BEACH Program national geospatial download, stored as a dated same-origin snapshot of 8,450 beach profiles with valid reference coordinates. Each point links to EPA BEACON's official advisory/closure and monitoring reports; those report rows are not copied locally. The map is a directory, not a live advisory feed, current closure list, sampling feed, beach boundary, monitoring-station map, contamination footprint, or swimming-safety determination. See `data/map53-source-license.md`.
 - **Map 54:** NOAA Coral Reef Watch Marine Heatwave Watch v1.0.1, stored as the dated 2026-10-18 same-origin global 5 km category pixel image. Click identification uses NOAA's exact palette; category is not degrees Celsius. The map is not live, a forecast, local sensor reading, coral-bleaching alert, fishery/navigation advisory, or safety determination. See `data/map54-source-license.md`.
+- **Map 55:** BTS/FRA North American Rail Network, stored as a dated 2024-10-16 same-origin generalized transparent rail raster plus state summary. Active NOAA/NWS land-weather polygons load only after explicit user action. Geographic overlap does not establish rail disruption, closure, delay, track condition, damage, or operating restriction. See `data/map55-source-license.md`.
 
 ## Site/search files
 

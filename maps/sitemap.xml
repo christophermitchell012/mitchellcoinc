@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-22T14:52:45Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-23T14:09:50Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -56,6 +56,7 @@
   <url><loc>https://mitchellcoinc.com/maps/52-california-coastal-erosion-shoreline-change.html</loc><lastmod>2026-10-20T14:12:25Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/53-beach-water-quality-advisory-history.html</loc><lastmod>2026-10-21T15:01:52Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/54-global-marine-heatwave-ocean-temperature-watch.html</loc><lastmod>2026-10-22T14:52:45Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-22T14:52:45Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/55-rail-network-weather-hazard-exposure.html</loc><lastmod>2026-10-23T14:09:50Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-23T14:09:50Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
