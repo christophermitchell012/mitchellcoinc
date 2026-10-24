@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+<title id="t">Highway bridge and weather</title>
+<path fill="#57d4ff" d="M8 41h48v5H8zM13 39c2-13 10-20 19-20s17 7 19 20h-6c-2-9-7-14-13-14S21 30 19 39z"/>
+<path fill="#ffbf69" d="M9 47h6v10H9zm40 0h6v10h-6zM27 27h10v12H27z"/>
+<path fill="#f4fbff" d="M40 8a10 10 0 0 0-9 6 8 8 0 0 0-3-1 8 8 0 0 0-8 8h28a8 8 0 0 0-8-8z"/>
+<path fill="#ef5c69" d="m30 43 5 6h-4l3 8-9-11h4z"/>
+</svg>
