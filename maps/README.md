@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 56:
+The collection contains Maps 00 through 57:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -65,6 +65,7 @@ The collection contains Maps 00 through 56:
 - 54 Global Marine Heatwave & Ocean Temperature Watch
 - 55 U.S. Rail Network Weather & Hazard Exposure
 - 56 U.S. Highway Weather & Bridge Exposure
+- 57 Global Port Performance & Hazard Exposure
 
 ## Repository architecture
 
@@ -86,8 +87,8 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 54 | Global Marine Heatwave & Ocean Temperature Watch | NOAA OISST / Coral Reef Watch | Published |
 | 55 | Rail Network Weather & Hazard Exposure | BTS NTAD / NOAA | Published |
 | 56 | Highway Weather & Bridge Exposure | FHWA NBI / NOAA | Published |
-| 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Next |
-| 58 | Global Dams, Reservoirs & Water Exposure | FAO | Planned |
+| 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Published |
+| 58 | Global Dams, Reservoirs & Water Exposure | FAO | Next |
 | 59 | Levee & Flood-Control Infrastructure Risk | USACE National Levee Database | Planned |
 | 60 | Global Water Stress & Supply Pressure | FAO AQUASTAT | Planned |
 
@@ -141,6 +142,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 54:** NOAA Coral Reef Watch Marine Heatwave Watch v1.0.1, stored as the dated 2026-10-18 same-origin global 5 km category pixel image. Click identification uses NOAA's exact palette; category is not degrees Celsius. The map is not live, a forecast, local sensor reading, coral-bleaching alert, fishery/navigation advisory, or safety determination. See `data/map54-source-license.md`.
 - **Map 55:** BTS/FRA North American Rail Network, stored as a dated 2024-10-16 same-origin generalized transparent rail raster plus state summary. Active NOAA/NWS land-weather polygons load only after explicit user action. Geographic overlap does not establish rail disruption, closure, delay, track condition, damage, or operating restriction. See `data/map55-source-license.md`.
 - **Map 56:** FHWA 2025 National Bridge Inventory, stored as three dated same-origin generalized transparent condition rasters plus a state summary. Active NOAA/NWS land-weather polygons load only after explicit user action. Condition labels reproduce FHWA's source field; geographic overlap does not establish damage, closure, restriction, condition change, route clearance, accessibility, or safety. See `data/map56-source-license.md`.
+- **Map 57:** World Bank CPPI 2020–2024 Annex joined to the CC BY 4.0 World Bank International Ports coordinate layer. The dated same-origin snapshot retains 338 of 403 CPPI rows; 65 unmatched rows are omitted rather than geocoded or guessed. Open NASA EONET event geometries load only after explicit user action. Geographic coincidence does not establish disruption, delay, damage, closure, capacity change, cargo loss, route safety, or operating conditions. See `data/map57-source-license.md`.
 
 ## Site/search files
 
