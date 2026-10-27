@@ -144,6 +144,18 @@ Public-map rules:
 - Link to the NWS API documentation and disclaimer.
 - No NOAA/NWS logo or visual identifier unless separately authorized.
 
+### USACE_NATIONAL_LEVEE_DATABASE
+Status: **ALLOWED WITH QUALIFICATION**
+
+Use: USACE National Levee Database public search, download, API, and generalized alignment data.
+
+Public-map rules:
+- Cite USACE National Levee Database and link to its About the Data page.
+- Preserve the NLD notice that completeness, quality, and update timing vary and that USACE does not validate every submitted value.
+- Treat generalized alignments as context, not surveyed boundaries, leveed areas, inundation zones, property boundaries, hydraulic models, or engineering drawings.
+- Do not infer accreditation, certification, ownership, inspection, structural condition, maintenance, loading, protection, overtopping, failure, operating status, or safety from presence or proximity.
+- Do not use USACE branding as MitchellCo identity or imply endorsement.
+
 ### OSM_STANDARD_TILES
 Status: **ALLOWED SUBJECT TO TILE POLICY**
 
