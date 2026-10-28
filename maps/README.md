@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 59:
+The collection contains Maps 00 through 60:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -68,6 +68,7 @@ The collection contains Maps 00 through 59:
 - 57 Global Port Performance & Hazard Exposure
 - 58 Global Dams, Reservoirs & Water Exposure
 - 59 U.S. Levee Systems & Flood-Exposure Context
+- 60 Global Water Stress & Supply Pressure
 
 ## Repository architecture
 
@@ -92,7 +93,8 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 57 | Global Port Performance & Hazard Exposure | World Bank CPPI | Published |
 | 58 | Global Dams, Reservoirs & Water Exposure | FAO | Published |
 | 59 | Levee & Flood-Control Infrastructure Risk | USACE National Levee Database | Published as U.S. Levee Systems & Flood-Exposure Context |
-| 60 | Global Water Stress & Supply Pressure | FAO AQUASTAT | Next |
+| 60 | Global Water Stress & Supply Pressure | FAO AQUASTAT / SDG 6.4.2 | Published |
+| 61 | Global Water-Use Efficiency | FAO AQUASTAT / SDG 6.4.1 | Next |
 
 Lightning Activity & Wildfire Ignition Potential is deferred until a stable authoritative lightning source passes the anonymous/keyless, browser-safe source gate.
 
@@ -147,6 +149,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 57:** World Bank CPPI 2020–2024 Annex joined to the CC BY 4.0 World Bank International Ports coordinate layer. The dated same-origin snapshot retains 338 of 403 CPPI rows; 65 unmatched rows are omitted rather than geocoded or guessed. Open NASA EONET event geometries load only after explicit user action. Geographic coincidence does not establish disruption, delay, damage, closure, capacity change, cargo loss, route safety, or operating conditions. See `data/map57-source-license.md`.
 - **Map 58:** FAO AQUASTAT regional dam workbooks, cataloged as edition 2026 under CC BY 4.0. The dated same-origin snapshot retains 8,502 rows with valid coordinates and omits 6,078 rows without coordinates rather than geocoding or guessing. Open NASA EONET event geometries load only after explicit user action. Geographic coincidence does not establish dam safety, failure probability, structural condition, storage status, water level, downstream impact, or operating conditions. See `data/map58-source-license.md`.
 - **Map 59:** USACE National Levee Database generalized public search-page alignments, stored as a dated same-origin snapshot of 6,102 features. Approximate state filters are derived from line midpoints only for display. Active NWS flood-related polygons load only after explicit user action. Presence or overlap does not establish ownership, accreditation, certification, inspection, structural condition, loading, protection, damage, failure, breach, closure, or safety. See `data/map59-source-license.md`.
+- **Map 60:** FAO Data Explorer SDG indicator 6.4.2, stored as a dated same-origin snapshot of 16,487 country observations for 182 ISO3 areas from 2000–2023. Generalized Natural Earth polygons draw 180 areas; French Guiana and Réunion remain counted but are not separately drawn. The map is not a live supply gauge, local-basin model, drought monitor, household-access measure, drinking-water assessment, forecast, allocation recommendation, or safety determination. See `data/map60-source-license.md`.
 
 ## Site/search files
 

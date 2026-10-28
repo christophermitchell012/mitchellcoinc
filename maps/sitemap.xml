@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-27T14:04:46Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-28T14:11:54Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -61,6 +61,7 @@
   <url><loc>https://mitchellcoinc.com/maps/57-global-port-performance-hazard-exposure.html</loc><lastmod>2026-10-25T14:21:21Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/58-global-dams-reservoirs-water-exposure.html</loc><lastmod>2026-10-26T14:21:40Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/59-us-levee-systems-flood-exposure-context.html</loc><lastmod>2026-10-27T14:04:46Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-27T14:04:46Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/60-global-water-stress-supply-pressure.html</loc><lastmod>2026-10-28T14:11:54Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-28T14:11:54Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
