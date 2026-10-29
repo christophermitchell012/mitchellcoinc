@@ -2,7 +2,7 @@
 
 ## Scope
 
-Map 62 geocodes a user-entered U.S. address, places one approximate point, and sends that point to three public polygon-query services. A returned intersection is a candidate territory match, not proof of retail service, eligibility, rates, account status, provider exclusivity, infrastructure connection, or service availability at a parcel, building, unit, or meter.
+Map 62 geocodes a user-entered U.S. address, places one approximate point, and sends that point to three public polygon-query services. Each response requests GeoJSON geometry in WGS84 and draws the matching electric, natural-gas and public-water features as independently selectable Leaflet overlays. A returned intersection or displayed polygon is a candidate territory match, not proof of retail service, eligibility, rates, account status, provider exclusivity, infrastructure connection, or service availability at a parcel, building, unit, or meter.
 
 The page performs no internet-provider lookup. Its orange internet card links only to the U.S. Federal Communications Commission's National Broadband Map and accurately labels that separate resource.
 
@@ -14,7 +14,7 @@ The page performs no internet-provider lookup. Its orange internet card links on
 - The public `Water_System_Boundaries` FeatureServer performs an anonymous point-in-polygon query. Records include original data provider, method, public-water-system identifier, feature type and source-specific dates where supplied.
 - OpenStreetMap tiles provide geographic context. Leaflet renders the map.
 
-All calls are anonymous and browser initiated. No credential, key, token, address log, server-side proxy, local provider snapshot, or inferred territory is published.
+All calls are anonymous and browser initiated. Geometry is requested only for features intersecting the searched point, capped at eight displayed records per utility, simplified through a bounded source query, and rejected client-side if a response exceeds 4 MB. New searches clear prior overlays and ignore stale asynchronous responses. No credential, key, token, address log, server-side proxy, local provider snapshot, or inferred territory is published.
 
 ## Narrow ArcGIS exception
 
