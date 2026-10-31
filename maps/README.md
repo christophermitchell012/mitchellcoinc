@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 63:
+The collection contains Maps 00 through 64:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -72,6 +72,7 @@ The collection contains Maps 00 through 63:
 - 61 Global Water-Use Efficiency
 - 62 U.S. Utility Provider Finder
 - 63 Global Renewable Freshwater Resources
+- 64 Global Electricity Access
 
 ## Repository architecture
 
@@ -100,6 +101,7 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 61 | Global Water-Use Efficiency | FAO AQUASTAT / SDG 6.4.1 | Published |
 | 62 | U.S. Utility Provider Finder | PNNL electric / public gas and water FeatureServers | Published with a user-approved Esri exception limited to this map |
 | 63 | Global Renewable Freshwater Resources | FAO AQUASTAT via World Bank WDI | Published |
+| 64 | Global Electricity Access | World Bank SDG 7.1.1 Electrification Dataset | Published |
 
 Lightning Activity & Wildfire Ignition Potential is deferred until a stable authoritative lightning source passes the anonymous/keyless, browser-safe source gate.
 
@@ -158,6 +160,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 61:** FAO Data Explorer SDG indicator 6.4.1, stored as a dated same-origin snapshot of 15,805 country/activity observations for 184 ISO3 areas from 2000–2023. The map exposes overall, agriculture, industry and services estimates without inferring missing values. It is an annual economic-productivity indicator, not a direct measure of conservation, water availability, scarcity, sustainability, service quality, household access, drinking-water safety, affordability, infrastructure performance, or operating guidance. See `data/map61-source-license.md`.
 - **Map 62:** OpenStreetMap Nominatim with Photon fallback geocodes a user-entered U.S. address; three public FeatureServer layers then return candidate electric, natural-gas and public-water polygon intersections and selectable GeoJSON overlays for that point. Red, yellow and blue overlays can be toggled independently; the orange internet card performs no lookup and links only to the FCC National Broadband Map. Results are approximate and do not prove parcel service. This is the sole user-approved exception to the zero-Esri rule; it uses no credentials and grants no exception to other maps. See `data/map62-source-license.md`.
 - **Map 63:** FAO AQUASTAT renewable internal freshwater resource estimates, distributed through the World Bank World Development Indicators API under CC BY 4.0, stored as a dated same-origin snapshot. The map compares latest per-capita and total-volume estimates for 183 mapped countries without inferring missing values. It is not total actual renewable water, live supply, storage, withdrawals, service access, water quality or a safety determination. See `data/map63-source-license.md`.
+- **Map 64:** World Bank SDG 7.1.1 electricity-access estimates, stored as a dated same-origin snapshot under CC BY 4.0. The map compares the latest national, urban and rural population percentages for 213 mapped countries or areas without inferring missing values. It is not an address-level service, utility territory, connection-quality, affordability, reliability, service-hours, voltage-quality or fuel-mix determination. See `data/map64-source-license.md`.
 
 ## Site/search files
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-30T14:43:08Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-10-31T14:44:37Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -65,6 +65,7 @@
   <url><loc>https://mitchellcoinc.com/maps/61-global-water-use-efficiency.html</loc><lastmod>2026-10-29T14:14:53Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/62-us-utility-provider-finder.html</loc><lastmod>2026-10-29T18:57:21Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/63-global-renewable-freshwater-resources.html</loc><lastmod>2026-10-30T14:43:08Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-30T14:43:08Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/64-global-electricity-access.html</loc><lastmod>2026-10-31T14:44:37Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-10-31T14:44:37Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
