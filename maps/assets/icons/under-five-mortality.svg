@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Under-five mortality</title><desc id="d">A child figure inside a protective heart outline with a health pulse</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 56C14 45 7 34 9 22c2-10 14-14 23-5 9-9 21-5 23 5 2 12-5 23-23 34z" stroke="#fb7185" stroke-width="3"/>
+    <circle cx="32" cy="25" r="5" fill="#facc15" stroke="#fff7b2" stroke-width="1.5"/>
+    <path d="M32 31v12m-7-7h14m-11 7-4 6m12-6 4 6" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M14 31h8l3-5 4 9 4-7 3 3h14" stroke="#a7f3d0" stroke-width="2" opacity=".9"/>
+  </g>
+</svg>
