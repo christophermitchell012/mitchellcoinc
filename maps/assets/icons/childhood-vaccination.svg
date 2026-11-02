@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Childhood vaccination coverage</title><desc id="d">A shield with a vaccination check mark</desc>
+  <path fill="#38bdf8" fill-opacity=".2" stroke="#38bdf8" stroke-width="3" d="M32 4 52 12v16c0 14-8 25-20 32C20 53 12 42 12 28V12Z"/>
+  <path fill="none" stroke="#facc15" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="m21 31 8 8 15-17"/>
+  <circle cx="49" cy="49" r="9" fill="#fb7185"/><path stroke="#fff" stroke-linecap="round" stroke-width="3" d="M45 49h8M49 45v8"/>
+</svg>
