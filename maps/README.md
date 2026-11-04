@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 67:
+The collection contains Maps 00 through 68:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -76,6 +76,7 @@ The collection contains Maps 00 through 67:
 - 65 Global Under-Five Mortality
 - 66 Global Childhood Vaccination Coverage
 - 67 Global Maternal Mortality
+- 68 Global Life Expectancy
 
 ## Repository architecture
 
@@ -106,6 +107,9 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 63 | Global Renewable Freshwater Resources | FAO AQUASTAT via World Bank WDI | Published |
 | 64 | Global Electricity Access | World Bank SDG 7.1.1 Electrification Dataset | Published |
 | 65 | Global Under-Five Mortality | UN IGME via World Bank WDI | Published |
+| 66 | Global Childhood Vaccination Coverage | WHO/UNICEF via World Bank WDI | Published |
+| 67 | Global Maternal Mortality | UN MMEIG via World Bank WDI | Published |
+| 68 | Global Life Expectancy | UN Population Division / national statistics via World Bank WDI | Published |
 
 Lightning Activity & Wildfire Ignition Potential is deferred until a stable authoritative lightning source passes the anonymous/keyless, browser-safe source gate.
 
@@ -170,6 +174,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 65:** UN Inter-agency Group for Child Mortality Estimation overall, female and male under-five mortality rates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 195 mapped countries or areas without inferring missing values. It is not a death count, live surveillance, local clinical data, an individual risk prediction, a causal explanation or medical advice. See `data/map65-source-license.md`.
 - **Map 66:** WHO/UNICEF national DPT, measles and hepatitis B vaccination-coverage estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 193 mapped countries or areas without inferring missing values. It is not a live immunization record, vaccine-effectiveness measure, local availability check, proof of individual protection or medical advice. See `data/map66-source-license.md`.
 - **Map 67:** UN Maternal Mortality Estimation Inter-Agency Group modeled ratio, lifetime-risk percentage and maternal-death estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 194 mapped countries or areas without inferring missing values. It is not live surveillance, an individual risk prediction, health-system ranking, causal analysis or medical advice. See `data/map67-source-license.md`.
+- **Map 68:** UN Population Division, national-statistical-office and Eurostat life-expectancy estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares total, female and male life expectancy at birth for 214 mapped countries or areas without inferring missing values. It is not an individual lifespan prediction, healthy-life-expectancy measure, live surveillance, health-system ranking, causal analysis or medical advice. See `data/map68-source-license.md`.
 
 ## Site/search files
 
