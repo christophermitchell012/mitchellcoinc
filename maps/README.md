@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 68:
+The collection contains Maps 00 through 69:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -77,6 +77,7 @@ The collection contains Maps 00 through 68:
 - 66 Global Childhood Vaccination Coverage
 - 67 Global Maternal Mortality
 - 68 Global Life Expectancy
+- 69 Wind & Solar Resource Explorer
 
 ## Repository architecture
 
@@ -110,22 +111,15 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 66 | Global Childhood Vaccination Coverage | WHO/UNICEF via World Bank WDI | Published |
 | 67 | Global Maternal Mortality | UN MMEIG via World Bank WDI | Published |
 | 68 | Global Life Expectancy | UN Population Division / national statistics via World Bank WDI | Published |
+| 69 | Wind & Solar Resource Explorer | NASA POWER climatology point API | Published |
+| 70 | Energy Mix & Emissions by Country | Our World in Data CO₂ and energy dataset | Candidate; annual static snapshot preferred |
+| 71 | Live Wildlife Observations | iNaturalist and GBIF | Candidate; confirm bounded query design and record-level reuse terms |
+| 72 | Bike/Scooter Share Map | MobilityData GBFS registry and selected operator feeds | Candidate; validate each selected live feed before build |
+| 73 | Fatal Crash Atlas | NHTSA FARS annual flat files | Candidate; static snapshot only, not the browser-blocked CrashAPI |
 
-Lightning Activity & Wildfire Ignition Potential is deferred until a stable authoritative lightning source passes the anonymous/keyless, browser-safe source gate.
+This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. Fatal Crash Atlas remains eligible only through NHTSA's downloadable annual files; its browser-blocked CrashAPI is not an acceptable runtime dependency.
 
-Global Clean Cooking Access was evaluated on 2026-11-01. The World Bank presentation labels the series CC BY 4.0 while the indicator's source note cites CC BY-NC 3.0 IGO terms. It remains unnumbered and deferred until the reuse terms are reconciled by an authoritative source.
-
-Assign each passing candidate the lowest unused map number after checking the published collection; if a candidate is deferred, do not reserve its number.
-
-Global Landslide Hazard & Rainfall Trigger Watch is at the bottom of the unnumbered backlog until a stable anonymous/keyless NASA LHASA path passes the source gate. Global Aviation Weather remains deferred. BloomWatch remains deferred until observation-record licensing/redistribution is clearly compatible with commercial/public reuse.
-
-Civil Emergency Alerts & Public Safety Context is deferred because the active NWS-distributed alert tested on 2026-10-05 supplied neither polygon geometry nor resolvable affected-zone URLs. Reconsider only when the source supports a truthful map rather than an area-name list.
-
-Open Emergency Shelters was evaluated on 2026-10-07. FEMA's public Open Shelters service exposed the needed points through an ArcGIS FeatureServer rather than a qualifying zero-Esri source, while the guessed OpenFEMA endpoint returned 404. It remains unnumbered and deferred until an authoritative non-Esri snapshot or API passes the source gate.
-
-Stream Velocity Explorer was evaluated on 2026-10-15 using USGS parameter 00055. The recent nationwide stream-site query returned only one series, so it remains unnumbered and deferred until the source supplies enough current observations for a useful geographic view.
-
-The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-10-17 using USGS parameter 00631. The recent nationwide stream-site query returned no series, so that parameter remains deferred. Map 49 instead uses the distinct in-situ parameter 99133 after its source contract and geographic coverage passed review.
+Assign each passing candidate the lowest unused map number after checking the published collection. A candidate that fails its source, licensing, CORS, coverage or validation gate does not consume a number.
 
 ## Recent source contracts
 
@@ -175,6 +169,7 @@ The filtered-water nitrate-plus-nitrite series candidate was evaluated on 2026-1
 - **Map 66:** WHO/UNICEF national DPT, measles and hepatitis B vaccination-coverage estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 193 mapped countries or areas without inferring missing values. It is not a live immunization record, vaccine-effectiveness measure, local availability check, proof of individual protection or medical advice. See `data/map66-source-license.md`.
 - **Map 67:** UN Maternal Mortality Estimation Inter-Agency Group modeled ratio, lifetime-risk percentage and maternal-death estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 194 mapped countries or areas without inferring missing values. It is not live surveillance, an individual risk prediction, health-system ranking, causal analysis or medical advice. See `data/map67-source-license.md`.
 - **Map 68:** UN Population Division, national-statistical-office and Eurostat life-expectancy estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares total, female and male life expectancy at birth for 214 mapped countries or areas without inferring missing values. It is not an individual lifespan prediction, healthy-life-expectancy measure, live surveillance, health-system ranking, causal analysis or medical advice. See `data/map68-source-license.md`.
+- **Map 69:** NASA POWER 2001–2025 climatology point estimates for all-sky solar irradiance and modeled wind speed at 50 metres, requested anonymously only after an explicit map click or coordinate submission. Values are coarse-grid long-term averages, not site measurements, current conditions, forecasts, engineering studies, energy-production guarantees or project-suitability determinations. See `data/map69-source-license.md`.
 
 ## Site/search files
 

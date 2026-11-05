@@ -35,7 +35,7 @@ NOAA-hosted research on above-water sensing combined marine radar, lidar, visibl
 
 The evidence bundle should preserve dissent. If radar tracks a contact while two cameras see open water, the product should not average the disagreement into medium confidence. It should say that radar supports the contact, cameras do not, and visibility conditions may explain why.
 
-This resembles the need to [make every robot incident reproducible](/blog/2026/10/16-make-every-robot-incident-reproducible/). The system must retain enough state to replay the decision, not merely display its final label.
+This resembles the need to [make every robot incident reproducible](/blog/2026/10/16/make-every-robot-incident-reproducible/). The system must retain enough state to replay the decision, not merely display its final label.
 
 ## Corroboration needs rules, not arithmetic
 
