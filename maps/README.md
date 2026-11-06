@@ -112,7 +112,7 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 67 | Global Maternal Mortality | UN MMEIG via World Bank WDI | Published |
 | 68 | Global Life Expectancy | UN Population Division / national statistics via World Bank WDI | Published |
 | 69 | Wind & Solar Resource Explorer | NASA POWER climatology point API | Published |
-| 70 | Energy Mix & Emissions by Country | Our World in Data CO₂ and energy dataset | Candidate; annual static snapshot preferred |
+| 70 | Energy Mix & Emissions by Country | Ember and Global Carbon Budget via Our World in Data | Published |
 | 71 | Live Wildlife Observations | iNaturalist and GBIF | Candidate; confirm bounded query design and record-level reuse terms |
 | 72 | Bike/Scooter Share Map | MobilityData GBFS registry and selected operator feeds | Candidate; validate each selected live feed before build |
 | 73 | Fatal Crash Atlas | NHTSA FARS annual flat files | Candidate; static snapshot only, not the browser-blocked CrashAPI |
@@ -170,6 +170,7 @@ Assign each passing candidate the lowest unused map number after checking the pu
 - **Map 67:** UN Maternal Mortality Estimation Inter-Agency Group modeled ratio, lifetime-risk percentage and maternal-death estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares each country's latest estimate for 194 mapped countries or areas without inferring missing values. It is not live surveillance, an individual risk prediction, health-system ranking, causal analysis or medical advice. See `data/map67-source-license.md`.
 - **Map 68:** UN Population Division, national-statistical-office and Eurostat life-expectancy estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares total, female and male life expectancy at birth for 214 mapped countries or areas without inferring missing values. It is not an individual lifespan prediction, healthy-life-expectancy measure, live surveillance, health-system ranking, causal analysis or medical advice. See `data/map68-source-license.md`.
 - **Map 69:** NASA POWER 2001–2025 climatology point estimates for all-sky solar irradiance and modeled wind speed at 50 metres, requested anonymously only after an explicit map click or coordinate submission. Values are coarse-grid long-term averages, not site measurements, current conditions, forecasts, engineering studies, energy-production guarantees or project-suitability determinations. See `data/map69-source-license.md`.
+- **Map 70:** Ember electricity-generation shares and Global Carbon Budget territorial fossil-fuel and industrial CO₂ emissions per person, distributed through Our World in Data and stored as a dated same-origin snapshot. The map reports the separate source year for each measure and does not infer missing values. Electricity mix is not total primary energy; territorial CO₂ excludes land-use change and imported-goods emissions. See `data/map70-source-license.md`.
 
 ## Site/search files
 
