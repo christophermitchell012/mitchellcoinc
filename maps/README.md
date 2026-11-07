@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 69:
+The collection contains Maps 00 through 71:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -78,6 +78,8 @@ The collection contains Maps 00 through 69:
 - 67 Global Maternal Mortality
 - 68 Global Life Expectancy
 - 69 Wind & Solar Resource Explorer
+- 70 Energy Mix & Emissions by Country
+- 71 Wildlife Observation Explorer
 
 ## Repository architecture
 
@@ -113,7 +115,7 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 68 | Global Life Expectancy | UN Population Division / national statistics via World Bank WDI | Published |
 | 69 | Wind & Solar Resource Explorer | NASA POWER climatology point API | Published |
 | 70 | Energy Mix & Emissions by Country | Ember and Global Carbon Budget via Our World in Data | Published |
-| 71 | Live Wildlife Observations | iNaturalist and GBIF | Candidate; confirm bounded query design and record-level reuse terms |
+| 71 | Live Wildlife Observations | iNaturalist and GBIF | Published as Wildlife Observation Explorer |
 | 72 | Bike/Scooter Share Map | MobilityData GBFS registry and selected operator feeds | Candidate; validate each selected live feed before build |
 | 73 | Fatal Crash Atlas | NHTSA FARS annual flat files | Candidate; static snapshot only, not the browser-blocked CrashAPI |
 
@@ -171,6 +173,7 @@ Assign each passing candidate the lowest unused map number after checking the pu
 - **Map 68:** UN Population Division, national-statistical-office and Eurostat life-expectancy estimates, distributed through World Bank WDI under CC BY 4.0 and stored as a dated same-origin snapshot. The map compares total, female and male life expectancy at birth for 214 mapped countries or areas without inferring missing values. It is not an individual lifespan prediction, healthy-life-expectancy measure, live surveillance, health-system ranking, causal analysis or medical advice. See `data/map68-source-license.md`.
 - **Map 69:** NASA POWER 2001–2025 climatology point estimates for all-sky solar irradiance and modeled wind speed at 50 metres, requested anonymously only after an explicit map click or coordinate submission. Values are coarse-grid long-term averages, not site measurements, current conditions, forecasts, engineering studies, energy-production guarantees or project-suitability determinations. See `data/map69-source-license.md`.
 - **Map 70:** Ember electricity-generation shares and Global Carbon Budget territorial fossil-fuel and industrial CO₂ emissions per person, distributed through Our World in Data and stored as a dated same-origin snapshot. The map reports the separate source year for each measure and does not infer missing values. Electricity mix is not total primary energy; territorial CO₂ excludes land-use change and imported-goods emissions. See `data/map70-source-license.md`.
+- **Map 71:** iNaturalist Research Grade and GBIF PRESENT occurrence records, requested anonymously only after explicit user action for a selected point and 5, 10, or 25 kilometre radius. Each source is capped at 30 records and restricted to CC0 or CC BY occurrence licences; media is not displayed because its licence can differ. Public coordinates may be obscured or uncertain, and the records do not prove current presence or absence. See `data/map71-source-license.md`.
 
 ## Site/search files
 

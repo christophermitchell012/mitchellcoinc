@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-11-07T15:21:04Z",
+  "default_center": [20, 0],
+  "default_zoom": 2,
+  "radii_km": [5, 10, 25],
+  "default_radius_km": 10,
+  "request_timeout_ms": 15000,
+  "record_limit_per_source": 30,
+  "sources": {
+    "inaturalist": {
+      "endpoint": "https://api.inaturalist.org/v1/observations",
+      "quality_grade": "research",
+      "licenses": ["cc0", "cc-by"],
+      "record_url_prefix": "https://www.inaturalist.org/observations/"
+    },
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "licenses": ["CC0_1_0", "CC_BY_4_0"],
+      "record_url_prefix": "https://www.gbif.org/occurrence/"
+    }
+  }
+}
