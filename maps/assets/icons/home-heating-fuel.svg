@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Home heating fuel map</title><desc id="d">A house containing a multicolor flame</desc>
+  <path d="M8 30 32 10l24 20v25H8Z" fill="#102532" stroke="#8fe7ff" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 22c7 9 11 14 11 21a11 11 0 1 1-22 0c0-5 3-10 8-16 0 7 3 9 5 10 2-5 1-10-2-15Z" fill="#f97316"/>
+  <path d="M33 37c4 4 5 7 5 10a6 6 0 0 1-12 0c0-3 2-6 5-9 0 3 1 5 2 6 1-2 1-4 0-7Z" fill="#facc15"/>
+</svg>
