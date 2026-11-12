@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 75:
+The collection contains Maps 00 through 76:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -84,6 +84,7 @@ The collection contains Maps 00 through 75:
 - 73 U.S. Housing Cost Burden by County
 - 74 U.S. Home Heating Fuel by County
 - 75 U.S. Commute Mode by County
+- 76 U.S. Uninsured Population by Age and County
 
 ## Repository architecture
 
@@ -124,8 +125,9 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 73 | U.S. Housing Cost Burden by County | U.S. Census Bureau 2020–2024 ACS 5-year summary files | Published; dated same-origin county snapshot |
 | 74 | U.S. Home Heating Fuel by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 | 75 | U.S. Commute Mode by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
+| 76 | U.S. Uninsured Population by Age and County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 
-This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Map 73 was researched and source-gated on 2026-11-09 using downloadable Census ACS summary files and cartographic boundaries; the anonymous ACS API was not used because it returned a key-required page during the run. Maps 74 and 75 were independently researched and source-gated on 2026-11-10 and 2026-11-11 using downloadable ACS tables B25040 and B08301 with the same official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
+This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Map 73 was researched and source-gated on 2026-11-09 using downloadable Census ACS summary files and cartographic boundaries; the anonymous ACS API was not used because it returned a key-required page during the run. Maps 74–76 were independently researched and source-gated on 2026-11-10 through 2026-11-12 using downloadable ACS tables B25040, B08301 and B27001 with the same official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
 
 Assign each passing candidate the lowest unused map number after checking the published collection. A candidate that fails its source, licensing, CORS, coverage or validation gate does not consume a number.
 
@@ -184,6 +186,7 @@ Assign each passing candidate the lowest unused map number after checking the pu
 - **Map 73:** U.S. Census Bureau 2020–2024 ACS 5-year tables B25070 and B25091, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports derived shares of renter, mortgaged-owner and mortgage-free-owner households with computable ratios whose housing costs are at least 30 percent of income. It is not live market data, parcel-level analysis, a hardship or eligibility determination, a ranking, a forecast or financial advice; margins of error are not displayed. See `data/map73-source-license.md`.
 - **Map 74:** U.S. Census Bureau 2020–2024 ACS 5-year table B25040, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports the share and source count of occupied housing units by primary heating-fuel response. It is not a live fuel-use, availability, price, equipment, energy-consumption, emissions, parcel, eligibility or household-recommendation product; margins of error are not displayed. See `data/map74-source-license.md`.
 - **Map 75:** U.S. Census Bureau 2020–2024 ACS 5-year table B08301, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports mutually exclusive usual commute-mode counts and shares for workers age 16 or older. It is not live traffic, congestion, travel-time, emissions, employment, transit-quality, service-availability or individual-trip data; margins of error are not displayed. See `data/map75-source-license.md`.
+- **Map 76:** U.S. Census Bureau 2020–2024 ACS 5-year table B27001, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports uninsured counts and shares for the civilian noninstitutionalized population across eight age bands and all ages. It is not current enrollment, care access, affordability, adequacy, eligibility, health-status or individual-coverage data; margins of error are not displayed. See `data/map76-source-license.md`.
 
 ## Site/search files
 
