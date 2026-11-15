@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-14T15:52:27Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-15T15:45:53Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -80,6 +80,7 @@
   <url><loc>https://mitchellcoinc.com/maps/76-us-uninsured-by-age-county.html</loc><lastmod>2026-11-12T15:26:36Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/77-us-household-internet-subscription-county.html</loc><lastmod>2026-11-13T15:41:19Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/78-us-household-vehicle-availability-county.html</loc><lastmod>2026-11-14T15:52:27Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-14T15:52:27Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/79-us-occupied-housing-crowding-county.html</loc><lastmod>2026-11-15T15:45:53Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-15T15:45:53Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
