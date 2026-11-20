@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 79:
+The collection contains Maps 00 through 84:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -88,6 +88,11 @@ The collection contains Maps 00 through 79:
 - 77 U.S. Household Internet Subscription by County
 - 78 U.S. Household Vehicle Availability by County
 - 79 U.S. Occupied Housing Crowding by County
+- 80 U.S. Housing Vacancy by County
+- 81 U.S. Housing Age by County
+- 82 U.S. Housing Plumbing Access by County
+- 83 U.S. Housing Kitchen Access by County
+- 84 U.S. Labor Force Status by County
 
 ## Repository architecture
 
@@ -136,8 +141,9 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 81 | U.S. Housing Age by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 | 82 | U.S. Housing Plumbing Access by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 | 83 | U.S. Housing Kitchen Access by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
+| 84 | U.S. Labor Force Status by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 
-This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Maps 73–83 were independently researched and source-gated on 2026-11-09 through 2026-11-19 using downloadable ACS tables B25070/B25091, B25040, B08301, B27001, B28002, B08201, B25014, B25002/B25004, B25034, B25049 and B25053 with official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
+This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Maps 73–84 were independently researched and source-gated on 2026-11-09 through 2026-11-20 using downloadable ACS tables B25070/B25091, B25040, B08301, B27001, B28002, B08201, B25014, B25002/B25004, B25034, B25049, B25053 and B23025 with official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
 
 Assign each passing candidate the lowest unused map number after checking the published collection. A candidate that fails its source, licensing, CORS, coverage or validation gate does not consume a number.
 
@@ -204,6 +210,7 @@ Assign each passing candidate the lowest unused map number after checking the pu
 - **Map 81:** U.S. Census Bureau 2020–2024 ACS 5-year table B25034, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports housing-unit shares by year-built period. It is not a building inspection, condition or safety rating, renovation history, code-compliance finding, hazardous-material assessment or individual-property source; margins of error are not displayed. See `data/map81-source-license.md`.
 - **Map 82:** U.S. Census Bureau 2020–2024 ACS 5-year table B25049, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports shares of occupied housing units lacking complete plumbing facilities overall and by tenure. It is not a property inspection or measure of water quality, pressure, reliability, sewer or septic service, needed repairs, habitability, code compliance or individual eligibility; margins of error are not displayed. See `data/map82-source-license.md`.
 - **Map 83:** U.S. Census Bureau 2020–2024 ACS 5-year table B25053, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports shares of occupied housing units lacking complete kitchen facilities overall and by tenure. It is not a property inspection or measure of food access, nutrition, appliance condition, affordability, needed repairs, habitability, code compliance or individual eligibility; margins of error are not displayed. See `data/map83-source-license.md`.
+- **Map 84:** U.S. Census Bureau 2020–2024 ACS 5-year table B23025, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports labor-force participation, employment-to-population and unemployment estimates. It is not current monthly labor-market data, a job-opening or wage source, an underemployment measure, a benefit-eligibility determination or an individual employment record; margins of error are not displayed. See `data/map84-source-license.md`.
 
 ## Site/search files
 
