@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Poverty status map</title>
+  <desc id="desc">A family beneath a threshold line with a county marker</desc>
+  <path d="M8 18h48" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 5"/>
+  <circle cx="21" cy="30" r="6" fill="#38bdf8"/>
+  <circle cx="41" cy="30" r="6" fill="#fb7185"/>
+  <path d="M11 50c1-9 5-13 10-13s9 4 10 13M31 50c1-9 5-13 10-13s9 4 10 13" fill="none" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M52 39c0 6-7 12-7 12s-7-6-7-12a7 7 0 1 1 14 0Z" fill="#dc2626" stroke="#fff" stroke-width="2"/>
+  <circle cx="45" cy="39" r="2.5" fill="#fff"/>
+</svg>

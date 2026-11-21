@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-20T15:52:54Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-21T15:46:53Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -86,6 +86,7 @@
   <url><loc>https://mitchellcoinc.com/maps/82-us-housing-plumbing-access-county.html</loc><lastmod>2026-11-18T15:11:41Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/83-us-housing-kitchen-access-county.html</loc><lastmod>2026-11-19T15:25:00Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/84-us-labor-force-status-county.html</loc><lastmod>2026-11-20T15:52:54Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-20T15:52:54Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/85-us-poverty-status-county.html</loc><lastmod>2026-11-21T15:46:53Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-21T15:46:53Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
