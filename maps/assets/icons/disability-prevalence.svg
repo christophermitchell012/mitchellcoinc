@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Disability prevalence map</title>
+  <desc id="desc">An accessible person symbol beside a county map marker</desc>
+  <circle cx="23" cy="14" r="6" fill="#38bdf8"/>
+  <path d="M23 22v13h13l7 15M22 27H12M23 34l-8 14" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 46a14 14 0 1 1-17-20" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+  <path d="M57 28c0 7-8 14-8 14s-8-7-8-14a8 8 0 1 1 16 0Z" fill="#dc2626" stroke="#fff" stroke-width="2"/>
+  <circle cx="49" cy="28" r="2.5" fill="#fff"/>
+</svg>
