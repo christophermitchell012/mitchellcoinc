@@ -6,7 +6,7 @@ Interactive, standalone public-data maps for weather, wildfire, earthquakes, dro
 
 Browse: https://mitchellcoinc.com/maps/
 
-The collection contains Maps 00 through 87:
+The collection contains Maps 00 through 88:
 
 - 00 WildfireWatch
 - 01 Flash Flood & River Flood Risk
@@ -96,6 +96,7 @@ The collection contains Maps 00 through 87:
 - 85 U.S. Poverty Status by County
 - 86 U.S. Disability Prevalence by Age and County
 - 87 U.S. Educational Attainment by County
+- 88 U.S. Language and English Proficiency by County
 
 ## Repository architecture
 
@@ -148,8 +149,9 @@ The approved sequence below governs the next releases. Numbers identify sequence
 | 85 | U.S. Poverty Status by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 | 86 | U.S. Disability Prevalence by Age and County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 | 87 | U.S. Educational Attainment by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
+| 88 | U.S. Language and English Proficiency by County | U.S. Census Bureau 2020–2024 ACS 5-year summary file | Published; dated same-origin county snapshot |
 
-This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Maps 73–87 were independently researched and source-gated on 2026-11-09 through 2026-11-23 using downloadable ACS tables B25070/B25091, B25040, B08301, B27001, B28002, B08201, B25014, B25002/B25004, B25034, B25049, B25053, B23025, B17001, B18101 and B15003 with official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
+This candidate list was rebuilt on 2026-11-05 from the user-supplied `map-roadmap-specs.md`. Previously blocked backlog entries were removed. The proposed Global Hazard Feed was not duplicated because Map 40 already provides the NASA EONET scope. Satellite Overhead Tonight and Nearest Help were omitted because their runtime sources remained inconclusive. Sea-Level Elevation Exposure was omitted because the tested terrain-tile delivery did not provide the browser canvas CORS permission its client-side analysis requires. Avalanche Forecast Zones was omitted because explicit content-reuse terms were not established. The Bike/Scooter Share candidate was deferred on 2026-11-08 after six selected GBFS discovery and data feeds returned no browser CORS permission for the production origin; it did not consume a number. Map 72 therefore used NHTSA's downloadable 2024 FARS annual file rather than the browser-blocked CrashAPI. After that queue was exhausted, Maps 73–88 were independently researched and source-gated on 2026-11-09 through 2026-11-24 using downloadable ACS tables B25070/B25091, B25040, B08301, B27001, B28002, B08201, B25014, B25002/B25004, B25034, B25049, B25053, B23025, B17001, B18101, B15003 and C16001 with official generalized county boundaries. The active candidate queue is again exhausted; the next run must research and source-gate a new non-duplicate proposal without reviving a blocked entry unless the blocking evidence changes.
 
 Assign each passing candidate the lowest unused map number after checking the published collection. A candidate that fails its source, licensing, CORS, coverage or validation gate does not consume a number.
 
@@ -220,6 +222,7 @@ Assign each passing candidate the lowest unused map number after checking the pu
 - **Map 85:** U.S. Census Bureau 2020–2024 ACS 5-year table B17001, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports poverty-status estimates overall and for people under age 18, ages 18–64, and age 65 or older. It is not current economic data, an individual income record, a benefit-eligibility determination, a geographic cost-of-living adjustment or a complete measure of hardship; margins of error are not displayed. See `data/map85-source-license.md`.
 - **Map 86:** U.S. Census Bureau 2020–2024 ACS 5-year table B18101, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports disability-prevalence estimates overall and for people under age 18, ages 18–34, ages 35–64, and age 65 or older. It is not diagnostic or medical-record data, a benefit-eligibility or service-availability determination, a measure of accommodation need or severity, or an individual disability record; margins of error are not displayed. See `data/map86-source-license.md`.
 - **Map 87:** U.S. Census Bureau 2020–2024 ACS 5-year table B15003, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports mutually exclusive attainment categories for adults age 25 and older: no high school diploma, high school diploma or equivalent, some college or associate degree, and bachelor's degree or higher. It is not school-performance, education-quality, literacy, enrollment, workforce-skill, credential-validity, individual-record or eligibility data; margins of error are not displayed. See `data/map87-source-license.md`.
+- **Map 88:** U.S. Census Bureau 2020–2024 ACS 5-year table C16001, joined to the 2024 1:20,000,000 county cartographic boundary file and stored as a dated same-origin snapshot. The map contains 3,222 counties or county equivalents in the 50 states, D.C. and Puerto Rico. It reports language spoken at home and the Census “less than very well” English-response category for people age 5 and older. It is not immigration-status, citizenship, literacy, disability, translation-need, individual-ability or eligibility data; margins of error are not displayed. See `data/map88-source-license.md`.
 
 ## Site/search files
 
