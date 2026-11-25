@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-24T15:49:06Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/</loc><lastmod>2026-11-25T15:19:00Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/00-wildfire-watch.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/01-flash-flood-river-flood-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/02-extreme-heat-health-risk.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
@@ -90,6 +90,7 @@
   <url><loc>https://mitchellcoinc.com/maps/86-us-disability-prevalence-by-age-county.html</loc><lastmod>2026-11-22T15:21:46Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/87-us-educational-attainment-county.html</loc><lastmod>2026-11-23T15:59:56Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/88-us-language-english-proficiency-county.html</loc><lastmod>2026-11-24T15:49:06Z</lastmod></url>
-  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-24T15:49:06Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/89-us-median-household-income-county.html</loc><lastmod>2026-11-25T15:19:00Z</lastmod></url>
+  <url><loc>https://mitchellcoinc.com/maps/data-sources-licenses.html</loc><lastmod>2026-11-25T15:19:00Z</lastmod></url>
   <url><loc>https://mitchellcoinc.com/maps/earthdata-eula-policy.html</loc><lastmod>2026-09-30T18:48:18Z</lastmod></url>
 </urlset>
