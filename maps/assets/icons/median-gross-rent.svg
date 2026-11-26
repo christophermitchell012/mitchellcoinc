@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Median gross rent map</title><desc id="desc">A house and dollar sign over a county-map grid</desc>
+  <path fill="none" stroke="#315e73" stroke-width="3" d="M4 15 22 7l19 7 19-7v42l-19 8-19-8-18 8Z"/>
+  <path fill="none" stroke="#315e73" stroke-width="2" d="M22 7v42m19-35v43"/>
+  <path fill="#0e7490" stroke="#f5fbff" stroke-width="2.5" stroke-linejoin="round" d="m14 31 18-14 18 14v22H14Z"/>
+  <path fill="#102532" d="M27 40h10v13H27Z"/>
+  <path fill="none" stroke="#facc15" stroke-width="3" stroke-linecap="round" d="M36 28c-1-4-9-3-9 1 0 5 10 2 10 7 0 4-8 5-10 1m5-13v17"/>
+</svg>
